@@ -289,7 +289,7 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="90dp"
         android:layout_marginRight="90dp"
-        android:text="@string/submit"
+        android:text="পরবর্তী"
         android:textSize="30sp"
         android:padding="10dp"
         android:background="@drawable/btn_round"
