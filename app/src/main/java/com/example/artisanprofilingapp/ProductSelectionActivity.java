@@ -54,7 +54,7 @@ public class ProductSelectionActivity extends AppCompatActivity {
                     myPref.edit().putString("selected", "saree").apply();
                     myPref.edit().putString("track", "15").apply();
                     mediaPlayer.stop();
-                    startActivity(new Intent(getApplicationContext(), FormSareeActivity.class));
+//                    startActivity(new Intent(getApplicationContext(), FormSareeActivity.class));
                 }
             });
             goina.setOnClickListener(new View.OnClickListener() {
@@ -63,7 +63,7 @@ public class ProductSelectionActivity extends AppCompatActivity {
                     myPref.edit().putString("selected", "goina").apply();
                     myPref.edit().putString("track", "15").apply();
                     mediaPlayer.stop();
-                    startActivity(new Intent(getApplicationContext(), FormGoinaActivity.class));
+//                    startActivity(new Intent(getApplicationContext(), FormGoinaActivity.class));
                 }
             });
             bag.setOnClickListener(new View.OnClickListener() {
@@ -72,7 +72,7 @@ public class ProductSelectionActivity extends AppCompatActivity {
                     myPref.edit().putString("selected", "bag").apply();
                     myPref.edit().putString("track", "15").apply();
                     mediaPlayer.stop();
-                    startActivity(new Intent(getApplicationContext(), FormBagActivity.class));
+//                    startActivity(new Intent(getApplicationContext(), FormBagActivity.class));
                 }
             });
             tshirt.setOnClickListener(new View.OnClickListener() {
@@ -81,7 +81,7 @@ public class ProductSelectionActivity extends AppCompatActivity {
                     myPref.edit().putString("selected", "tshirt").apply();
                     myPref.edit().putString("track", "15").apply();
                     mediaPlayer.stop();
-                    startActivity(new Intent(getApplicationContext(), FormTshirtActivity.class));
+//                    startActivity(new Intent(getApplicationContext(), FormTshirtActivity.class));
                 }
             });
 
@@ -92,7 +92,7 @@ public class ProductSelectionActivity extends AppCompatActivity {
                     myPref.edit().putString("selected", "other").apply();
                     myPref.edit().putString("track", "15").apply();
                     mediaPlayer.stop();
-                    startActivity(new Intent(getApplicationContext(), FormWrapperSkirtActivity.class));
+//                    startActivity(new Intent(getApplicationContext(), FormWrapperSkirtActivity.class));
                 }
             });
 
@@ -103,7 +103,7 @@ public class ProductSelectionActivity extends AppCompatActivity {
                     myPref.edit().putString("selected", "other").apply();
                     myPref.edit().putString("track", "15").apply();
                     mediaPlayer.stop();
-                    startActivity(new Intent(getApplicationContext(), FormPalazzoActivity.class));
+//                    startActivity(new Intent(getApplicationContext(), FormPalazzoActivity.class));
                 }
             });
 
@@ -114,7 +114,7 @@ public class ProductSelectionActivity extends AppCompatActivity {
                     myPref.edit().putString("selected", "other").apply();
                     myPref.edit().putString("track", "15").apply();
                     mediaPlayer.stop();
-                    startActivity(new Intent(getApplicationContext(), FormCushionCoverActivity.class));
+//                    startActivity(new Intent(getApplicationContext(), FormCushionCoverActivity.class));
                 }
             });
 
@@ -125,7 +125,7 @@ public class ProductSelectionActivity extends AppCompatActivity {
                     myPref.edit().putString("selected", "other").apply();
                     myPref.edit().putString("track", "15").apply();
                     mediaPlayer.stop();
-                    startActivity(new Intent(getApplicationContext(), FormLeatherbagActivity.class));
+//                    startActivity(new Intent(getApplicationContext(), FormLeatherbagActivity.class));
                 }
             });
 
@@ -136,7 +136,7 @@ public class ProductSelectionActivity extends AppCompatActivity {
                     myPref.edit().putString("selected", "other").apply();
                     myPref.edit().putString("track", "15").apply();
                     mediaPlayer.stop();
-                    startActivity(new Intent(getApplicationContext(), FormBlousepieceActivity.class));
+//                    startActivity(new Intent(getApplicationContext(), FormBlousepieceActivity.class));
                 }
             });
 
@@ -146,7 +146,7 @@ public class ProductSelectionActivity extends AppCompatActivity {
                     myPref.edit().putString("selected", "kurta").apply();
                     myPref.edit().putString("track", "15").apply();
                     mediaPlayer.stop();
-                    startActivity(new Intent(getApplicationContext(), FormKurtaActivity.class));
+//                    startActivity(new Intent(getApplicationContext(), FormKurtaActivity.class));
                 }
             });
 
@@ -156,7 +156,7 @@ public class ProductSelectionActivity extends AppCompatActivity {
                     myPref.edit().putString("selected", "showpiece").apply();
                     myPref.edit().putString("track", "15").apply();
                     mediaPlayer.stop();
-                    startActivity(new Intent(getApplicationContext(), FormShowpieceActivity.class));
+//                    startActivity(new Intent(getApplicationContext(), FormShowpieceActivity.class));
                 }
             });
 
@@ -166,7 +166,7 @@ public class ProductSelectionActivity extends AppCompatActivity {
                     myPref.edit().putString("selected", "other").apply();
                     myPref.edit().putString("track", "15").apply();
                     mediaPlayer.stop();
-                    startActivity(new Intent(getApplicationContext(), FormUtilityActivity.class));
+//                    startActivity(new Intent(getApplicationContext(), FormUtilityActivity.class));
                 }
             });
 
@@ -177,7 +177,7 @@ public class ProductSelectionActivity extends AppCompatActivity {
                     myPref.edit().putString("selected", "other").apply();
                     myPref.edit().putString("track", "15").apply();
                     mediaPlayer.stop();
-                    startActivity(new Intent(getApplicationContext(), FormPaintingActivity.class));
+//                    startActivity(new Intent(getApplicationContext(), FormPaintingActivity.class));
                 }
             });
 
@@ -188,7 +188,7 @@ public class ProductSelectionActivity extends AppCompatActivity {
                     myPref.edit().putString("selected", "other").apply();
                     myPref.edit().putString("track", "15").apply();
                     mediaPlayer.stop();
-                    startActivity(new Intent(getApplicationContext(), FormStolesActivity.class));
+//                    startActivity(new Intent(getApplicationContext(), FormStolesActivity.class));
                 }
             });
 
@@ -199,7 +199,7 @@ public class ProductSelectionActivity extends AppCompatActivity {
                     myPref.edit().putString("selected", "other").apply();
                     myPref.edit().putString("track", "15").apply();
                     mediaPlayer.stop();
-                    startActivity(new Intent(getApplicationContext(), FormHandkerchiefActivity.class));
+//                    startActivity(new Intent(getApplicationContext(), FormHandkerchiefActivity.class));
                 }
             });
 

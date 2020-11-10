@@ -163,22 +163,6 @@ public class AudioActivity extends AppCompatActivity {
             }
         });
 
-
-
-//        buttonStopPlayingRecording.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                buttonStop.setEnabled(false);
-//                buttonStart.setEnabled(true);
-//                buttonStopPlayingRecording.setEnabled(false);
-//                buttonPlayLastRecordAudio.setEnabled(true);
-//                if(mediaPlayer != null){
-//                    mediaPlayer.stop();
-//                    mediaPlayer.release();
-//                    MediaRecorderReady();
-//                }
-//            }
-//        });
     }
 
     private void uploadAudio() {
@@ -196,8 +180,6 @@ public class AudioActivity extends AppCompatActivity {
                 super.onPostExecute(s);
                 uploading.dismiss();
                 Toast.makeText(AudioActivity.this, s, Toast.LENGTH_LONG).show();
-//                    textViewResponse.setText(Html.fromHtml("<b>Uploaded at <a href='" + s + "'>" + s + "</a></b>"));
-//                    textViewResponse.setMovementMethod(LinkMovementMethod.getInstance());
                 mediaPlayer.stop();
                 myPref.edit().putString("track", "17").apply();
                 Intent i=new Intent(AudioActivity.this,UserChoiceActivity.class);

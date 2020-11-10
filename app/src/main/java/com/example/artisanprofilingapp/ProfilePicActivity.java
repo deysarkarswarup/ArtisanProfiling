@@ -60,7 +60,7 @@ public class ProfilePicActivity extends AppCompatActivity {
     SharedPreferences myPref;
     private String dataToGet, idToGet;
     private String ImageCountToGet;
-    private MediaPlayer mediaPlayer;
+//    private MediaPlayer mediaPlayer;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -72,9 +72,8 @@ public class ProfilePicActivity extends AppCompatActivity {
         dataToGet = myPref.getString("phone","No data found");
         idToGet = myPref.getString("id","No data found");
         ImageCountToGet = myPref.getString("count","No data found");
-        mediaPlayer = MediaPlayer.create(this, R.raw.profilepicinst);
-
-        mediaPlayer.start();
+//        mediaPlayer = MediaPlayer.create(this, R.raw.profilepicinst);
+//        mediaPlayer.start();
 
         String state = Environment.getExternalStorageState();
         if (Environment.MEDIA_MOUNTED.equals(state)) {
@@ -120,17 +119,15 @@ public class ProfilePicActivity extends AppCompatActivity {
         //img_type = "yes";
         image_name = "_"+ dataToGet + ".jpg";
         //img_type = ".jpg";
-        Log.d("msg","asche ei kane?");
+
         file = new File(Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_PICTURES)
-                + File.separator + count + image_name
-        );
+                + File.separator + count + image_name);
         Log.d("msg" , String.valueOf(file));
         file_uri = Uri.fromFile(file);
         Log.d("msg" , String.valueOf(file_uri));
     }
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-
         super.onActivityResult(requestCode, resultCode, data);
         if (requestCode == 10 && resultCode == RESULT_OK) {
             new Encode_image().execute();
@@ -178,7 +175,7 @@ public class ProfilePicActivity extends AppCompatActivity {
                     rotatedBitmap = bitmap;
             }
             bitmap = rotatedBitmap;
-  //          bitmap = BitmapFactory.decodeFile(file_uri.getPath());
+//            bitmap = BitmapFactory.decodeFile(file_uri.getPath());
 //            Log.d("hi", "doInBackground: "+bitmap.toString());
             ByteArrayOutputStream stream = new ByteArrayOutputStream();
             bitmap.compress(Bitmap.CompressFormat.JPEG, 50, stream);//compress image as per ur need
@@ -192,31 +189,25 @@ public class ProfilePicActivity extends AppCompatActivity {
         protected void onPostExecute(Void aVoid) {
             makeRequest();
             Toast.makeText(ProfilePicActivity.this, "picture submitted successfully!", Toast.LENGTH_LONG).show();
-
             myPref.edit().putString("track", "7").apply();
-            mediaPlayer.stop();
-            Intent i=new Intent(ProfilePicActivity.this, ArtformActivity.class);
+//            mediaPlayer.stop();
+            Intent i=new Intent(ProfilePicActivity.this, ProfilePicActivity2.class);
             startActivity(i);
         }
     }
 
     private void makeRequest() {
         RequestQueue requestQueue = Volley.newRequestQueue(this);
-
 //        StringRequest request = new StringRequest(Request.Method.POST, "http://192.168.43.12/Artisans-Profiling/profilepic.php",
-
         StringRequest request = new StringRequest(Request.Method.POST, "https://artisanapp.xyz/profilepic.php",
-
 
                 new Response.Listener<String>() {
                     @Override
                     public void onResponse(String response) {
-
                     }
                 }, new Response.ErrorListener() {
             @Override
             public void onErrorResponse(VolleyError error) {
-
             }
         }) {
             @Override
@@ -244,7 +235,6 @@ public class ProfilePicActivity extends AppCompatActivity {
 
 private void requestPermission() {
     int i=0;
-
     if(ActivityCompat.shouldShowRequestPermissionRationale(this, Manifest.permission.WRITE_EXTERNAL_STORAGE))
     {
         new AlertDialog.Builder(this)
@@ -270,8 +260,6 @@ private void requestPermission() {
     Log.d("check",Integer.toString(i));
 }
 
-
-
     @Override
     public void onRequestPermissionsResult(int requestCode, String permissions[], int[] grantResults) {
 //        switch (requestCode) {
@@ -293,15 +281,14 @@ private void requestPermission() {
 ////                }
 ////                break;
 //        }
-        switch (requestCode) {
 
+        switch (requestCode) {
             case 666: // Allowed was selected so Permission granted
                 if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
 
 //                    Log.d("Jhingalala", "granted");
 //                    mediaPlayer.start();
-
-                    // do your work here
+//                    do your work here
 
                 } else if (Build.VERSION.SDK_INT >= 23 && !shouldShowRequestPermissionRationale(permissions[0])) {
                     // User selected the Never Ask Again Option Change settings in app settings manually
@@ -334,7 +321,7 @@ private void requestPermission() {
                                 .setCancelable(false)
                                 .setPositiveButton("RETRY", new DialogInterface.OnClickListener() {
                                     public void onClick(DialogInterface dialog, int id) {
-                                        mediaPlayer.stop();
+//                                        mediaPlayer.stop();
                                         //ActivityCompat.requestPermissions((Activity) context, new String[]{Manifest.permission.READ_EXTERNAL_STORAGE}, Integer.parseInt(WRITE_EXTERNAL_STORAGE));
                                         Intent i = new Intent(ProfilePicActivity.this, ProfilePicActivity.class);
                                         i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK);
@@ -357,12 +344,12 @@ private void requestPermission() {
     }
     @Override
     public void onBackPressed() {
-        mediaPlayer.stop();
+//        mediaPlayer.stop();
         super.onBackPressed();
     }
     @Override
     public void onUserLeaveHint(){
-        mediaPlayer.stop();
+//        mediaPlayer.stop();
         super.onUserLeaveHint();
     }
 }

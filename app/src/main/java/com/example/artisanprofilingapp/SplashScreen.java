@@ -57,11 +57,11 @@ public class SplashScreen extends AppCompatActivity {
 //                                startActivity(i);
 //                                break;
                             case "1":
-                                i = new Intent(SplashScreen.this, NameActivity.class);
+//                                i = new Intent(SplashScreen.this, NameActivity.class);
                                 startActivity(i);
                                 break;
                             case "2":
-                                i = new Intent(SplashScreen.this, AgeActivity.class);
+//                                i = new Intent(SplashScreen.this, AgeActivity.class);
                                 startActivity(i);
                                 break;
                             case "3":
