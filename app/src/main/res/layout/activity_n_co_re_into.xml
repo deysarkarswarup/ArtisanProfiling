@@ -28,11 +28,22 @@
             android:textColor="@color/Heading"
             />
 
+        <ImageView
+            android:id="@+id/img1"
+            android:layout_width="wrap_content"
+            android:layout_height="150dp"
+            android:src="@drawable/picture"
+            android:layout_marginTop="80dp"
+            android:layout_marginBottom="50dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            />
+
         <TextView
             android:id="@+id/inst"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="80dp"
+            android:layout_marginTop="0dp"
             android:text="NCoRe এ আপনাকে স্বাগত জানাই |\n\n
 হস্তশিল্পীদের তৈরি করা প্রোডাক্টকে অনলাইনের মাধ্যমে বাজারজাত করার লক্ষ্যে আমরা কাজ করে চলেছি |\n\n
 এর জন্য আপনার অনলাইনে একটা দোকান থাকবে, যেখানে আপনি আপনার তৈরি করা প্রোডাক্ট এর ছবি এবং তার বিস্তারিত বিবরণ রাখতে পারবেন | এই অনলাইন দোকান এর সাহায্যে ক্রেতা সরাসরি আপনার এবং আপনার প্রোডাক্ট এর সম্বন্ধে জানতে পারবে |\n \n

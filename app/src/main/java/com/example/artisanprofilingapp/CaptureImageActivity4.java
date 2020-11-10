@@ -185,7 +185,7 @@ public class CaptureImageActivity4 extends AppCompatActivity {
 
             myPref.edit().putString("track", "14").apply();
             mediaPlayer.stop();
-            Intent i=new Intent(CaptureImageActivity4.this,ProductSelectionActivity.class);
+            Intent i=new Intent(CaptureImageActivity4.this,AudioActivity.class);
             startActivity(i);
         }
     }

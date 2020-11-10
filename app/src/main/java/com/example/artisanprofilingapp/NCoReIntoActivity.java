@@ -30,7 +30,7 @@ public class NCoReIntoActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                startActivity(new Intent(NCoReIntoActivity.this, UserTypeActivity.class));
+                startActivity(new Intent(NCoReIntoActivity.this, MainActivity.class));
 
             }
         });

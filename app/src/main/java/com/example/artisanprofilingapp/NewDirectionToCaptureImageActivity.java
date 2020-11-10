@@ -9,38 +9,37 @@ import android.view.View;
 import android.view.WindowManager;
 import android.widget.Button;
 
-import java.io.IOException;
-
-public class DirectionToCaptureVideoActivity extends AppCompatActivity {
+public class NewDirectionToCaptureImageActivity extends AppCompatActivity {
     private Button nextBtn;
-    private MediaPlayer mediaPlayer;
+//    private MediaPlayer mediaPlayer;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_direction_to_capture_video);
+        setContentView(R.layout.activity_new_direction_to_capture_image);
+
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         nextBtn = findViewById(R.id.nextBtn);
-        mediaPlayer = MediaPlayer.create(this, R.raw.directiontocapturevideo);
+//        mediaPlayer = MediaPlayer.create(this, R.raw.directiontocaptureimage);
 
-        mediaPlayer.start();
+//        mediaPlayer.start();
+        //At the end
         nextBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                mediaPlayer.stop();
-                startActivity(new Intent(DirectionToCaptureVideoActivity.this, DirectionToCaptureVideoActivity2.class));
-
+//                mediaPlayer.stop();
+                startActivity(new Intent(NewDirectionToCaptureImageActivity.this,DirectionToCaptureImageActivity.class));
             }
         });
-    }
 
+    }
     @Override
     public void onBackPressed() {
-        mediaPlayer.stop();
+//        mediaPlayer.stop();
         super.onBackPressed();
     }
     @Override
     public void onUserLeaveHint(){
-        mediaPlayer.stop();
+//        mediaPlayer.stop();
         super.onUserLeaveHint();
     }
 }

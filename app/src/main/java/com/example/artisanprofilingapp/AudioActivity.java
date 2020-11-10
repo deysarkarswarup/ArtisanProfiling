@@ -37,7 +37,7 @@ import static android.Manifest.permission.WRITE_EXTERNAL_STORAGE;
 public class AudioActivity extends AppCompatActivity {
     TextInputLayout name;
     EditText nam;//to show error msg
-    Button buttonStart, buttonStop, buttonPlayLastRecordAudio ;
+    Button buttonStart, buttonStop, buttonPlayLastRecordAudio,yes ;
     String AudioSavePathInDevice = null;
     MediaRecorder mediaRecorder ;
     Random random ;
@@ -62,6 +62,7 @@ public class AudioActivity extends AppCompatActivity {
         buttonStart = (Button) findViewById(R.id.button1);
         buttonStop = (Button) findViewById(R.id.button2);
         buttonPlayLastRecordAudio = (Button) findViewById(R.id.button3);
+        yes = findViewById(R.id.yes);
 
         myPref = getApplicationContext().getSharedPreferences("MyPref",MODE_PRIVATE);
         dataToGet = myPref.getString("id","No data found");
@@ -154,6 +155,39 @@ public class AudioActivity extends AppCompatActivity {
                     mediaPlayer.setDataSource(AudioSavePathInDevice);
 //                    mediaPlayer.prepare();
                     Log.d("hmm",AudioSavePathInDevice);
+                    Intent i=new Intent(AudioActivity.this,FetchingDataActivity.class);
+                    startActivity(i);
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+                //mediaPlayer.start();
+//                Toast.makeText(AudioActivity.this, "Recording Playing",
+//                        Toast.LENGTH_LONG).show();
+            }
+        });
+
+        yes.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) throws IllegalArgumentException,
+                    SecurityException, IllegalStateException {
+                buttonStop.setEnabled(false);
+                buttonStart.setEnabled(false);
+                //            buttonStopPlayingRecording.setEnabled(true);
+                mediaPlayer = new MediaPlayer();
+                try {
+                    fileName = AudioSavePathInDevice;
+                    if (!nam.getText().toString().equals("")) {
+                        PriceHolder = name.getEditText().getText().toString().trim();
+                        Log.d("hmm Priczz", PriceHolder);
+                    } else {
+                        nam.setError("আপনার প্রোডাক্টের দাম বলুন");
+                    }
+                    uploadAudio();
+                    mediaPlayer.setDataSource(AudioSavePathInDevice);
+//                    mediaPlayer.prepare();
+                    Log.d("hmm",AudioSavePathInDevice);
+                    Intent i=new Intent(AudioActivity.this,ImageCaptureSelection.class);
+                    startActivity(i);
                 } catch (IOException e) {
                     e.printStackTrace();
                 }
@@ -182,8 +216,8 @@ public class AudioActivity extends AppCompatActivity {
                 Toast.makeText(AudioActivity.this, s, Toast.LENGTH_LONG).show();
                 mediaPlayer.stop();
                 myPref.edit().putString("track", "17").apply();
-                Intent i=new Intent(AudioActivity.this,UserChoiceActivity.class);
-                startActivity(i);
+//                Intent i=new Intent(AudioActivity.this,UserChoiceActivity.class);
+//                startActivity(i);
             }
 
 

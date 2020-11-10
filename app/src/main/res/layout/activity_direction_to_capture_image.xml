@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="fill_parent"
     android:layout_height="wrap_content"
     android:orientation="vertical"
     android:fillViewport="false">
     <LinearLayout
         android:orientation="vertical"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
-        xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         tools:context=".MainActivity">
@@ -31,8 +31,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="50dp"
-            android:text="@string/directionPhotoHeading"
-            android:textSize="27sp"
+            android:text="আপনার প্রোডাক্টের ছবি সুন্দরভাবে তোলার জন্য কিছু পরামর্শ"
+            android:textSize="20sp"
             android:paddingLeft="20dp"
             android:paddingRight="20dp"
             android:textAlignment="center"
@@ -46,17 +46,79 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
-            android:text="@string/directionPhotoCapture"
-            android:textSize="25sp"
+            android:text="•	ছবি তোলার সময় ছবির পেছনের ব্যাকগ্রাউন্ড সবসময় পরিষ্কার দেওয়াল বা সাদাসিধে রাখবেন যেমন মাদুর চাটাই এসব রাখতে পারেন\n
+•	সবসময় খেয়াল রাখবেন আপনি যে প্রোডাক্ট এর ছবি তুলছেন সেটি যেন আপনার ক্যামেরার সাথে সমান্তরালভাবে থাকে \n
+•	ছবি তোলার সময় খেয়াল রাখবেন যেন আপনার প্রোডাক্টের ছবি ফটোর বেশিরভাগ অংশ জুড়ে থাকে\n
+•	ছবি তোলার সময় ক্যামেরাটি স্থির ভাবে ধরবেন \n
+•	এমনভাবে ছবিটি তুলবেন যাতে প্রোডাক্ট এর উপর পর্যাপ্ত আলো পড়ে এবং ছবিটা পরিষ্কার আসে\n
+•	ছবি তোলার সময় আপনার মোবাইল ফোনটি আড়াআড়ি ভাবে ধরবেন \n"
+            android:textSize="22sp"
             android:paddingLeft="20dp"
             android:paddingRight="20dp"
-            android:textAlignment="center"
+
             android:textColor="@color/textColor"
             android:textStyle="italic"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/img1"
+            android:layout_width="wrap_content"
+            android:layout_height="150dp"
+            android:src="@drawable/picture"
+            android:layout_marginTop="0dp"
+            android:layout_marginBottom="50dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="প্রাথমিক ধারণার জন্য নিজের ছবি গুলো লক্ষ্য করুন"
+            android:textSize="22sp"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+
+            android:textColor="@color/textColor"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="150dp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="10dp">
+                <ImageView
+                    android:layout_width="150dp"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/picture"/>
+
+                <ImageView
+                    android:layout_width="150dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="30dp"
+                    android:src="@drawable/picture" />
+
+                <ImageView
+                    android:layout_width="150dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="30dp"
+                    android:src="@drawable/picture"/>
+
+            </LinearLayout>
+        </HorizontalScrollView>
+
+
         <Button
             android:id="@+id/nextBtn"
             android:layout_width="match_parent"
@@ -68,6 +130,8 @@
             android:padding="10dp"
             android:background="@drawable/btn_round"
             android:layout_marginTop="40dp" />
+
+
     </LinearLayout>
 
 </ScrollView>

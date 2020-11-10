@@ -28,7 +28,7 @@ public class DirectionToCaptureImageActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 mediaPlayer.stop();
-                startActivity(new Intent(DirectionToCaptureImageActivity.this,DirectionToCaptureImageActivity2.class));
+                startActivity(new Intent(DirectionToCaptureImageActivity.this,ImageCaptureSelection.class));
             }
         });
 

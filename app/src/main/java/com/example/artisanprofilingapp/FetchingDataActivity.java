@@ -49,16 +49,10 @@ public class FetchingDataActivity extends AppCompatActivity {
 //                ThankYouActivity.this.finish();
 //                System.exit(0);
                     //myPref.edit().putString("track","0").apply();
-                    if (toUpdateFlag=="1")
-                    {
-                        Intent intent = new Intent(FetchingDataActivity.this, UpdateSelectionAcivity.class);
-                        startActivity(intent);
 
-                    }
-                    else {
                         Intent intent = new Intent(FetchingDataActivity.this, ThankYouActivity.class);
                         startActivity(intent);
-                    }
+
                 }
             });
 

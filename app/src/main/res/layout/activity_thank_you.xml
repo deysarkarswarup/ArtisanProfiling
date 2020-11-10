@@ -30,13 +30,33 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
             android:layout_marginTop="100dp"
-            android:paddingLeft="40dp"
-            android:paddingRight="40dp"
-            android:text="@string/ThankYou"
-            android:textColor="@color/textColor"
-            android:textSize="60sp" />
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:text="আমাদের সাথে সহযোগিতা করার জন্য আপনাকে অনেক ধন্যবাদ |"
+            android:textColor="#359A04"
+            android:textSize="35sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:text="আপনার দেওয়া তথ্যের উপর ভিত্তি করে আমরা শীঘ্রই আপনার অনলাইন দোকান তৈরি করে দেবো |
+ইতিমধ্যে যদি আপনার এই সংক্রান্ত কোন কিছু জানার প্রয়োজন হয় তাহলে অনুগ্রহ করে আমাদের ফোন বা হোয়াটসঅ্যাপ করুন এই নম্বরে"
+            android:textColor="#000"
+            android:textSize="25sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="60dp"
+            android:layout_marginRight="60dp"
+            android:text="+91-7603040606"
+            android:textColor="#000"
+            android:textSize="35sp" />
 
         <Button
             android:id="@+id/finish"
@@ -44,23 +64,11 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="90dp"
             android:layout_marginRight="90dp"
-            android:text="@string/finish"
+            android:text="ধন্যবাদ"
             android:textSize="30sp"
             android:padding="10dp"
             android:background="@drawable/btn_round"
             android:layout_marginTop="80dp" />
-
-<!--        <Button-->
-<!--            android:id="@+id/newEntry"-->
-<!--            android:layout_width="match_parent"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:layout_marginLeft="90dp"-->
-<!--            android:layout_marginRight="90dp"-->
-<!--            android:text="@string/newEntry"-->
-<!--            android:textSize="30sp"-->
-<!--            android:padding="10dp"-->
-<!--            android:background="@drawable/btn_round"-->
-<!--            android:layout_marginTop="20dp" />-->
 
     </LinearLayout>
 </ScrollView>

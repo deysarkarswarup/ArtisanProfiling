@@ -73,15 +73,15 @@ public class SplashScreen extends AppCompatActivity {
                                 startActivity(i);
                                 break;
                             case "5":
-                                i = new Intent(SplashScreen.this, ArtformActivity2.class);
+//                                i = new Intent(SplashScreen.this, ArtformActivity2.class);
                                 startActivity(i);
                                 break;
                             case "6":
-                                i = new Intent(SplashScreen.this, ArtformActivity3.class);
+//                                i = new Intent(SplashScreen.this, ArtformActivity3.class);
                                 startActivity(i);
                                 break;
                             case "7":
-                                i = new Intent(SplashScreen.this, ExperienceActivity.class);
+//                                i = new Intent(SplashScreen.this, ExperienceActivity.class);
                                 startActivity(i);
                                 break;
                             case "8":
@@ -109,7 +109,7 @@ public class SplashScreen extends AppCompatActivity {
                                 startActivity(i);
                                 break;
                             case "14":
-                                i = new Intent(SplashScreen.this, ProductSelectionActivity.class);
+//                                i = new Intent(SplashScreen.this, ProductSelectionActivity.class);
                                 startActivity(i);
                                 break;
 //                            case "16":
@@ -121,7 +121,7 @@ public class SplashScreen extends AppCompatActivity {
                                 startActivity(i);
                                 break;
                             case "17":
-                                i = new Intent(SplashScreen.this, UserChoiceActivity.class);
+//                                i = new Intent(SplashScreen.this, UserChoiceActivity.class);
                                 startActivity(i);
                                 break;
 //                            case "13":
@@ -145,7 +145,7 @@ public class SplashScreen extends AppCompatActivity {
                                 startActivity(i);
                                 break;
                             default:
-                                i = new Intent(SplashScreen.this, UserTypeActivity.class);
+//                                i = new Intent(SplashScreen.this, UserTypeActivity.class);
                                 startActivity(i);
                                 break;
                         }

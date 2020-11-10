@@ -33,7 +33,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="80dp"
-            android:text="@string/selectimageinfo"
+            android:text="আপনি আপনার যে প্রোডাক্টের ছবি তুলবেন সেটি নির্বাচন করুন"
             android:textSize="25sp"
             android:paddingLeft="20dp"
             android:paddingRight="20dp"
@@ -66,30 +66,9 @@
                 android:padding="10dp"
                 android:text="শাড়ী"
                 android:textSize="30sp" />
-            <Button
-                android:id="@+id/kurta"
-                android:layout_width="0dp"
-                android:layout_marginRight="10dp"
-                android:layout_marginLeft="10dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="0.5"
-                android:text="কুর্তা"
-                android:textSize="30sp"
-                android:padding="10dp"
-                android:background="@drawable/btn_round"
-                android:layout_marginTop="0dp" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:layout_marginBottom="20dp"
-            android:layout_alignParentBottom="true"
-            android:orientation="horizontal">
 
             <Button
-                android:id="@+id/tshirt"
+                android:id="@+id/goina"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_alignParentTop="false"
@@ -98,22 +77,9 @@
                 android:layout_weight="0.5"
                 android:background="@drawable/btn_round"
                 android:padding="10dp"
-                android:text="টি-শার্ট"
+                android:text="গয়না"
                 android:textSize="30sp" />
-            <Button
-                android:id="@+id/showPiece"
-                android:layout_width="0dp"
-                android:layout_marginRight="10dp"
-                android:layout_marginLeft="10dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="0.5"
-                android:text="শো পিস্"
-                android:textSize="30sp"
-                android:padding="10dp"
-                android:background="@drawable/btn_round"
-                android:layout_marginTop="0dp" />
         </LinearLayout>
-
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -134,30 +100,243 @@
                 android:padding="10dp"
                 android:text="ব্যাগ"
                 android:textSize="30sp" />
+
             <Button
-                android:id="@+id/goina"
+                android:id="@+id/tshirt"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="false"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_weight="0.5"
+                android:background="@drawable/btn_round"
+                android:padding="10dp"
+                android:text="টি-শার্ট"
+                android:textSize="30sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:layout_alignParentBottom="true"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/wrapperskirt"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="false"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_weight="0.5"
+                android:background="@drawable/btn_round"
+                android:padding="10dp"
+                android:text="স্কার্ট"
+                android:textSize="30sp" />
+
+            <Button
+                android:id="@+id/palazzo"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="false"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_weight="0.5"
+                android:background="@drawable/btn_round"
+                android:padding="10dp"
+                android:text="পালাজো"
+                android:textSize="30sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:layout_alignParentBottom="true"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/cushioncover"
                 android:layout_width="0dp"
                 android:layout_marginRight="10dp"
                 android:layout_marginLeft="10dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="0.5"
-                android:text="গয়না"
+                android:text="কুশন কভার"
+                android:textSize="30sp"
+                android:padding="10dp"
+                android:background="@drawable/btn_round"
+                android:layout_marginTop="0dp" />
+
+
+            <Button
+                android:id="@+id/leatherbag"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="false"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_weight="0.5"
+                android:background="@drawable/btn_round"
+                android:padding="10dp"
+                android:text="চামড়ার ব্যাগ"
+                android:textSize="30sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:layout_alignParentBottom="true"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/blousepiece"
+                android:layout_width="0dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:text="ব্লাউজ পিস্"
+                android:textSize="30sp"
+                android:padding="10dp"
+                android:background="@drawable/btn_round"
+                android:layout_marginTop="0dp" />
+
+            <Button
+                android:id="@+id/kurta"
+                android:layout_width="0dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:text="কুর্তা, কুর্তি"
+                android:textSize="30sp"
+                android:padding="10dp"
+                android:background="@drawable/btn_round"
+                android:layout_marginTop="0dp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:layout_alignParentBottom="true"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/homedecor"
+                android:layout_width="0dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:text="শো পিস্"
+                android:textSize="30sp"
+                android:padding="10dp"
+                android:background="@drawable/btn_round"
+                android:layout_marginTop="0dp" />
+
+            <Button
+                android:id="@+id/utility"
+                android:layout_width="0dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:text="ইউটিলিটি"
+                android:textSize="30sp"
+                android:padding="10dp"
+                android:background="@drawable/btn_round"
+                android:layout_marginTop="0dp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:layout_alignParentBottom="true"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/painting"
+                android:layout_width="0dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:text="পেইন্টিং"
+                android:textSize="30sp"
+                android:padding="10dp"
+                android:background="@drawable/btn_round"
+                android:layout_marginTop="0dp" />
+
+            <Button
+                android:id="@+id/stoles"
+                android:layout_width="0dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:text="স্টোল"
+                android:textSize="30sp"
+                android:padding="10dp"
+                android:background="@drawable/btn_round"
+                android:layout_marginTop="0dp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:layout_alignParentBottom="true"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/handkerchief"
+                android:layout_width="0dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:text="রুমাল"
                 android:textSize="30sp"
                 android:padding="10dp"
                 android:background="@drawable/btn_round"
                 android:layout_marginTop="0dp" />
         </LinearLayout>
-        <Button
-            android:id="@+id/others"
+
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="90dp"
-            android:layout_marginRight="90dp"
-            android:text="অন্যান্য"
-            android:textSize="30sp"
-            android:padding="10dp"
-            android:background="@drawable/btn_round"
-            android:layout_marginTop="40dp" />
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:layout_alignParentBottom="true"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/others"
+                android:layout_width="0dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:text="অন্যান্য"
+                android:textSize="30sp"
+                android:padding="10dp"
+                android:background="@drawable/btn_round"
+                android:layout_marginTop="0dp" />
+        </LinearLayout>
 
 
     </LinearLayout>
