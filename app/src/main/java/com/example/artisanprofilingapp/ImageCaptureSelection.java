@@ -52,36 +52,40 @@ public class ImageCaptureSelection extends AppCompatActivity {
                 @Override
                 public void onClick(View v) {
                     myPref.edit().putString("selected", "saree").apply();
+                    myPref.edit().putString("ProductName", "শাড়ি").apply();
                     myPref.edit().putString("track", "15").apply();
                     mediaPlayer.stop();
-//                    startActivity(new Intent(getApplicationContext(), FormSareeActivity.class));
+                    startActivity(new Intent(getApplicationContext(), Insert_image_instructionActivity.class));
                 }
             });
             goina.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     myPref.edit().putString("selected", "goina").apply();
+                    myPref.edit().putString("ProductName", "গয়না").apply();
                     myPref.edit().putString("track", "15").apply();
                     mediaPlayer.stop();
-//                    startActivity(new Intent(getApplicationContext(), FormGoinaActivity.class));
+                    startActivity(new Intent(getApplicationContext(), Insert_image_instructionActivity.class));
                 }
             });
             bag.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     myPref.edit().putString("selected", "bag").apply();
+                    myPref.edit().putString("ProductName", "ব্যাগ").apply();
                     myPref.edit().putString("track", "15").apply();
                     mediaPlayer.stop();
-//                    startActivity(new Intent(getApplicationContext(), FormBagActivity.class));
+                    startActivity(new Intent(getApplicationContext(), Insert_image_instructionActivity.class));
                 }
             });
             tshirt.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     myPref.edit().putString("selected", "tshirt").apply();
+                    myPref.edit().putString("ProductName", "টি-শার্ট").apply();
                     myPref.edit().putString("track", "15").apply();
                     mediaPlayer.stop();
-//                    startActivity(new Intent(getApplicationContext(), FormTshirtActivity.class));
+                    startActivity(new Intent(getApplicationContext(), Insert_image_instructionActivity.class));
                 }
             });
 
@@ -89,10 +93,11 @@ public class ImageCaptureSelection extends AppCompatActivity {
             wrapperskirt.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    myPref.edit().putString("selected", "other").apply();
+                    myPref.edit().putString("selected", "wrapperskirt").apply();
+                    myPref.edit().putString("ProductName", "স্কার্ট").apply();
                     myPref.edit().putString("track", "15").apply();
                     mediaPlayer.stop();
-//                    startActivity(new Intent(getApplicationContext(), FormWrapperSkirtActivity.class));
+                    startActivity(new Intent(getApplicationContext(), Insert_image_instructionActivity.class));
                 }
             });
 
@@ -100,10 +105,11 @@ public class ImageCaptureSelection extends AppCompatActivity {
             palazzo.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    myPref.edit().putString("selected", "other").apply();
+                    myPref.edit().putString("selected", "palazzo").apply();
+                    myPref.edit().putString("ProductName", "পালাজো").apply();
                     myPref.edit().putString("track", "15").apply();
                     mediaPlayer.stop();
-//                    startActivity(new Intent(getApplicationContext(), FormPalazzoActivity.class));
+                    startActivity(new Intent(getApplicationContext(), Insert_image_instructionActivity.class));
                 }
             });
 
@@ -111,10 +117,11 @@ public class ImageCaptureSelection extends AppCompatActivity {
             cushioncover.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    myPref.edit().putString("selected", "other").apply();
+                    myPref.edit().putString("selected", "cushioncover").apply();
+                    myPref.edit().putString("ProductName", "কুশন কভার").apply();
                     myPref.edit().putString("track", "15").apply();
                     mediaPlayer.stop();
-//                    startActivity(new Intent(getApplicationContext(), FormCushionCoverActivity.class));
+                    startActivity(new Intent(getApplicationContext(), Insert_image_instructionActivity.class));
                 }
             });
 
@@ -122,10 +129,11 @@ public class ImageCaptureSelection extends AppCompatActivity {
             leatherbag.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    myPref.edit().putString("selected", "other").apply();
+                    myPref.edit().putString("selected", "leatherbag").apply();
+                    myPref.edit().putString("ProductName", "চামড়ার ব্যাগ").apply();
                     myPref.edit().putString("track", "15").apply();
                     mediaPlayer.stop();
-//                    startActivity(new Intent(getApplicationContext(), FormLeatherbagActivity.class));
+                    startActivity(new Intent(getApplicationContext(), Insert_image_instructionActivity.class));
                 }
             });
 
@@ -133,10 +141,11 @@ public class ImageCaptureSelection extends AppCompatActivity {
             blousepiece.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    myPref.edit().putString("selected", "other").apply();
+                    myPref.edit().putString("selected", "blousepiece").apply();
+                    myPref.edit().putString("ProductName", "ব্লাউজ পিস").apply();
                     myPref.edit().putString("track", "15").apply();
                     mediaPlayer.stop();
-//                    startActivity(new Intent(getApplicationContext(), FormBlousepieceActivity.class));
+                    startActivity(new Intent(getApplicationContext(), Insert_image_instructionActivity.class));
                 }
             });
 
@@ -144,29 +153,32 @@ public class ImageCaptureSelection extends AppCompatActivity {
                 @Override
                 public void onClick(View v) {
                     myPref.edit().putString("selected", "kurta").apply();
+                    myPref.edit().putString("ProductName", "কুর্তা কুর্তি").apply();
                     myPref.edit().putString("track", "15").apply();
                     mediaPlayer.stop();
-//                    startActivity(new Intent(getApplicationContext(), FormKurtaActivity.class));
+                    startActivity(new Intent(getApplicationContext(), Insert_image_instructionActivity.class));
                 }
             });
 
             homedecor.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    myPref.edit().putString("selected", "showpiece").apply();
+                    myPref.edit().putString("selected", "homedecor").apply();
+                    myPref.edit().putString("ProductName", "শো-পিস").apply();
                     myPref.edit().putString("track", "15").apply();
                     mediaPlayer.stop();
-//                    startActivity(new Intent(getApplicationContext(), FormShowpieceActivity.class));
+                    startActivity(new Intent(getApplicationContext(), Insert_image_instructionActivity.class));
                 }
             });
 
             utility.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    myPref.edit().putString("selected", "other").apply();
+                    myPref.edit().putString("selected", "utility").apply();
+                    myPref.edit().putString("ProductName", "অফিস আইটেম").apply();
                     myPref.edit().putString("track", "15").apply();
                     mediaPlayer.stop();
-//                    startActivity(new Intent(getApplicationContext(), FormUtilityActivity.class));
+                    startActivity(new Intent(getApplicationContext(), Insert_image_instructionActivity.class));
                 }
             });
 
@@ -174,10 +186,11 @@ public class ImageCaptureSelection extends AppCompatActivity {
             painting.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    myPref.edit().putString("selected", "other").apply();
+                    myPref.edit().putString("selected", "painting").apply();
+                    myPref.edit().putString("ProductName", "পেইন্টিং").apply();
                     myPref.edit().putString("track", "15").apply();
                     mediaPlayer.stop();
-//                    startActivity(new Intent(getApplicationContext(), FormPaintingActivity.class));
+                    startActivity(new Intent(getApplicationContext(), Insert_image_instructionActivity.class));
                 }
             });
 
@@ -185,10 +198,11 @@ public class ImageCaptureSelection extends AppCompatActivity {
             stoles.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    myPref.edit().putString("selected", "other").apply();
+                    myPref.edit().putString("selected", "stoles").apply();
+                    myPref.edit().putString("ProductName", "স্টোল").apply();
                     myPref.edit().putString("track", "15").apply();
                     mediaPlayer.stop();
-//                    startActivity(new Intent(getApplicationContext(), FormStolesActivity.class));
+                    startActivity(new Intent(getApplicationContext(), Insert_image_instructionActivity.class));
                 }
             });
 
@@ -196,10 +210,11 @@ public class ImageCaptureSelection extends AppCompatActivity {
             handkerchief.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    myPref.edit().putString("selected", "other").apply();
+                    myPref.edit().putString("selected", "handkerchief").apply();
+                    myPref.edit().putString("ProductName", "রুমাল").apply();
                     myPref.edit().putString("track", "15").apply();
                     mediaPlayer.stop();
-//                    startActivity(new Intent(getApplicationContext(), FormHandkerchiefActivity.class));
+                    startActivity(new Intent(getApplicationContext(), Insert_image_instructionActivity.class));
                 }
             });
 
@@ -207,6 +222,7 @@ public class ImageCaptureSelection extends AppCompatActivity {
                 @Override
                 public void onClick(View v) {
                     myPref.edit().putString("selected", "other").apply();
+                    myPref.edit().putString("ProductName", "অন্যান্য").apply();
                     myPref.edit().putString("track", "15").apply();
                     mediaPlayer.stop();
                     startActivity(new Intent(getApplicationContext(), CaptureImageActivity.class));

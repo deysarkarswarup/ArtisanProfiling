@@ -32,7 +32,7 @@ public class Insert_image_instructionActivity extends AppCompatActivity {
     private static final int PERMISSION_REQUEST_CODE = 100;
     SharedPreferences myPref;
     private MediaPlayer sareemediaPlayer, kurtamediaPlayer, tshirtmediaPlayer, bagmediaPlayer, showpiecemediaPlayer, goinamediaPlayer;
-    private ImageView img1,img2,img3,img4;
+    private ImageView img1,img2,img3,img4,img5,img6,img7,img8;
     private TextView inst;
     private String selected;
     @Override
@@ -46,6 +46,10 @@ public class Insert_image_instructionActivity extends AppCompatActivity {
         img2 = findViewById(R.id.img2);
         img3 = findViewById(R.id.img3);
         img4 = findViewById(R.id.img4);
+        img5 = findViewById(R.id.img5);
+        img6 = findViewById(R.id.img6);
+        img7 = findViewById(R.id.img7);
+        img8 = findViewById(R.id.img8);
         inst = findViewById(R.id.picInstruction);
 
         sareemediaPlayer = MediaPlayer.create(this, R.raw.sareeinst);
@@ -60,16 +64,17 @@ public class Insert_image_instructionActivity extends AppCompatActivity {
         try {
             switch (selected) {
                 case "saree":
-                    inst.setText("শাড়ীর ছবি তোলার নির্দেশাবলী:-\n"+
+                    inst.setText("শাড়ির ছবি তোলার জন্য কিছু প্রাথমিক পরামর্শ\n" +
+                            "•\tপুরো শাড়িটা নিয়ে একটা ছবি তুলুন \n" +
+                            "•\tশাড়ির উপরে ডিজাইনের একটা ছবি তুলুন \n" +
+                            "•\tশাড়ির আঁচলের ডিজাইনের সামনে থেকে ছবি তুলুন\n" +
+                            "•\tশাড়ির ব্লাউজ পিস থাকলে তার একটা ছবি দিন\n" +
+                            "•\tছবিগুলো সোজা এবং পরিষ্কার করে তুলবেন \n" +
+                            "•\tছবি গুলো ঠিকঠাক আলোতে রেখে তুলবেন \n" +
+                            "•\tছবিগুলো তোলার সময় ব্যাকগ্রাউন্ড টা হালকা রঙের থাকবে \n" +
+                            "•\tছবি তোলার সময় আপনার মোবাইল ফোনটি আড়াআড়ি ভাবে ধরবেন \n" +
                             "\n" +
-                            "- শাড়ীর প্রতি টা অংশ ছবি তে পরিষ্কার ভাবে দেখা যাবে\n" +
-                            "- পুরো শাড়ী টা নিয়ে একটা ছবি তুলুন\n" +
-                            "- শাড়ীর ওপরে করা ডিজাইন টার একটা সামনে থেকে ছবি তুলুন \n" +
-                            "- ছবি গুলো সোজা করে পরিষ্কার করে তুলবেন\n" +
-                            "- ছবি গুলো ঠিকঠাক আলোতে রেখে তুলবেন\n" +
-                            "- ছবি গুলো তোলার সময়ে ব্যাকগ্রাউন্ড টা হালকা রং এর থাকবে\n"+
-                            "\n" +
-                            "শাড়ীর কয়েকটা স্যাম্পল ছবি:-");
+                            "নিচে  শাড়ির কয়েকটা স্যাম্পল ছবি দেখুন \n");
                     img1.setImageResource(R.drawable.saree1);
                     img2.setImageResource(R.drawable.saree2);
                     img3.setImageResource(R.drawable.saree3);
@@ -77,87 +82,17 @@ public class Insert_image_instructionActivity extends AppCompatActivity {
 
                     sareemediaPlayer.start();
                     break;
-                case "kurta":
-                    inst.setText("কুর্তার ছবি তোলার নির্দেশাবলী:-  \n" +
-                            "\n" +
-                            "- পুরো কুর্তা টার ছবি তুলুন, সামনে এবং পিছন থেকে \n" +
-                            "- কুর্তার ওপর করা ডিজাইন টার একটা সামনে থেকে ছবি তুলুন\n" +
-                            "- কুর্তার গলা টার একটা সামনে থেকে ছবি তুলুন\n" +
-                            "- কুর্তার হাতা দুটোর সামনে থেকে ছবি তুলুন\n" +
-                            "- ছবি গুলো সোজা করে পরিষ্কার করে তুলবেন\n" +
-                            "- ছবি গুলো ঠিকঠাক আলোতে রেখে তুলবেন\n" +
-                            "- ছবি গুলো তোলার সময়ে ব্যাকগ্রাউন্ড টা হালকা রং এর থাকবে\n" +
-                            "\n" +
-                            "কুর্তার কয়েকটা স্যাম্পল ছবি:-\n");
-                    img1.setImageResource(R.drawable.kurta1);
-                    img2.setImageResource(R.drawable.kurta2);
-                    img3.setImageResource(R.drawable.kurta3);
-                    img4.setImageResource(R.drawable.kurta4);
-//                    kurtamediaPlayer.prepare();
-                    kurtamediaPlayer.start();
-                    break;
-                case "tshirt":
-                    inst.setText("টি-শার্টের ছবি তোলার নির্দেশাবলী:-\n" +
-                            "\n" +
-                            "- পুরো টি-শার্ট টার ছবি তুলুন, সামনে এবং পিছন থেকে\n" +
-                            "- টি-শার্ট এর ওপরে করা ডিজাইন টার সামনে থেকে ছবি তুলুন\n" +
-                            "- ছবি গুলো সোজা করে পরিষ্কার করে তুলবেন\n" +
-                            "- ছবি গুলো ঠিকঠাক আলোতে রেখে তুলবেন\n" +
-                            "- ছবি গুলো তোলার সময়ে ব্যাকগ্রাউন্ড টা হালকা রং এর থাকবে\n" +
-                            "\n" +
-                            "টি-শার্টের কয়েকটা স্যাম্পল ছবি:-\n");
-                    img1.setImageResource(R.drawable.tshirt1);
-                    img2.setImageResource(R.drawable.tshirt2);
-                    img3.setVisibility(View.GONE);
-                    img4.setVisibility(View.GONE);
-//                    tshirtmediaPlayer.prepare();
-                    tshirtmediaPlayer.start();
-                    break;
-                case "showpiece":
-                    inst.setText("শো পিস্ এর ছবি তোলার নির্দেশাবলী:-\n" +
-                            "\n" +
-                            "- পুরো জিনিস টার  ছবি তুলবেন\n" +
-                            "- ছবি গুলো সোজা করে পরিষ্কার করে তুলবেন\n" +
-                            "- ছবি গুলো ঠিকঠাক আলোতে রেখে তুলবেন\n" +
-                            "- ছবি গুলো তোলার সময়ে ব্যাকগ্রাউন্ড টা হালকা রং এর থাকবে\n" +
-                            "\n" +
-                            "- কিছু স্যাম্পল ছবি:-\n");
-                    img1.setImageResource(R.drawable.showpiece1);
-                    img2.setImageResource(R.drawable.showpiece2);
-                    img3.setImageResource(R.drawable.showpiece3);
-                    img4.setImageResource(R.drawable.showpiece4);
-//                    showpiecemediaPlayer.prepare();
-                    showpiecemediaPlayer.start();
-                    break;
-                case "bag":
-                    inst.setText("ব্যাগের ছবি তোলার নির্দেশাবলী:-\n" +
-                            "\n" +
-                            "- ব্যাগের সামনে এবং পিছন থেকে ছবি তুলুন\n" +
-                            "- ব্যাগের সাইড থেকে একটা ছবি তুলুন'\n" +
-                            "- ব্যাগের ওপর করা ডিজাইন এর সামনে থেকে ছবি তুলুন\n" +
-                            "- ব্যাগ এর হ্যান্ডেল এর ছবি তুলুন\n" +
-                            "- ব্যাগ টা খুলে, ব্যাগের ভিতরের ছবি তুলুন\n" +
-                            "- ছবি গুলো সোজা করে পরিষ্কার করে তুলবেন\n" +
-                            "- ছবি গুলো ঠিকঠাক আলোতে রেখে তুলবেন\n" +
-                            "- ছবি গুলো তোলার সময়ে ব্যাকগ্রাউন্ড টা হালকা রং এর থাকবে\n" +
-                            "\n" +
-                            "ব্যাগের কিছু স্যাম্পল ছবি:-  \n");
-                    img1.setImageResource(R.drawable.bag1);
-                    img2.setImageResource(R.drawable.bag2);
-                    img3.setImageResource(R.drawable.bag3);
-                    img4.setVisibility(View.GONE);
-//                    bagmediaPlayer.prepare();
-                    bagmediaPlayer.start();
-                    break;
                 case "goina":
-                    inst.setText("গয়নার ছবি তোলার নির্দেশাবলী:-\n" +
-                            "\n" +
-                            "- পুরো গয়না টার ছবি তুলুন\n" +
-                            "- ছবি গুলো সোজা করে পরিষ্কার করে তুলবেন\n" +
-                            "- ছবি গুলো ঠিকঠাক আলোতে রেখে তুলবেন\n" +
-                            "- ছবি গুলো তোলার সময়ে ব্যাকগ্রাউন্ড টা হালকা রং এর থাকবে\n" +
-                            "\n" +
-                            "গয়নার কিছু স্যাম্পল ছবি:-\n");
+                    inst.setText("গয়নার ছবি তোলার কিছু প্রাথমিক ধারণা\n" +
+                            "•\tপুরো গয়নার সেটের একটা ছবি তুলুন।\n" +
+                            "•\tগয়নার টির বিভিন্ন দিক থেকে ছবি তুলুন।\n" +
+                            "•\tগয়নার ওপর ডিজাইনের একটা ছবি কাছ থেকে তুলুন।\n" +
+                            "•\tছবিগুলা ঠিকঠাক আলোতে রেখে তুলবেন।\n" +
+                            "•\tসবুজ পাতা বা ফুল ইত্যাদি সামগ্রী ব্যাবহার করা যেতে পারে।\n" +
+                            "•\tছবিগুলো তোলার সময় ব্যাকগ্রাউন্ড  টা হালকা রঙের থাকবে।\n" +
+                            "•\tছবিগুলো সোজা এবং পরিষ্কার করে তুলুন।\n" +
+                            "•\tছবি তোলার সময় ফোন টি আড়াআড়ি ভাবে ধরুন।\n" +
+                            "নিচে গয়নার কয়েকটি স্যাম্পল ছবি লক্ষ্য করুন\n");
                     img1.setImageResource(R.drawable.goina1);
                     img2.setImageResource(R.drawable.goina2);
                     img3.setImageResource(R.drawable.goina3);
@@ -165,6 +100,243 @@ public class Insert_image_instructionActivity extends AppCompatActivity {
 //                    goinamediaPlayer.prepare();
                     goinamediaPlayer.start();
                     break;
+                case "bag":
+                    inst.setText("ব্যাগ এর ছবি তোলার কিছু প্রাথমিক ধারণা\n" +
+                            "•\tপুরো ব্যাগটির একটি ছবি তুলুন।\n" +
+                            "•\tব্যাগটির বিভিন্ন দিক থেকে ছবি তুলুন। \n" +
+                            "•\tব্যাগ এর ওপর নকশার কাছ থেকে ছবি তুলুন। \n" +
+                            "•\tছবিগুলা ঠিকঠাক আলোতে রেখে তুলবেন।\n" +
+                            "•\tসবুজ পাতা বা ফুল ইত্যাদি সামগ্রী ব্যাবহার করা যেতে পারে।\n" +
+                            "•\tছবিগুলো তোলার সময় ব্যাকগ্রাউন্ড  টা হালকা রঙের থাকবে।\n" +
+                            "•\tছবিগুলো সোজা এবং পরিষ্কার করে তুলুন।\n" +
+                            "•\tছবি তোলার সময় ফোন টি আড়াআড়ি ভাবে ধরুন।\n" +
+                            "\n" +
+                            "নিচে ব্যাগ এর কয়েকটি স্যাম্পল ছবি লক্ষ্য করুন\n");
+                    img1.setImageResource(R.drawable.bag1);
+                    img2.setImageResource(R.drawable.bag2);
+                    img3.setImageResource(R.drawable.bag3);
+                    img4.setVisibility(View.GONE);
+//                    bagmediaPlayer.prepare();
+                    bagmediaPlayer.start();
+                    break;
+
+                case "tshirt":
+                    inst.setText("টটি-শার্ট এর ছবি তোলার কিছু প্রাথমিক ধারণা\n" +
+                            "•\tপুরো টি-শার্ট টির ছবি তুলুন।\n" +
+                            "•\tটি-শার্ট টির বিভিন্ন দিক থেকে ছবি তুলুন।\n" +
+                            "•\tটি-শার্ট এর ওপর নকশার বা আঁকা ছবির কাছ থেকে ছবি তুলুন। \n" +
+                            "•\tছবিগুলা ঠিকঠাক আলোতে রেখে তুলবেন।\n" +
+                            "•\tছবিগুলো তোলার সময় ব্যাকগ্রাউন্ড  টা হালকা রঙের থাকবে।\n" +
+                            "•\tছবিগুলো সোজা এবং পরিষ্কার করে তুলুন।\n" +
+                            "•\tছবি তোলার সময় ফোন টি আড়াআড়ি ভাবে ধরুন।\n" +
+                            "নিচে টি-শার্ট এর কয়েকটি স্যাম্পল ছবি লক্ষ্য করুন\n");
+                    img1.setImageResource(R.drawable.tshirt1);
+                    img2.setImageResource(R.drawable.tshirt2);
+                    img3.setVisibility(View.GONE);
+                    img4.setVisibility(View.GONE);
+//                    tshirtmediaPlayer.prepare();
+                    tshirtmediaPlayer.start();
+                    break;
+                case "wrapperskirt":
+                    inst.setText("স্কার্ট এর ছবি তোলার কিছু প্রাথমিক ধারণা\n" +
+                            "•\tপুরো স্কার্টটির ছবি তুলুন।\n" +
+                            "•\tস্কার্টটির বিভিন্ন দিক থেকে ছবি তুলুন।\n" +
+                            "•\tস্কার্ট এর ওপর নকশার বা আঁকা ছবির কাছ থেকে ছবি তুলুন।\n" +
+                            "•\tছবিগুলা ঠিকঠাক আলোতে রেখে তুলবেন।\n" +
+                            "•\tছবিগুলো তোলার সময় ব্যাকগ্রাউন্ড  টা হালকা রঙের থাকবে।\n" +
+                            "•\tছবিগুলো সোজা এবং পরিষ্কার করে তুলুন।\n" +
+                            "•\tছবি তোলার সময় ফোন টি আড়াআড়ি ভাবে ধরুন।\n" +
+                            "নিচে স্কার্ট এর কয়েকটি স্যাম্পল ছবি লক্ষ্য করুন\n");
+                    img1.setImageResource(R.drawable.kurta1);
+                    img2.setImageResource(R.drawable.kurta2);
+                    img3.setImageResource(R.drawable.kurta3);
+                    img4.setImageResource(R.drawable.kurta4);
+//                    kurtamediaPlayer.prepare();
+                    kurtamediaPlayer.start();
+                    break;
+                case "palazzo":
+                    inst.setText("পালাজো এর ছবি তোলার কিছু প্রাথমিক ধারণা\n" +
+                            "•\tপুরো পালাজো টির ছবি তুলুন।\n" +
+                            "•\tপালাজো টির বিভিন্ন দিক থেকে ছবি তুলুন।\n" +
+                            "•\tপালাজো এর ওপর নকশার বা আঁকা ছবির কাছ থেকে ছবি তুলুন।\n" +
+                            "•\tছবিগুলা ঠিকঠাক আলোতে রেখে তুলবেন।\n" +
+                            "•\tছবিগুলো তোলার সময় ব্যাকগ্রাউন্ড  টা হালকা রঙের থাকবে।\n" +
+                            "•\tছবিগুলো সোজা এবং পরিষ্কার করে তুলুন।\n" +
+                            "•\tছবি তোলার সময় ফোন টি আড়াআড়ি ভাবে ধরুন।\n" +
+                            "নিচে পালাজো এর কয়েকটি স্যাম্পল ছবি লক্ষ্য করুন\n");
+                    img1.setImageResource(R.drawable.showpiece1);
+                    img2.setImageResource(R.drawable.showpiece2);
+                    img3.setImageResource(R.drawable.showpiece3);
+                    img4.setImageResource(R.drawable.showpiece4);
+//                    showpiecemediaPlayer.prepare();
+                    showpiecemediaPlayer.start();
+                    break;
+
+                case "cushioncover":
+                    inst.setText("কুশন কভার এর ছবি তোলার কিছু প্রাথমিক ধারণা\n" +
+                            "•\tপুরো কুশন কভার টির ছবি তুলুন।\n" +
+                            "•\tকুশন কভার বিভিন্ন দিক থেকে ছবি তুলুন।\n" +
+                            "•\tকুশন কভার এর ওপর নকশার বা আঁকা ছবির কাছ থেকে ছবি তুলুন।\n" +
+                            "•\tছবিগুলা ঠিকঠাক আলোতে রেখে তুলবেন।\n" +
+                            "•\tছবিগুলো তোলার সময় ব্যাকগ্রাউন্ড  টা হালকা রঙের থাকবে।\n" +
+                            "•\tছবিগুলো সোজা এবং পরিষ্কার করে তুলুন।\n" +
+                            "•\tছবি তোলার সময় ফোন টি আড়াআড়ি ভাবে ধরুন।\n" +
+                            "নিচে কুশন কভার এর কয়েকটি স্যাম্পল ছবি লক্ষ্য করুন\n");
+                    img1.setImageResource(R.drawable.showpiece1);
+                    img2.setImageResource(R.drawable.showpiece2);
+                    img3.setImageResource(R.drawable.showpiece3);
+                    img4.setImageResource(R.drawable.showpiece4);
+//                    showpiecemediaPlayer.prepare();
+                    showpiecemediaPlayer.start();
+                    break;
+
+                case "leatherbag":
+                    inst.setText("চামড়ার ব্যাগ এর ছবি তোলার কিছু প্রাথমিক ধারণা\n" +
+                            "•\tপুরো ব্যাগটির একটি ছবি তুলুন।\n" +
+                            "•\tব্যাগটির বিভিন্ন দিক থেকে ছবি তুলুন। \n" +
+                            "•\tব্যাগ এর ওপর নকশার কাছ থেকে ছবি তুলুন। \n" +
+                            "•\tছবিগুলা ঠিকঠাক আলোতে রেখে তুলবেন।\n" +
+                            "•\tসবুজ পাতা বা ফুল ইত্যাদি সামগ্রী ব্যাবহার করা যেতে পারে।\n" +
+                            "•\tছবিগুলো তোলার সময় ব্যাকগ্রাউন্ড  টা হালকা রঙের থাকবে।\n" +
+                            "•\tছবিগুলো সোজা এবং পরিষ্কার করে তুলুন।\n" +
+                            "•\tছবি তোলার সময় ফোন টি আড়াআড়ি ভাবে ধরুন।\n" +
+                            "\n" +
+                            "নিচে ব্যাগ এর কয়েকটি স্যাম্পল ছবি লক্ষ্য করুন\n");
+                    img1.setImageResource(R.drawable.showpiece1);
+                    img2.setImageResource(R.drawable.showpiece2);
+                    img3.setImageResource(R.drawable.showpiece3);
+                    img4.setImageResource(R.drawable.showpiece4);
+//                    showpiecemediaPlayer.prepare();
+                    showpiecemediaPlayer.start();
+                    break;
+
+                case "blousepiece":
+                    inst.setText("ব্লাউস পিস এর ছবি তোলার কিছু প্রাথমিক ধারণা\n" +
+                            "•\tপুরো ব্লাউস পিস টির ছবি তুলুন।\n" +
+                            "•\tব্লাউস পিস বিভিন্ন দিক থেকে ছবি তুলুন।\n" +
+                            "•\tব্লাউস পিস এর ওপর নকশার বা আঁকা ছবির কাছ থেকে ছবি তুলুন।\n" +
+                            "•\tছবিগুলা ঠিকঠাক আলোতে রেখে তুলবেন।\n" +
+                            "•\tছবিগুলো তোলার সময় ব্যাকগ্রাউন্ড  টা হালকা রঙের থাকবে।\n" +
+                            "•\tছবিগুলো সোজা এবং পরিষ্কার করে তুলুন।\n" +
+                            "•\tছবি তোলার সময় ফোন টি আড়াআড়ি ভাবে ধরুন।\n" +
+                            "নিচে ব্লাউস পিস এর কয়েকটি স্যাম্পল ছবি লক্ষ্য করুন\n");
+                    img1.setImageResource(R.drawable.showpiece1);
+                    img2.setImageResource(R.drawable.showpiece2);
+                    img3.setImageResource(R.drawable.showpiece3);
+                    img4.setImageResource(R.drawable.showpiece4);
+//                    showpiecemediaPlayer.prepare();
+                    showpiecemediaPlayer.start();
+                    break;
+
+                case "kurta":
+                    inst.setText("কুর্তা/কুর্তি এর ছবি তোলার কিছু প্রাথমিক ধারণা\n" +
+                            "•\tপুরো কুর্তা/কুর্তি টির ছবি তুলুন।\n" +
+                            "•\tকুর্তা/কুর্তি বিভিন্ন দিক থেকে ছবি তুলুন।\n" +
+                            "•\tকুর্তা/কুর্তি এর ওপর নকশার বা আঁকা ছবির কাছ থেকে ছবি তুলুন।\n" +
+                            "•\tছবিগুলা ঠিকঠাক আলোতে রেখে তুলবেন।\n" +
+                            "•\tছবিগুলো তোলার সময় ব্যাকগ্রাউন্ড  টা হালকা রঙের থাকবে।\n" +
+                            "•\tছবিগুলো সোজা এবং পরিষ্কার করে তুলুন।\n" +
+                            "•\tছবি তোলার সময় ফোন টি আড়াআড়ি ভাবে ধরুন।\n" +
+                            "নিচে কুর্তা/কুর্তি এর কয়েকটি স্যাম্পল ছবি লক্ষ্য করুন\n");
+                    img1.setImageResource(R.drawable.showpiece1);
+                    img2.setImageResource(R.drawable.showpiece2);
+                    img3.setImageResource(R.drawable.showpiece3);
+                    img4.setImageResource(R.drawable.showpiece4);
+//                    showpiecemediaPlayer.prepare();
+                    showpiecemediaPlayer.start();
+                    break;
+
+                case "homedecor":
+                    inst.setText("শো-পিস এর ছবি তোলার কিছু প্রাথমিক ধারণা\n" +
+                            "•\tপুরো শো-পিস টির ছবি তুলুন।\n" +
+                            "•\tশো-পিস বিভিন্ন দিক থেকে ছবি তুলুন।\n" +
+                            "•\tশো-পিস এর ওপর নকশার বা আঁকা ছবির কাছ থেকে ছবি তুলুন।\n" +
+                            "•\tছবিগুলা ঠিকঠাক আলোতে রেখে তুলবেন।\n" +
+                            "•\tছবিগুলো তোলার সময় ব্যাকগ্রাউন্ড  টা হালকা রঙের থাকবে।\n" +
+                            "•\tছবিগুলো সোজা এবং পরিষ্কার করে তুলুন।\n" +
+                            "•\tছবি তোলার সময় ফোন টি আড়াআড়ি ভাবে ধরুন।\n" +
+                            "নিচে শো-পিস এর কয়েকটি স্যাম্পল ছবি লক্ষ্য করুন\n");
+                    img1.setImageResource(R.drawable.showpiece1);
+                    img2.setImageResource(R.drawable.showpiece2);
+                    img3.setImageResource(R.drawable.showpiece3);
+                    img4.setImageResource(R.drawable.showpiece4);
+//                    showpiecemediaPlayer.prepare();
+                    showpiecemediaPlayer.start();
+                    break;
+
+                case "utility":
+                    inst.setText("অফিস স্টেশনারি এর ছবি তোলার কিছু প্রাথমিক ধারণা\n" +
+                            "•\tপুরো অফিস স্টেশনারি টির ছবি তুলুন।\n" +
+                            "•\tঅফিস স্টেশনারি বিভিন্ন দিক থেকে ছবি তুলুন।\n" +
+                            "•\tঅফিস স্টেশনারি এর ওপর নকশার বা আঁকা ছবির কাছ থেকে ছবি তুলুন।\n" +
+                            "•\tছবিগুলা ঠিকঠাক আলোতে রেখে তুলবেন।\n" +
+                            "•\tছবিগুলো তোলার সময় ব্যাকগ্রাউন্ড  টা হালকা রঙের থাকবে।\n" +
+                            "•\tছবিগুলো সোজা এবং পরিষ্কার করে তুলুন।\n" +
+                            "•\tছবি তোলার সময় ফোন টি আড়াআড়ি ভাবে ধরুন।\n" +
+                            "নিচে অফিস স্টেশনারি এর কয়েকটি স্যাম্পল ছবি লক্ষ্য করুন\n");
+                    img1.setImageResource(R.drawable.showpiece1);
+                    img2.setImageResource(R.drawable.showpiece2);
+                    img3.setImageResource(R.drawable.showpiece3);
+                    img4.setImageResource(R.drawable.showpiece4);
+//                    showpiecemediaPlayer.prepare();
+                    showpiecemediaPlayer.start();
+                    break;
+
+                case "painting":
+                    inst.setText("পেইন্টিং এর ছবি তোলার কিছু প্রাথমিক ধারণা\n" +
+                            "•\tপুরো পেইন্টিং টির ছবি তুলুন।\n" +
+                            "•\tপেইন্টিং বিভিন্ন দিক থেকে ছবি তুলুন।\n" +
+                            "•\tপেইন্টিং এর ওপর নকশার বা আঁকা ছবির কাছ থেকে ছবি তুলুন।\n" +
+                            "•\tছবিগুলা ঠিকঠাক আলোতে রেখে তুলবেন।\n" +
+                            "•\tছবিগুলো তোলার সময় ব্যাকগ্রাউন্ড  টা হালকা রঙের থাকবে।\n" +
+                            "•\tছবিগুলো সোজা এবং পরিষ্কার করে তুলুন।\n" +
+                            "•\tছবি তোলার সময় ফোন টি আড়াআড়ি ভাবে ধরুন।\n" +
+                            "নিচে পেইন্টিং এর কয়েকটি স্যাম্পল ছবি লক্ষ্য করুন\n");
+                    img1.setImageResource(R.drawable.showpiece1);
+                    img2.setImageResource(R.drawable.showpiece2);
+                    img3.setImageResource(R.drawable.showpiece3);
+                    img4.setImageResource(R.drawable.showpiece4);
+//                    showpiecemediaPlayer.prepare();
+                    showpiecemediaPlayer.start();
+                    break;
+
+                case "stoles":
+                    inst.setText("স্টোল এর ছবি তোলার কিছু প্রাথমিক ধারণা\n" +
+                            "•\tপুরো স্টোল টির ছবি তুলুন।\n" +
+                            "•\tস্টোল বিভিন্ন দিক থেকে ছবি তুলুন।\n" +
+                            "•\tস্টোল এর ওপর নকশার বা আঁকা ছবির কাছ থেকে ছবি তুলুন।\n" +
+                            "•\tছবিগুলা ঠিকঠাক আলোতে রেখে তুলবেন।\n" +
+                            "•\tছবিগুলো তোলার সময় ব্যাকগ্রাউন্ড  টা হালকা রঙের থাকবে।\n" +
+                            "•\tছবিগুলো সোজা এবং পরিষ্কার করে তুলুন।\n" +
+                            "•\tছবি তোলার সময় ফোন টি আড়াআড়ি ভাবে ধরুন।\n" +
+                            "নিচে স্টোল এর কয়েকটি স্যাম্পল ছবি লক্ষ্য করুন\n");
+                    img1.setImageResource(R.drawable.showpiece1);
+                    img2.setImageResource(R.drawable.showpiece2);
+                    img3.setImageResource(R.drawable.showpiece3);
+                    img4.setImageResource(R.drawable.showpiece4);
+//                    showpiecemediaPlayer.prepare();
+                    showpiecemediaPlayer.start();
+                    break;
+
+                case "handkerchief":
+                    inst.setText("রুমাল এর ছবি তোলার কিছু প্রাথমিক ধারণা\n" +
+                            "•\tপুরো রুমাল টির ছবি তুলুন।\n" +
+                            "•\tরুমাল বিভিন্ন দিক থেকে ছবি তুলুন।\n" +
+                            "•\tরুমাল এর ওপর নকশার বা আঁকা ছবির কাছ থেকে ছবি তুলুন।\n" +
+                            "•\tছবিগুলা ঠিকঠাক আলোতে রেখে তুলবেন।\n" +
+                            "•\tছবিগুলো তোলার সময় ব্যাকগ্রাউন্ড  টা হালকা রঙের থাকবে।\n" +
+                            "•\tছবিগুলো সোজা এবং পরিষ্কার করে তুলুন।\n" +
+                            "•\tছবি তোলার সময় ফোন টি আড়াআড়ি ভাবে ধরুন।\n" +
+                            "নিচে রুমাল এর কয়েকটি স্যাম্পল ছবি লক্ষ্য করুন\n");
+                    img1.setImageResource(R.drawable.showpiece1);
+                    img2.setImageResource(R.drawable.showpiece2);
+                    img3.setImageResource(R.drawable.showpiece3);
+                    img4.setImageResource(R.drawable.showpiece4);
+//                    showpiecemediaPlayer.prepare();
+                    showpiecemediaPlayer.start();
+                    break;
+
+
                 default:
                     Toast.makeText(getApplicationContext(), "Some Error Occured!", Toast.LENGTH_LONG).show();
             }
