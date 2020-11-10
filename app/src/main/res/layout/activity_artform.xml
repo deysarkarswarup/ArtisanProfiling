@@ -28,11 +28,25 @@
 
         android:textColor="@color/Heading"
         />
-
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="100dp"
+        android:text="আপনার শিল্প কর্ম সম্বন্ধে আমাদের জানান"
+        android:textSize="25sp"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:textColor="@color/textColor"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
         android:text="@string/artformString"
         android:textSize="25sp"
         android:paddingLeft="20dp"
@@ -44,24 +58,174 @@
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/txtVw"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_marginTop="50dp"
-        android:text="শিল্প:"
-        android:textStyle="bold"
-        android:textSize="25dp" />
-    <Spinner
-        android:id="@+id/spinner"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:layout_gravity="center"
-        android:layout_alignBottom="@+id/txtVw"
-        android:layout_toRightOf="@+id/txtVw" />
 
+
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:id="@+id/radioGroup2"
+        >
+        <RadioButton
+            android:id="@+id/radio1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="কাঁথাস্টিচ"
+            android:layout_marginTop="15dp"
+            android:textSize="20dp" />
+
+        <RadioButton
+            android:id="@+id/radio2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="বাটিক প্রিন্ট"
+            android:layout_marginTop="5dp"
+            android:textSize="20dp" />
+        <RadioButton
+            android:id="@+id/radio3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="চামড়ার কাজ"
+            android:layout_marginTop="5dp"
+            android:textSize="20dp" />
+
+        <RadioButton
+            android:id="@+id/radio4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="জুয়েলারি"
+            android:layout_marginTop="5dp"
+            android:textSize="20dp" />
+
+        <RadioButton
+            android:id="@+id/radio5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="অন্যান্য শিল্প কর্ম"
+            android:layout_marginTop="5dp"
+            android:textSize="20dp" />
+    </RadioGroup>
+
+
+    <TextView
+        android:id="@+id/inst"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:text="@string/uworkalone"
+        android:textSize="25sp"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:textColor="@color/textColor"
+        android:textStyle="italic"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:id="@+id/radioGroup"
+        >
+        <RadioButton
+            android:id="@+id/yes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/haaa"
+            android:layout_marginTop="20dp"
+            android:textSize="20dp" />
+
+        <RadioButton
+            android:id="@+id/no"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/naa"
+            android:layout_marginTop="5dp"
+            android:textSize="20dp" />
+
+    </RadioGroup>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:text="আপনি কত বছর ধরে এই কাজ করছেন?"
+        android:textSize="25sp"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:textColor="@color/textColor"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/experi"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_marginTop="50dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="0dp"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox" >
+
+        <EditText
+            android:id="@+id/nam"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/expHint"
+            android:maxLength="5"
+            android:inputType="number"
+            />
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:text="আপনি কি কোনো সংস্থার সদস্য? (যেমন কোপাই চারুলতা ওয়েলফেয়ার সোসাইটি, আমার কুঠি, ইত্যাদি)"
+        android:textSize="25sp"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:textColor="@color/textColor"
+        android:textStyle="italic"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:id="@+id/radioGroup1"
+        >
+
+        <RadioButton
+            android:id="@+id/yes1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="হ্যাঁ"
+            android:layout_marginTop="5dp"
+            android:textSize="20dp" />
+
+        <RadioButton
+            android:id="@+id/no1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="না"
+            android:layout_marginTop="5dp"
+            android:textSize="20dp" />
+    </RadioGroup>
 
     <Button
         android:id="@+id/submitBtn"
@@ -72,8 +236,9 @@
         android:text="@string/submit"
         android:textSize="30sp"
         android:padding="10dp"
+
         android:background="@drawable/btn_round"
-        android:layout_marginTop="90dp" />
+        android:layout_marginTop="40dp" />
 
 </LinearLayout>
 </ScrollView>
