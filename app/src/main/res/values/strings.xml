@@ -1,0 +1,68 @@
+<resources>
+    <string name="app_name">Artisan Profiling App</string>
+    <string name="address">নিচে আপনার ঠিকানা টাইপ করুন</string>
+    <string name="addHint">ঠিকানা</string>
+    <string name="submit">জমা দিন</string>
+    <string name="art_form">নিচে আপনার শিল্প আকৃতি টাইপ করুন</string>
+    <string name="art_form_hint">শিল্প আকৃতি</string>
+    <string name="expHint">অভিজ্ঞতা</string>
+    <string name="exp">নিচে আপনার অভিজ্ঞতা টাইপ করুন</string>
+    <string name="phone">নিচে আপনার ফোন নম্বর টাইপ করুন</string>
+    <string name="phoneHint">ফোন নম্বর</string>
+    <string name="name">নিচে আপনার নাম টাইপ করুন</string>
+    <string name="nameHint">নাম</string>
+    <string name="next">পরবর্তী</string>
+    <string name="takeAgain">আবার নিন</string>
+    <string name="yes">হ্যাঁ</string>
+    <string name="No">না</string>
+    <string name="more_pictures">আপনি কি আরো ছবি তুলতে চান?</string>
+    <string name="ClickImage">নিচে ক্যামেরা বাটন টিপুন ছবি তোলার জন্য</string>
+    <string name="CLickVideo">নিচে ক্যামেরা বাটন টিপুন আপনার পরিচিতি ভিডিও তোলার জন্য</string>
+    <string name="finish">শেষ করুন</string>
+    <string name="newEntry">নতুন তথ্য</string>
+    <string name="ThankYou">ধন্যবাদ..</string>
+    <string name="artformVideo">নিচে ক্যামেরা বাটন টিপুন আপনার প্রোডাক্ট ভিডিও তোলার জন্য</string>
+    <string name="selectimageinfo">আপনি এবার আপনার নিজের তৈরী জিনিস গুলোর ফটো তুলবেন. আপনার তৈরী জিনিস টা কোন প্রকারের?</string>
+    <string name="zilla">জেলা</string>
+    <string name="address1">ঠিকানা ১</string>
+    <string name="address2">ঠিকানা ২</string>
+    <string name="pincode">পিনকোড</string>
+    <string name="landmark">ল্যান্ডমার্ক</string>
+    <string name="instt">কতদিন ধরে এই এলাকায় থাকছেন?</string>
+    <string name="agee">নিচে আপনার বয়স টাইপ করুন</string>
+    <string name="aiu">বয়স</string>
+    <string name="artformString">আপনি কোন শিল্প নিয়ে কাজ করেন?</string>
+    <string name="silpoo">আপনি কোথা থেকে এই শিল্প শিখেছেন?</string>
+    <string name="typehere">এখানে লিখুন</string>
+    <string name="howmany">কত জন নিযুক্ত করেছেন?</string>
+    <string name="naa">না, লোক নিযুক্ত করেছি</string>
+    <string name="haaa">হ্যাঁ, একাই কাজ করি</string>
+    <string name="uworkalone">আপনি কি একাই এই কাজ করেন নাকি কোন লোক নিযুক্ত করেছেন আপনার সাথে কাজ করার জন্য?</string>
+    <string name="artformvideoinstn">ভিডিও তোলার নির্দেশাবলী:-\n \n - পুরো ভিডিও টা ২-৩ মিনিটের হবে\n - আপনার পরিচিত কাউকে ভিডিও তা তুলে দিতে অনুরোধ করুন\n - ভিডিও যেন পর্যাপ্ত আলোয় তোলা হয়\n - আপনার কাজের সম্বন্ধে বলবেন\n - আপনি কাজ করছেন এরকম অবস্থায় খানিক্ষন আপনার ভিডিও তুলবেন\n - আপনার ভিডিও তে আপনি আপনার তৈরী জিনিস দেখাচ্ছেন, এরকম কিছু অংশ তুলবেন\n</string>
+    <string name="capturepicinstn">ছবি তোলার নির্দেশাবলী:-</string>
+    <string name="videocaptureinstnn">ভিডিও তোলার নির্দেশাবলী:-\n \n - পুরো ভিডিও টা ২-৩ মিনিটের হবে\n - আপনার পরিচিত কাউকে ভিডিও তা তুলে দিতে অনুরোধ করুন\n - ভিডিও যেন পর্যাপ্ত আলোয় তোলা হয়\n - আপনার ভিডিও তে খানিক্ষন আপনি নিজের পরিচিতি দেবেন</string>
+    <string name="profilepicinstn">নিচে ক্যামেরা বাটন টিপুন আপনার ছবি তোলার জন্য</string>
+    <string name="user_type">আপনি কি নতুন রেজিস্ট্রেশন করতে চান নাকি পুরোনো তথ্য আপডেট করতে চান ?</string>
+    <string name="register">রেজিস্টার</string>
+    <string name="update">আপডেট</string>
+    <string name="updateSelection">আপনি কি পাল্টাতে চান?</string>
+    <string name="phoneNo">ফোন নম্বর</string>
+    <string name="nam">নাম</string>
+    <string name="ageupdate">বয়স</string>
+    <string name="addressupdate">ঠিকানা</string>
+    <string name="directionPhotoHeading">বাড়িতে ফটো তোলার জন্য কিছু নির্দেশ</string>
+    <string name="directionPhotoCapture">- ফটো তলার সময় খেয়াল রাখবেন যেন ছবির দুই তৃতীয়াংশে পন্যের ছবি থাকে এবং বাকি এক তৃতীয়াংশ জায়গা যেন ফাঁকা থাকে\n - আপনার ছবির পেছনের ব্যাকগ্রাউন্ড হবে সাধাসিধে, পরিস্কার দেওয়াল অথবা কোন বিশেষ টেক্সচার যেমন মাদুর/ চাটাই\n
+        - যে জিনিস টার ছবি তুলছেন সেটি যেন আপনার ক্যামেরার সাথে সমান্তরাল ভাবে থাকে বা আপনার চোখের লেভেলে থাকে\n - এমন ভাবে ছবি তুলবেন যাতে ফটোর বেশিরভাগ অংশ জুড়ে যেন পন্যের ছবিটি থাকে\n
+        - এমন ভাবে ছবি তুলবেন যাতে পন্যের ছবিটি পরিস্কার আসে\n - সকালের দিকে আথবা বিকেলের দিকে ছবি তুললে সবচেয়ে ভাল ছবি ওঠে\n - আপনার মোবাইলের ফ্ল্যাশ রেঞ্জ কত জেনে নিন। সাধারনত, মোবাইলের ফ্ল্যাশ রেঞ্জ ৫ ফুটের কম হয়\n
+        - কোন পন্যের ছবি তোলার সময় হরাইজন্টাল এবং ভারটিকাল দুটি দিকই যেন দেখা যায়\n - ক্যামেরাটি স্থির ভাবে ধরবেন । দেখবেন ক্যামেরা যেন ছবি তোলার সময় নড়ে না যায়
+</string>
+    <string name="directionVideoHeading">মোবাইলে কিভাবে ভিডিও তুলবেন</string>
+    <string name="directionVideoCapture">- শুটিং  এর সময় হাত না কেঁপে  যায় | শুটিং  এর সময় হাতের তলায় সাপোর্ট দেবেন, এছারা, শ্বাস প্রশ্বাস ওই সময়টুকুর জন্য ধরে রাখবেন\n
+        - বিষয় বস্তুর বিভিন্ন দিক থেকে শট নেবেন । কেবল একদিক থেকে সোজাসুজি শট নিলে দেখতে একঘেয়ে লাগে\n
+        - অনর্থক বার বার প্যান বা জুম করবেন না তাতে আসল বিষয়ের থেকে দৃষ্টি ঘুরে যায়\n
+        - ভিডিও তে ছবির ঔজ্জল্য অনুজায়ী এক্সপোসার দেবেন\n
+        - সকালের দিকে আথবা বিকেলের দিকে ছবি তুললে সবচেয়ে ভাল ছবি ওঠে\n
+        - বেশি লাইট থাকলে ভাল ভিডিও ওঠে। ভিডিও তোলার সময় মাথার ওপর লাইট রাখবেন না\n
+        - খেয়াল রাখবেন সাউন্ড কোয়ালিটি যেন ভাল হয় | ভাল কোয়ালিটির সাউন্ড থাকলে ভিডিও দেখতে ভাল লাগে।
+</string>
+</resources>

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:fillViewport="false">
+    <LinearLayout
+        android:orientation="vertical"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:orientation="horizontal"
+            android:background="@drawable/top_gradient"/>
+        <TextView
+            android:layout_marginTop="-60dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/app_name"
+            android:textSize="30sp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:textColor="@color/Heading"
+            />
+
+        <TextView
+            android:id="@+id/inst"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="80dp"
+            android:text="NCoRe এ আপনাকে স্বাগত জানাই |\n\n
+হস্তশিল্পীদের তৈরি করা প্রোডাক্টকে অনলাইনের মাধ্যমে বাজারজাত করার লক্ষ্যে আমরা কাজ করে চলেছি |\n\n
+এর জন্য আপনার অনলাইনে একটা দোকান থাকবে, যেখানে আপনি আপনার তৈরি করা প্রোডাক্ট এর ছবি এবং তার বিস্তারিত বিবরণ রাখতে পারবেন | এই অনলাইন দোকান এর সাহায্যে ক্রেতা সরাসরি আপনার এবং আপনার প্রোডাক্ট এর সম্বন্ধে জানতে পারবে |\n \n
+অনলাইনে আপনার দোকান তৈরি করার জন্য আপনাকে কিছু তথ্য জানাতে হবে, যাতে আমরা অনলাইনে আপনার দোকানটি খুলতে পারি | \n \n
+আমাদের এই প্রচেষ্টায় যোগদান করার জন্য অনুগ্রহ করে রেজিস্টার করুন |
+"
+            android:textSize="25sp"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:textColor="@color/textColor"
+            android:textStyle="italic"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/submitBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="90dp"
+            android:layout_marginRight="90dp"
+            android:text="রেজিস্টার"
+            android:textSize="30sp"
+            android:padding="10dp"
+            android:background="@drawable/btn_round"
+            android:layout_marginTop="50dp" />
+
+    </LinearLayout>
+</ScrollView>
