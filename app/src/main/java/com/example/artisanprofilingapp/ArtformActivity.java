@@ -69,7 +69,7 @@ public class ArtformActivity extends AppCompatActivity {
 //
 //        mediaPlayer.start();
 
-        radioGroup = (RadioGroup) findViewById(R.id.radioGroup1);
+        radioGroup = (RadioGroup) findViewById(R.id.radioGroup);
         radioGroup.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup group, int checkedId) {
@@ -171,7 +171,7 @@ public class ArtformActivity extends AppCompatActivity {
                 String myurl = "https://artisanapp.xyz/newartform.php?typeOfSilpo=" + typeOfSilpo+"&hascoworker="+ yesOrNo
                         +"&experience="+DataHolder+"&orgmember="+yesOrNo1 +"&id="+idToGet;
 
-
+Log.d("msg",myurl);
 
                 RequestQueue queue = Volley.newRequestQueue(getApplicationContext());
                 StringRequest stringRequest = new StringRequest(Request.Method.GET, myurl,
