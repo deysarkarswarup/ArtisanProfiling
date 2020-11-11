@@ -21,7 +21,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".UpdateChooseActivity"></activity>
+        <activity android:name=".EditArtformActivity"></activity>
+        <activity android:name=".EditExperienceActivity" />
+        <activity android:name=".EditAddressActivity" />
+        <activity android:name=".EditAgeActivity" />
+        <activity android:name=".UpdateChooseActivity" />
         <activity android:name=".WelcomeActivity" />
         <activity
             android:name=".NewDirectionToCaptureImageActivity"

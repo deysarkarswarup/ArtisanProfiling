@@ -58,7 +58,7 @@ public class ProfilePicActivity extends AppCompatActivity {
     private File file;
     private Uri file_uri;
     SharedPreferences myPref;
-    private String dataToGet, idToGet;
+    private String dataToGet, idToGet, updateProfile="";
     private String ImageCountToGet;
 //    private MediaPlayer mediaPlayer;
 
@@ -70,6 +70,7 @@ public class ProfilePicActivity extends AppCompatActivity {
         button = (Button) findViewById(R.id.start);
         myPref = getApplicationContext().getSharedPreferences("MyPref",MODE_PRIVATE);
         dataToGet = myPref.getString("phone","No data found");
+        updateProfile = myPref.getString("updateProfile","No data found");
         idToGet = myPref.getString("id","No data found");
         ImageCountToGet = myPref.getString("count","No data found");
 //        mediaPlayer = MediaPlayer.create(this, R.raw.profilepicinst);
@@ -186,9 +187,16 @@ public class ProfilePicActivity extends AppCompatActivity {
             makeRequest();
             Toast.makeText(ProfilePicActivity.this, "picture submitted successfully!", Toast.LENGTH_LONG).show();
             myPref.edit().putString("track", "7").apply();
+            updateProfile = myPref.getString("updateProfile","No data found");
 //            mediaPlayer.stop();
-            Intent i=new Intent(ProfilePicActivity.this, ProfilePicActivity2.class);
-            startActivity(i);
+            if (updateProfile.equals("1")){
+                Intent i = new Intent(ProfilePicActivity.this, WelcomeActivity.class);
+                startActivity(i);
+            }
+            else {
+                Intent i = new Intent(ProfilePicActivity.this, ProfilePicActivity2.class);
+                startActivity(i);
+            }
         }
     }
 
