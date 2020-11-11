@@ -78,8 +78,11 @@ public class Insert_image_instructionActivity extends AppCompatActivity {
                     img1.setImageResource(R.drawable.saree1);
                     img2.setImageResource(R.drawable.saree2);
                     img3.setImageResource(R.drawable.saree3);
-                    img4.setVisibility(View.GONE);
-
+                    img4.setImageResource(R.drawable.saree4);
+                    img5.setImageResource(R.drawable.saree5);
+                    img6.setImageResource(R.drawable.saree6);
+                    img7.setImageResource(R.drawable.saree7);
+                    img8.setImageResource(R.drawable.saree8);
                     sareemediaPlayer.start();
                     break;
                 case "goina":
@@ -93,11 +96,14 @@ public class Insert_image_instructionActivity extends AppCompatActivity {
                             "•\tছবিগুলো সোজা এবং পরিষ্কার করে তুলুন।\n" +
                             "•\tছবি তোলার সময় ফোন টি আড়াআড়ি ভাবে ধরুন।\n" +
                             "নিচে গয়নার কয়েকটি স্যাম্পল ছবি লক্ষ্য করুন\n");
-                    img1.setImageResource(R.drawable.goina1);
-                    img2.setImageResource(R.drawable.goina2);
-                    img3.setImageResource(R.drawable.goina3);
-                    img4.setVisibility(View.GONE);
-//                    goinamediaPlayer.prepare();
+                    img1.setImageResource(R.drawable.jewellery1);
+                    img2.setImageResource(R.drawable.jewellery2);
+                    img3.setImageResource(R.drawable.jewellery3);
+                    img4.setImageResource(R.drawable.jewellery4);
+                    img5.setImageResource(R.drawable.jewellery5);
+                    img6.setImageResource(R.drawable.jewellery6);
+                    img7.setVisibility(View.GONE);
+                    img8.setVisibility(View.GONE);
                     goinamediaPlayer.start();
                     break;
                 case "bag":
@@ -115,7 +121,13 @@ public class Insert_image_instructionActivity extends AppCompatActivity {
                     img1.setImageResource(R.drawable.bag1);
                     img2.setImageResource(R.drawable.bag2);
                     img3.setImageResource(R.drawable.bag3);
-                    img4.setVisibility(View.GONE);
+                    img4.setImageResource(R.drawable.bag4);
+                    img5.setImageResource(R.drawable.bag5);
+                    img6.setImageResource(R.drawable.bag6);
+                    img7.setImageResource(R.drawable.bag7);
+                    img8.setImageResource(R.drawable.bag8);
+//                    img7.setVisibility(View.GONE);
+//                    img8.setVisibility(View.GONE);
 //                    bagmediaPlayer.prepare();
                     bagmediaPlayer.start();
                     break;
@@ -132,9 +144,14 @@ public class Insert_image_instructionActivity extends AppCompatActivity {
                             "নিচে টি-শার্ট এর কয়েকটি স্যাম্পল ছবি লক্ষ্য করুন\n");
                     img1.setImageResource(R.drawable.tshirt1);
                     img2.setImageResource(R.drawable.tshirt2);
-                    img3.setVisibility(View.GONE);
-                    img4.setVisibility(View.GONE);
-//                    tshirtmediaPlayer.prepare();
+                    img3.setImageResource(R.drawable.tshirt3);
+                    img4.setImageResource(R.drawable.tshirt4);
+                    img5.setImageResource(R.drawable.tshirt5);
+                    img6.setImageResource(R.drawable.tshirt6);
+                    img7.setImageResource(R.drawable.tshirt7);
+                    img8.setImageResource(R.drawable.tshirt8);
+//                    img7.setVisibility(View.GONE);
+//                    img8.setVisibility(View.GONE);
                     tshirtmediaPlayer.start();
                     break;
                 case "wrapperskirt":
@@ -151,6 +168,12 @@ public class Insert_image_instructionActivity extends AppCompatActivity {
                     img2.setImageResource(R.drawable.kurta2);
                     img3.setImageResource(R.drawable.kurta3);
                     img4.setImageResource(R.drawable.kurta4);
+                    img5.setImageResource(R.drawable.kurta5);
+                    img6.setImageResource(R.drawable.kurta6);
+//                    img7.setImageResource(R.drawable.bag7);
+//                    img8.setImageResource(R.drawable.bag8);
+                    img7.setVisibility(View.GONE);
+                    img8.setVisibility(View.GONE);
 //                    kurtamediaPlayer.prepare();
                     kurtamediaPlayer.start();
                     break;
@@ -164,11 +187,16 @@ public class Insert_image_instructionActivity extends AppCompatActivity {
                             "•\tছবিগুলো সোজা এবং পরিষ্কার করে তুলুন।\n" +
                             "•\tছবি তোলার সময় ফোন টি আড়াআড়ি ভাবে ধরুন।\n" +
                             "নিচে পালাজো এর কয়েকটি স্যাম্পল ছবি লক্ষ্য করুন\n");
-                    img1.setImageResource(R.drawable.showpiece1);
-                    img2.setImageResource(R.drawable.showpiece2);
-                    img3.setImageResource(R.drawable.showpiece3);
-                    img4.setImageResource(R.drawable.showpiece4);
-//                    showpiecemediaPlayer.prepare();
+                    img1.setImageResource(R.drawable.palazzo1);
+                    img2.setImageResource(R.drawable.palazzo2);
+                    img3.setImageResource(R.drawable.palazzo3);
+                    img4.setImageResource(R.drawable.palazzo4);
+                    img5.setImageResource(R.drawable.palazzo5);
+                    img6.setImageResource(R.drawable.palazzo6);
+//                    img7.setImageResource(R.drawable.bag7);
+//                    img8.setImageResource(R.drawable.bag8);
+                    img7.setVisibility(View.GONE);
+                    img8.setVisibility(View.GONE);
                     showpiecemediaPlayer.start();
                     break;
 
@@ -182,11 +210,16 @@ public class Insert_image_instructionActivity extends AppCompatActivity {
                             "•\tছবিগুলো সোজা এবং পরিষ্কার করে তুলুন।\n" +
                             "•\tছবি তোলার সময় ফোন টি আড়াআড়ি ভাবে ধরুন।\n" +
                             "নিচে কুশন কভার এর কয়েকটি স্যাম্পল ছবি লক্ষ্য করুন\n");
-                    img1.setImageResource(R.drawable.showpiece1);
-                    img2.setImageResource(R.drawable.showpiece2);
-                    img3.setImageResource(R.drawable.showpiece3);
-                    img4.setImageResource(R.drawable.showpiece4);
-//                    showpiecemediaPlayer.prepare();
+                    img1.setImageResource(R.drawable.cushion2);
+                    img2.setImageResource(R.drawable.cushion3);
+                    img3.setImageResource(R.drawable.cushion4);
+                    img4.setImageResource(R.drawable.cushion5);
+                    img5.setImageResource(R.drawable.cushion6);
+                    img6.setImageResource(R.drawable.cushion7);
+//                    img7.setImageResource(R.drawable.bag7);
+//                    img8.setImageResource(R.drawable.bag8);
+                    img7.setVisibility(View.GONE);
+                    img8.setVisibility(View.GONE);
                     showpiecemediaPlayer.start();
                     break;
 
@@ -202,11 +235,16 @@ public class Insert_image_instructionActivity extends AppCompatActivity {
                             "•\tছবি তোলার সময় ফোন টি আড়াআড়ি ভাবে ধরুন।\n" +
                             "\n" +
                             "নিচে ব্যাগ এর কয়েকটি স্যাম্পল ছবি লক্ষ্য করুন\n");
-                    img1.setImageResource(R.drawable.showpiece1);
-                    img2.setImageResource(R.drawable.showpiece2);
-                    img3.setImageResource(R.drawable.showpiece3);
-                    img4.setImageResource(R.drawable.showpiece4);
-//                    showpiecemediaPlayer.prepare();
+//                    img1.setImageResource(R.drawable.cushion2);
+//                    img2.setImageResource(R.drawable.cushion3);
+//                    img3.setImageResource(R.drawable.cushion4);
+//                    img4.setImageResource(R.drawable.cushion5);
+//                    img5.setImageResource(R.drawable.cushion6);
+//                    img6.setImageResource(R.drawable.cushion7);
+////                    img7.setImageResource(R.drawable.bag7);
+////                    img8.setImageResource(R.drawable.bag8);
+//                    img7.setVisibility(View.GONE);
+//                    img8.setVisibility(View.GONE);
                     showpiecemediaPlayer.start();
                     break;
 
@@ -220,11 +258,16 @@ public class Insert_image_instructionActivity extends AppCompatActivity {
                             "•\tছবিগুলো সোজা এবং পরিষ্কার করে তুলুন।\n" +
                             "•\tছবি তোলার সময় ফোন টি আড়াআড়ি ভাবে ধরুন।\n" +
                             "নিচে ব্লাউস পিস এর কয়েকটি স্যাম্পল ছবি লক্ষ্য করুন\n");
-                    img1.setImageResource(R.drawable.showpiece1);
-                    img2.setImageResource(R.drawable.showpiece2);
-                    img3.setImageResource(R.drawable.showpiece3);
-                    img4.setImageResource(R.drawable.showpiece4);
-//                    showpiecemediaPlayer.prepare();
+                    img1.setImageResource(R.drawable.blouse1);
+                    img2.setImageResource(R.drawable.blouse2);
+                    img3.setImageResource(R.drawable.blouse3);
+                    img4.setImageResource(R.drawable.blouse4);
+                    img5.setImageResource(R.drawable.blouse5);
+                    img6.setImageResource(R.drawable.blouse6);
+//                    img7.setImageResource(R.drawable.bag7);
+//                    img8.setImageResource(R.drawable.bag8);
+                    img7.setVisibility(View.GONE);
+                    img8.setVisibility(View.GONE);
                     showpiecemediaPlayer.start();
                     break;
 
@@ -238,11 +281,16 @@ public class Insert_image_instructionActivity extends AppCompatActivity {
                             "•\tছবিগুলো সোজা এবং পরিষ্কার করে তুলুন।\n" +
                             "•\tছবি তোলার সময় ফোন টি আড়াআড়ি ভাবে ধরুন।\n" +
                             "নিচে কুর্তা/কুর্তি এর কয়েকটি স্যাম্পল ছবি লক্ষ্য করুন\n");
-                    img1.setImageResource(R.drawable.showpiece1);
-                    img2.setImageResource(R.drawable.showpiece2);
-                    img3.setImageResource(R.drawable.showpiece3);
-                    img4.setImageResource(R.drawable.showpiece4);
-//                    showpiecemediaPlayer.prepare();
+                    img1.setImageResource(R.drawable.kurta1);
+                    img2.setImageResource(R.drawable.kurta2);
+                    img3.setImageResource(R.drawable.kurta3);
+                    img4.setImageResource(R.drawable.kurta4);
+                    img5.setImageResource(R.drawable.kurta5);
+                    img6.setImageResource(R.drawable.kurta6);
+//                    img7.setImageResource(R.drawable.bag7);
+//                    img8.setImageResource(R.drawable.bag8);
+                    img7.setVisibility(View.GONE);
+                    img8.setVisibility(View.GONE);
                     showpiecemediaPlayer.start();
                     break;
 
@@ -259,8 +307,13 @@ public class Insert_image_instructionActivity extends AppCompatActivity {
                     img1.setImageResource(R.drawable.showpiece1);
                     img2.setImageResource(R.drawable.showpiece2);
                     img3.setImageResource(R.drawable.showpiece3);
-                    img4.setImageResource(R.drawable.showpiece4);
-//                    showpiecemediaPlayer.prepare();
+                    img4.setVisibility(View.GONE);
+                    img5.setVisibility(View.GONE);
+                    img6.setVisibility(View.GONE);
+//                    img7.setImageResource(R.drawable.bag7);
+//                    img8.setImageResource(R.drawable.bag8);
+                    img7.setVisibility(View.GONE);
+                    img8.setVisibility(View.GONE);
                     showpiecemediaPlayer.start();
                     break;
 
@@ -274,11 +327,16 @@ public class Insert_image_instructionActivity extends AppCompatActivity {
                             "•\tছবিগুলো সোজা এবং পরিষ্কার করে তুলুন।\n" +
                             "•\tছবি তোলার সময় ফোন টি আড়াআড়ি ভাবে ধরুন।\n" +
                             "নিচে অফিস স্টেশনারি এর কয়েকটি স্যাম্পল ছবি লক্ষ্য করুন\n");
-                    img1.setImageResource(R.drawable.showpiece1);
-                    img2.setImageResource(R.drawable.showpiece2);
-                    img3.setImageResource(R.drawable.showpiece3);
-                    img4.setImageResource(R.drawable.showpiece4);
-//                    showpiecemediaPlayer.prepare();
+                    img1.setImageResource(R.drawable.utility1);
+                    img2.setImageResource(R.drawable.utility2);
+                    img3.setImageResource(R.drawable.utility3);
+                    img4.setImageResource(R.drawable.utility4);
+                    img5.setImageResource(R.drawable.utility5);
+                    img6.setImageResource(R.drawable.utility6);
+                    img7.setImageResource(R.drawable.utility7);
+                    img8.setImageResource(R.drawable.utility8);
+//                    img7.setVisibility(View.GONE);
+//                    img8.setVisibility(View.GONE);
                     showpiecemediaPlayer.start();
                     break;
 
@@ -292,11 +350,16 @@ public class Insert_image_instructionActivity extends AppCompatActivity {
                             "•\tছবিগুলো সোজা এবং পরিষ্কার করে তুলুন।\n" +
                             "•\tছবি তোলার সময় ফোন টি আড়াআড়ি ভাবে ধরুন।\n" +
                             "নিচে পেইন্টিং এর কয়েকটি স্যাম্পল ছবি লক্ষ্য করুন\n");
-                    img1.setImageResource(R.drawable.showpiece1);
-                    img2.setImageResource(R.drawable.showpiece2);
-                    img3.setImageResource(R.drawable.showpiece3);
-                    img4.setImageResource(R.drawable.showpiece4);
-//                    showpiecemediaPlayer.prepare();
+                    img1.setImageResource(R.drawable.painting1);
+                    img2.setImageResource(R.drawable.painting2);
+                    img3.setImageResource(R.drawable.painting3);
+                    img4.setVisibility(View.GONE);
+                    img5.setVisibility(View.GONE);
+                    img6.setVisibility(View.GONE);
+//                    img7.setImageResource(R.drawable.bag7);
+//                    img8.setImageResource(R.drawable.bag8);
+                    img7.setVisibility(View.GONE);
+                    img8.setVisibility(View.GONE);
                     showpiecemediaPlayer.start();
                     break;
 
@@ -310,11 +373,16 @@ public class Insert_image_instructionActivity extends AppCompatActivity {
                             "•\tছবিগুলো সোজা এবং পরিষ্কার করে তুলুন।\n" +
                             "•\tছবি তোলার সময় ফোন টি আড়াআড়ি ভাবে ধরুন।\n" +
                             "নিচে স্টোল এর কয়েকটি স্যাম্পল ছবি লক্ষ্য করুন\n");
-                    img1.setImageResource(R.drawable.showpiece1);
-                    img2.setImageResource(R.drawable.showpiece2);
-                    img3.setImageResource(R.drawable.showpiece3);
-                    img4.setImageResource(R.drawable.showpiece4);
-//                    showpiecemediaPlayer.prepare();
+                    img1.setImageResource(R.drawable.stole1);
+                    img2.setImageResource(R.drawable.stole2);
+                    img3.setImageResource(R.drawable.stole3);
+                    img4.setImageResource(R.drawable.stole4);
+                    img5.setImageResource(R.drawable.stole5);
+                    img6.setImageResource(R.drawable.stole6);
+//                    img7.setImageResource(R.drawable.utility7);
+//                    img8.setImageResource(R.drawable.utility8);
+                    img7.setVisibility(View.GONE);
+                    img8.setVisibility(View.GONE);
                     showpiecemediaPlayer.start();
                     break;
 
@@ -328,11 +396,16 @@ public class Insert_image_instructionActivity extends AppCompatActivity {
                             "•\tছবিগুলো সোজা এবং পরিষ্কার করে তুলুন।\n" +
                             "•\tছবি তোলার সময় ফোন টি আড়াআড়ি ভাবে ধরুন।\n" +
                             "নিচে রুমাল এর কয়েকটি স্যাম্পল ছবি লক্ষ্য করুন\n");
-                    img1.setImageResource(R.drawable.showpiece1);
-                    img2.setImageResource(R.drawable.showpiece2);
-                    img3.setImageResource(R.drawable.showpiece3);
-                    img4.setImageResource(R.drawable.showpiece4);
-//                    showpiecemediaPlayer.prepare();
+                    img1.setImageResource(R.drawable.hankerchiep1);
+                    img2.setImageResource(R.drawable.hankerchiep2);
+                    img3.setImageResource(R.drawable.hankerchiep3);
+                    img4.setImageResource(R.drawable.hankerchiep4);
+                    img5.setImageResource(R.drawable.hankerchiep5);
+                    img6.setImageResource(R.drawable.hankerchiep6);
+//                    img7.setImageResource(R.drawable.utility7);
+//                    img8.setImageResource(R.drawable.utility8);
+                    img7.setVisibility(View.GONE);
+                    img8.setVisibility(View.GONE);
                     showpiecemediaPlayer.start();
                     break;
 
@@ -355,11 +428,6 @@ public class Insert_image_instructionActivity extends AppCompatActivity {
                 }
             }
         }
-
-//        String SelectedType = myPref.getString("selected","No data found");
-//        if(SelectedType=="saree"){
-//
-//        }
 
 
         submitbtn.setOnClickListener(new View.OnClickListener() {
@@ -387,13 +455,6 @@ public class Insert_image_instructionActivity extends AppCompatActivity {
                     else if(kurtamediaPlayer.isPlaying()) {
                         kurtamediaPlayer.stop();
                     }
-//
-//
-//                    tshirtmediaPlayer.stop();
-//                    bagmediaPlayer.stop();
-//                    goinamediaPlayer.stop();
-//                    showpiecemediaPlayer.stop();
-//                    kurtamediaPlayer.stop();
 
                     Intent i = new Intent(Insert_image_instructionActivity.this, CaptureImageActivity.class);
                     startActivity(i);
@@ -432,43 +493,9 @@ public class Insert_image_instructionActivity extends AppCompatActivity {
         kurtamediaPlayer.stop();
         super.onBackPressed();
     }
-//    private void requestPermission() {
-//        int i=0;
-//        if (ActivityCompat.shouldShowRequestPermissionRationale(Insert_image_instructionActivity.this, android.Manifest.permission.WRITE_EXTERNAL_STORAGE)) {
-//            i=1;
-//            Toast.makeText(Insert_image_instructionActivity.this, "Write External Storage permission allows us to save files. Please allow this permission in App Settings.", Toast.LENGTH_LONG).show();
-//        }
-////        if(ActivityCompat.shouldShowRequestPermissionRationale(Insert_image_instructionActivity.this, android.Manifest.permission.CAMERA)) {
-////            i=2;
-////            Toast.makeText(Insert_image_instructionActivity.this, "Camera permission allows us to Click Pictures. Please allow this permission in App Settings.", Toast.LENGTH_LONG).show();
-////        }
-//
-//
-//        else {
-//            i=3;
-//            ActivityCompat.requestPermissions(Insert_image_instructionActivity.this, new String[]{android.Manifest.permission.WRITE_EXTERNAL_STORAGE}, PERMISSION_REQUEST_CODE);
-////            ActivityCompat.requestPermissions(Insert_image_instructionActivity.this, new String[]{android.Manifest.permission.CAMERA}, PERMISSION_REQUEST_CODE);
-//        }
-//        Log.d("check",Integer.toString(i));
-////        Intent ii = new Intent(Insert_image_instructionActivity.this, CaptureImageActivity.class);
-////        startActivity(ii);
-//    }
 
     private void requestPermission() {
         int i=0;
-//        if (ActivityCompat.shouldShowRequestPermissionRationale(this, Manifest.permission.WRITE_EXTERNAL_STORAGE)) {
-//            i=1;
-//            Toast.makeText(this, "Camera permission allows us to click images. Please allow this permission in App Settings.", Toast.LENGTH_LONG).show();
-//        }
-//
-//
-//
-//        else {
-//            i=3;
-//            ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE}, PERMISSION_REQUEST_CODE);
-//
-//        }
-
         if(ActivityCompat.shouldShowRequestPermissionRationale(this, Manifest.permission.WRITE_EXTERNAL_STORAGE))
         {
             new AlertDialog.Builder(this)
@@ -498,34 +525,10 @@ public class Insert_image_instructionActivity extends AppCompatActivity {
 
     @Override
     public void onRequestPermissionsResult(int requestCode, String permissions[], int[] grantResults) {
-//        switch (requestCode) {
-//            case PERMISSION_REQUEST_CODE:
-//                if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
-//                    myPref.edit().putString("track", "6").apply();
-//                    Log.e("value", "Permission Granted, Now you can use local drive .");
-//                    Intent i = new Intent(Insert_image_instructionActivity.this, CaptureImageActivity.class);
-//                    startActivity(i);
-//                } else {
-//                    Log.e("value", "Permission Denied, You cannot use local drive .");
-//                }
-//                break;
-////            case 9:
-////                if (grantResults.length > 1 && grantResults[1] == PackageManager.PERMISSION_GRANTED) {
-////                    Log.e("value", "Permission Granted, Now you can use camera .");
-////                } else {
-////                    Log.e("value", "Permission Denied, You cannot use camera.");
-////                }
-////                break;
-//        }
         switch (requestCode) {
 
             case 666: // Allowed was selected so Permission granted
                 if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
-
-                    //Log.d("Jhingalala", "granted");
-                    //mediaPlayer.start();
-
-                    // do your work here
 
                 } else if (Build.VERSION.SDK_INT >= 23 && !shouldShowRequestPermissionRationale(permissions[0])) {
                     // User selected the Never Ask Again Option Change settings in app settings manually
