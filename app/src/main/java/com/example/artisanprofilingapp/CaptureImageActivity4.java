@@ -54,7 +54,7 @@ public class CaptureImageActivity4 extends AppCompatActivity {
     private File file;
     private Uri file_uri;
     SharedPreferences myPref;
-    private String dataToGet, idToGet;
+    private String dataToGet, idToGet, productNameToGet;
     private String ImageCountToGet;
     private MediaPlayer mediaPlayer;
 
@@ -67,6 +67,7 @@ public class CaptureImageActivity4 extends AppCompatActivity {
         myPref = getApplicationContext().getSharedPreferences("MyPref",MODE_PRIVATE);
         dataToGet = myPref.getString("phone","No data found");
         idToGet = myPref.getString("id","No Data found");
+        productNameToGet = myPref.getString("ProductName","No Data found");
         ImageCountToGet = myPref.getString("count","No data found");
         mediaPlayer = MediaPlayer.create(this, R.raw.captureimage4);
 
@@ -215,6 +216,7 @@ public class CaptureImageActivity4 extends AppCompatActivity {
                 map.put("image_name",count+image_name);
                 Log.d("eirki id-->", idToGet);
                 map.put("id",idToGet);
+                map.put("productName",productNameToGet);
 
 
                 return map;

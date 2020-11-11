@@ -199,7 +199,7 @@ public class CaptureImageActivity extends AppCompatActivity {
 
 //        StringRequest request = new StringRequest(Request.Method.POST, "http://192.168.43.12/Artisans-Profiling/imageupload.php",
 
-StringRequest request = new StringRequest(Request.Method.POST, "https://artisanapp.xyz/imageupload.php?productName="+productNameToGet,
+StringRequest request = new StringRequest(Request.Method.POST, "https://artisanapp.xyz/imageupload.php",
 
                 new Response.Listener<String>() {
                     @Override
@@ -219,6 +219,7 @@ StringRequest request = new StringRequest(Request.Method.POST, "https://artisana
                 map.put("image_name",count+image_name);
                 Log.d("eirki id-->", idToGet);
                 map.put("id",idToGet);
+                map.put("productName",productNameToGet);
 
 
                 return map;
