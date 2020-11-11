@@ -32,7 +32,7 @@ public class ThankYouActivity extends AppCompatActivity {
             finish.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    myPref.edit().putString("track","0").apply();
+                    myPref.edit().putString("track","100").apply();
                     //mediaPlayer.stop();
                     finishAffinity();
                     System.exit(0);
