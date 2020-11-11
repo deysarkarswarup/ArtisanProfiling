@@ -106,13 +106,13 @@
                 <ImageView
                     android:layout_width="150dp"
                     android:layout_height="match_parent"
-                    android:layout_marginLeft="0dp"
+                    android:layout_marginLeft="10dp"
                     android:src="@drawable/painting3" />
 
                 <ImageView
                     android:layout_width="150dp"
                     android:layout_height="match_parent"
-                    android:layout_marginLeft="0dp"
+                    android:layout_marginLeft="10dp"
                     android:src="@drawable/showpiece3"/>
 
             </LinearLayout>
