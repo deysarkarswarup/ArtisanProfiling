@@ -154,7 +154,7 @@ public class EditAgeActivity extends AppCompatActivity {
                     if (potaka==1){
                         regUser();
 //                        mediaPlayer.stop();
-                        Intent i = new Intent(EditAgeActivity.this, WelcomeActivity.class);
+                        Intent i = new Intent(EditAgeActivity.this, FetchingDataActivity.class);
                         startActivity(i);
                     }
                     else {

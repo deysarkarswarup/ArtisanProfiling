@@ -124,7 +124,7 @@ public class EditExperienceActivity extends AppCompatActivity {
                     if (!nam.getText().toString().equals("")) {
                         regUser();
 ////                        mediaPlayer.stop();
-                        Intent i = new Intent(EditExperienceActivity.this, WelcomeActivity.class);
+                        Intent i = new Intent(EditExperienceActivity.this, FetchingDataActivity.class);
                         startActivity(i);
 
                     } else {

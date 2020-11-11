@@ -153,7 +153,7 @@ public class EditAddressActivity extends AppCompatActivity {
                     if (potaka>=3){
                         regUser();
 //                        mediaPlayer.stop();
-                        Intent i = new Intent(EditAddressActivity.this, WelcomeActivity.class);
+                        Intent i = new Intent(EditAddressActivity.this, FetchingDataActivity.class);
                         startActivity(i);
                     }
                     else {

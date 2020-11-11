@@ -122,7 +122,7 @@ public class EditArtformActivity extends AppCompatActivity {
 //                    if (!nam.getText().toString().equals("")) {
                         regUser();
 ////                        mediaPlayer.stop();
-                        Intent i = new Intent(EditArtformActivity.this, WelcomeActivity.class);
+                        Intent i = new Intent(EditArtformActivity.this, FetchingDataActivity.class);
 //                        startActivity(i);
 //
 //                    } else {

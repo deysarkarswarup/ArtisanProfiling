@@ -190,7 +190,7 @@ public class ProfilePicActivity extends AppCompatActivity {
             updateProfile = myPref.getString("updateProfile","No data found");
 //            mediaPlayer.stop();
             if (updateProfile.equals("1")){
-                Intent i = new Intent(ProfilePicActivity.this, WelcomeActivity.class);
+                Intent i = new Intent(ProfilePicActivity.this, FetchingDataActivity.class);
                 startActivity(i);
             }
             else {
