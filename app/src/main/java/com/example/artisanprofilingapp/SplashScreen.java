@@ -128,6 +128,10 @@ public class SplashScreen extends AppCompatActivity {
                                 i = new Intent(SplashScreen.this, ThankYouActivity.class);
                                 startActivity(i);
                                 break;
+                            case "100":
+                                i = new Intent(SplashScreen.this, WelcomeActivity.class);
+                                startActivity(i);
+                                break;
                             default:
 //                                i = new Intent(SplashScreen.this, UserTypeActivity.class);
                                 startActivity(i);
