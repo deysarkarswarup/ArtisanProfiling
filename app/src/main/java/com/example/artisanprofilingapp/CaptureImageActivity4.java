@@ -112,9 +112,7 @@ public class CaptureImageActivity4 extends AppCompatActivity {
     }
 
     private void getFileUri() {
-        //img_type = "yes";
         image_name = "_4_"+ dataToGet + ".jpg";
-        //img_type = ".jpg";
         file = new File(Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_PICTURES)
                 + File.separator + count + image_name
         );
@@ -193,9 +191,6 @@ public class CaptureImageActivity4 extends AppCompatActivity {
 
     private void makeRequest() {
         RequestQueue requestQueue = Volley.newRequestQueue(this);
-
-//        StringRequest request = new StringRequest(Request.Method.POST, "http://192.168.43.12/Artisans-Profiling/imageupload.php",
-
         StringRequest request = new StringRequest(Request.Method.POST, "https://artisanapp.xyz/imageupload.php",
 
                 new Response.Listener<String>() {
@@ -214,7 +209,6 @@ public class CaptureImageActivity4 extends AppCompatActivity {
                 HashMap<String,String> map = new HashMap<>();
                 map.put("encoded_string",encoded_string);
                 map.put("image_name",count+image_name);
-                Log.d("eirki id-->", idToGet);
                 map.put("id",idToGet);
                 map.put("productName",productNameToGet);
 

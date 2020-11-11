@@ -253,21 +253,17 @@ public class ProfilePicActivity2 extends AppCompatActivity {
                     SecurityException, IllegalStateException {
                 buttonStop.setEnabled(false);
                 buttonStart.setEnabled(false);
-                //            buttonStopPlayingRecording.setEnabled(true);
                 mediaPlayer = new MediaPlayer();
                 try {
                     fileName = AudioSavePathInDevice;
 
                     uploadAudio();
                     mediaPlayer.setDataSource(AudioSavePathInDevice);
-//                    mediaPlayer.prepare();
                     Log.d("hmm",AudioSavePathInDevice);
                 } catch (IOException e) {
                     e.printStackTrace();
                 }
                 //mediaPlayer.start();
-//                Toast.makeText(AudioActivity.this, "Recording Playing",
-//                        Toast.LENGTH_LONG).show();
             }
         });
 
@@ -331,8 +327,6 @@ public class ProfilePicActivity2 extends AppCompatActivity {
                     rotatedBitmap = bitmap;
             }
             bitmap = rotatedBitmap;
-//            bitmap = BitmapFactory.decodeFile(file_uri.getPath());
-//            Log.d("hi", "doInBackground: "+bitmap.toString());
             ByteArrayOutputStream stream = new ByteArrayOutputStream();
             bitmap.compress(Bitmap.CompressFormat.JPEG, 50, stream);//compress image as per ur need
             bitmap.recycle();
@@ -354,8 +348,7 @@ public class ProfilePicActivity2 extends AppCompatActivity {
 
     private void makeRequest() {
         RequestQueue requestQueue = Volley.newRequestQueue(this);
-//        StringRequest request = new StringRequest(Request.Method.POST, "http://192.168.43.12/Artisans-Profiling/profilepic.php",
-        StringRequest request = new StringRequest(Request.Method.POST, "https://artisanapp.xyz/profilepic.php",
+      StringRequest request = new StringRequest(Request.Method.POST, "https://artisanapp.xyz/profilepic.php",
 
                 new Response.Listener<String>() {
                     @Override
@@ -380,13 +373,6 @@ public class ProfilePicActivity2 extends AppCompatActivity {
     }
 
     private boolean checkPermission() {
-//        int result = ContextCompat.checkSelfPermission(ProfilePicActivity2.this, Manifest.permission.WRITE_EXTERNAL_STORAGE);
-//        //int result2 = ContextCompat.checkSelfPermission(Insert_image_instructionActivity.this, Manifest.permission.CAMERA);
-//        if (result == PackageManager.PERMISSION_GRANTED ) {
-//            return true;
-//        } else {
-//            return false;
-//        }
         int result = ContextCompat.checkSelfPermission(getApplicationContext(),
                 WRITE_EXTERNAL_STORAGE);
         int result1 = ContextCompat.checkSelfPermission(getApplicationContext(),
@@ -398,93 +384,13 @@ public class ProfilePicActivity2 extends AppCompatActivity {
     private void requestPermission() {
         ActivityCompat.requestPermissions(ProfilePicActivity2.this, new
                 String[]{WRITE_EXTERNAL_STORAGE, RECORD_AUDIO}, RequestPermissionCode);
-//        int i=0;
-//        if(ActivityCompat.shouldShowRequestPermissionRationale(this, Manifest.permission.WRITE_EXTERNAL_STORAGE))
-//        {
-//            new AlertDialog.Builder(this)
-//                    .setTitle("Permission Needed")
-//                    .setMessage("Permission is needed to access files from your device...")
-//                    .setPositiveButton("OK", new DialogInterface.OnClickListener() {
-//                        @Override
-//                        public void onClick(DialogInterface dialog, int which) {
-//                            ActivityCompat.requestPermissions(ProfilePicActivity2.this,new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE},666);
-//                        }
-//                    })
-//                    .setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
-//                        @Override
-//                        public void onClick(DialogInterface dialog, int which) {
-//                            dialog.dismiss();
-//                        }
-//                    }).create().show();
-//        }
-//        else
-//        {
-//            ActivityCompat.requestPermissions(this,new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE},666);
-//        }
-//        Log.d("check",Integer.toString(i));
     }
 
     @Override
     public void onRequestPermissionsResult(int requestCode, String permissions[], int[] grantResults) {
 
         switch (requestCode) {
-//            case 666: // Allowed was selected so Permission granted
-//                if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
-//
-////                    Log.d("Jhingalala", "granted");
-////                    mediaPlayer.start();
-////                    do your work here
-//
-//                } else if (Build.VERSION.SDK_INT >= 23 && !shouldShowRequestPermissionRationale(permissions[0])) {
-//
-//                    // User selected the Never Ask Again Option Change settings in app settings manually
-//                    AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(this);
-//                    alertDialogBuilder.setTitle("Change Permissions in Settings");
-//                    alertDialogBuilder
-//                            .setMessage("" +
-//                                    "\nClick SETTINGS to Manually Set\n" + "Permissions to use Database Storage")
-//                            .setCancelable(false)
-//                            .setPositiveButton("SETTINGS", new DialogInterface.OnClickListener() {
-//                                public void onClick(DialogInterface dialog, int id) {
-//                                    Intent intent = new Intent(Settings.ACTION_APPLICATION_DETAILS_SETTINGS);
-//                                    Uri uri = Uri.fromParts("package", getPackageName(), null);
-//                                    intent.setData(uri);
-//                                    startActivityForResult(intent, 1000);     // Comment 3.
-//                                }
-//                            });
-//
-//                    AlertDialog alertDialog = alertDialogBuilder.create();
-//                    alertDialog.show();
-//
-//                } else {
-//                    // User selected Deny Dialog to EXIT App ==> OR <== RETRY to have a second chance to Allow Permissions
-//                    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M && checkSelfPermission(Manifest.permission.WRITE_EXTERNAL_STORAGE) == PackageManager.PERMISSION_DENIED) {
-//
-//                        AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(this);
-//                        alertDialogBuilder.setTitle("Second Chance");
-//                        alertDialogBuilder
-//                                .setMessage("Click RETRY to Set Permissions to Allow\n\n" + "Click EXIT to the Close App")
-//                                .setCancelable(false)
-//                                .setPositiveButton("RETRY", new DialogInterface.OnClickListener() {
-//                                    public void onClick(DialogInterface dialog, int id) {
-////                                        mediaPlayer.stop();
-//                                        //ActivityCompat.requestPermissions((Activity) context, new String[]{Manifest.permission.READ_EXTERNAL_STORAGE}, Integer.parseInt(WRITE_EXTERNAL_STORAGE));
-//                                        Intent i = new Intent(ProfilePicActivity2.this, ProfilePicActivity2.class);
-//                                        i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK);
-//                                        startActivity(i);
-//                                    }
-//                                })
-//                                .setNegativeButton("EXIT", new DialogInterface.OnClickListener() {
-//                                    public void onClick(DialogInterface dialog, int id) {
-//                                        dialog.cancel();
-//                                        finishAffinity();
-//                                        System.exit(0);
-//                                    }
-//                                });
-//                        AlertDialog alertDialog = alertDialogBuilder.create();
-//                        alertDialog.show();
-//                    }
-//                }
+
 
             case RequestPermissionCode:
                 if (grantResults.length> 0) {
@@ -530,7 +436,7 @@ public class ProfilePicActivity2 extends AppCompatActivity {
             @Override
             protected String doInBackground(Void... params) {
                 ProfileAudioUpload u = new ProfileAudioUpload();
-                String msg = u.upLoad2Server(fileName,dataToGet);
+                String msg = u.upLoad2Server(fileName,idToGet);
                 Log.d("hmm msg-->" ,msg);
                 return msg;
 
@@ -559,41 +465,6 @@ public class ProfilePicActivity2 extends AppCompatActivity {
         return stringBuilder.toString();
     }
 
-//    private void requestPermission() {
-//        ActivityCompat.requestPermissions(ProfilePicActivity2.this, new
-//                String[]{WRITE_EXTERNAL_STORAGE, RECORD_AUDIO}, RequestPermissionCode);
-//    }
-
-//    @Override
-//    public void onRequestPermissionsResult(int requestCode,
-//                                           String permissions[], int[] grantResults) {
-//        switch (requestCode) {
-//            case RequestPermissionCode:
-//                if (grantResults.length> 0) {
-//                    boolean StoragePermission = grantResults[0] ==
-//                            PackageManager.PERMISSION_GRANTED;
-//                    boolean RecordPermission = grantResults[1] ==
-//                            PackageManager.PERMISSION_GRANTED;
-//
-//                    if (StoragePermission && RecordPermission) {
-//                        Toast.makeText(ProfilePicActivity2.this, "Permission Granted",
-//                                Toast.LENGTH_LONG).show();
-//                    } else {
-//                        Toast.makeText(ProfilePicActivity2.this,"Permission Denied",Toast.LENGTH_LONG).show();
-//                    }
-//                }
-//                break;
-//        }
-//    }
-
-//    public boolean checkPermission() {
-//        int result = ContextCompat.checkSelfPermission(getApplicationContext(),
-//                WRITE_EXTERNAL_STORAGE);
-//        int result1 = ContextCompat.checkSelfPermission(getApplicationContext(),
-//                RECORD_AUDIO);
-//        return result == PackageManager.PERMISSION_GRANTED &&
-//                result1 == PackageManager.PERMISSION_GRANTED;
-//    }
 
     @Override
     public void onBackPressed() {

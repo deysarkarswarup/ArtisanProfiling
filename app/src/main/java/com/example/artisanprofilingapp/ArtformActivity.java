@@ -48,7 +48,6 @@ public class ArtformActivity extends AppCompatActivity {
     //    private MediaPlayer mediaPlayer;
     RadioGroup radioGroup, radioGroup1, radioGroup2;
     String yesOrNo, yesOrNo1,typeOfSilpo;
-//    int potaka=0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -77,11 +76,9 @@ public class ArtformActivity extends AppCompatActivity {
                 switch (checkedId){
                     case R.id.yes:
                         yesOrNo = "হ্যাঁ";
-//                        potaka++;
                         break;
                     case R.id.no:
                         yesOrNo = "না";
-//                        potaka++;
                         break;
                 }
             }
@@ -94,23 +91,18 @@ public class ArtformActivity extends AppCompatActivity {
                 switch (checkedId){
                     case R.id.radio1:
                         typeOfSilpo = "কাঁথাস্টিচ";
-//                        potaka++;
                         break;
                     case R.id.radio2:
                         typeOfSilpo = "বাটিক প্রিন্ট";
-//                        potaka++;
                         break;
                     case R.id.radio3:
                         typeOfSilpo = "চামড়ার কাজ";
-//                        potaka++;
                         break;
                     case R.id.radio4:
                         typeOfSilpo = "জুয়েলারি";
-//                        potaka++;
                         break;
                     case R.id.radio5:
                         typeOfSilpo = "অন্যান্য শিল্প কর্ম";
-//                        potaka++;
                         break;
                 }
             }
@@ -123,11 +115,9 @@ public class ArtformActivity extends AppCompatActivity {
                 switch (checkedId){
                     case R.id.yes1:
                         yesOrNo1 = "হ্যাঁ";
-//                        potaka++;
                         break;
                     case R.id.no1:
                         yesOrNo1 = "না";
-//                        potaka++;
                         break;
 
                 }
@@ -143,7 +133,6 @@ public class ArtformActivity extends AppCompatActivity {
                 NetworkInfo networkInfo = con.getActiveNetworkInfo();
                 if (networkInfo != null && networkInfo.isConnected()) {
                     if (!nam.getText().toString().equals("")) {
-//                        potaka++;
                         regUser();
 ////                        mediaPlayer.stop();
                         Intent i = new Intent(ArtformActivity.this, DirectionToCaptureImageActivity.class);
@@ -153,16 +142,6 @@ public class ArtformActivity extends AppCompatActivity {
                         nam.setError("টাইপ করুন");
                     }
 
-//                    if (potaka==4){
-//                        regUser();
-////                        mediaPlayer.stop();
-//                        Intent i = new Intent(ArtformActivity.this, ProfilePicActivity.class);
-//                        startActivity(i);
-//                    }
-//                    else {
-//                        Log.d("potaka", String.valueOf(potaka));
-//                        Toast.makeText(ArtformActivity.this,"সব ফিল্ড টাইপ করুন",Toast.LENGTH_LONG).show();
-//                    }
                 }
 
                 else{

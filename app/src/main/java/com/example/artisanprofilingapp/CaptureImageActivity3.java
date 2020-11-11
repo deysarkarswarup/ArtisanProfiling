@@ -112,9 +112,7 @@ public class CaptureImageActivity3 extends AppCompatActivity {
     }
 
     private void getFileUri() {
-        //img_type = "yes";
         image_name = "_3_"+ dataToGet + ".jpg";
-        //img_type = ".jpg";
         file = new File(Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_PICTURES)
                 + File.separator + count + image_name
         );
@@ -194,8 +192,6 @@ public class CaptureImageActivity3 extends AppCompatActivity {
     private void makeRequest() {
         RequestQueue requestQueue = Volley.newRequestQueue(this);
 
-//        StringRequest request = new StringRequest(Request.Method.POST, "http://192.168.43.12/Artisans-Profiling/imageupload.php",
-
         StringRequest request = new StringRequest(Request.Method.POST, "https://artisanapp.xyz/imageupload.php",
 
                 new Response.Listener<String>() {
@@ -214,7 +210,6 @@ public class CaptureImageActivity3 extends AppCompatActivity {
                 HashMap<String,String> map = new HashMap<>();
                 map.put("encoded_string",encoded_string);
                 map.put("image_name",count+image_name);
-                Log.d("eirki id-->", idToGet);
                 map.put("id",idToGet);
                 map.put("productName",productNameToGet);
 
@@ -227,7 +222,6 @@ public class CaptureImageActivity3 extends AppCompatActivity {
     }
 
     private boolean checkPermission() {
-        // int result = ContextCompat.checkSelfPermission(CaptureImageActivity.this, android.Manifest.permission.WRITE_EXTERNAL_STORAGE);
         int result2 = ContextCompat.checkSelfPermission(CaptureImageActivity3.this, Manifest.permission.CAMERA);
         if (/*result == PackageManager.PERMISSION_GRANTED && */result2 == PackageManager.PERMISSION_GRANTED) {
             return true;
@@ -238,10 +232,6 @@ public class CaptureImageActivity3 extends AppCompatActivity {
 
     private void requestPermission() {
         int i=0;
-//        if (ActivityCompat.shouldShowRequestPermissionRationale(CaptureImageActivity.this, android.Manifest.permission.WRITE_EXTERNAL_STORAGE)) {
-//           i=1;
-//            Toast.makeText(CaptureImageActivity.this, "Write External Storage permission allows us to save files. Please allow this permission in App Settings.", Toast.LENGTH_LONG).show();
-//        }
         if(ActivityCompat.shouldShowRequestPermissionRationale(CaptureImageActivity3.this, android.Manifest.permission.CAMERA)) {
             i=2;
             Toast.makeText(CaptureImageActivity3.this, "Camera permission allows us to Click Pictures. Please allow this permission in App Settings.", Toast.LENGTH_LONG).show();
@@ -250,8 +240,7 @@ public class CaptureImageActivity3 extends AppCompatActivity {
 
         else {
             i=3;
-            //ActivityCompat.requestPermissions(CaptureImageActivity.this, new String[]{android.Manifest.permission.WRITE_EXTERNAL_STORAGE}, PERMISSION_REQUEST_CODE);
-            ActivityCompat.requestPermissions(CaptureImageActivity3.this, new String[]{Manifest.permission.CAMERA}, PERMISSION_REQUEST_CODE);
+           ActivityCompat.requestPermissions(CaptureImageActivity3.this, new String[]{Manifest.permission.CAMERA}, PERMISSION_REQUEST_CODE);
         }
         Log.d("check",Integer.toString(i));
     }

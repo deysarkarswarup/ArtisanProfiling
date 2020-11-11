@@ -76,14 +76,6 @@ public class AudioUpload {
 
             dos.writeBytes(lineEnd);
             dos.writeBytes(twoHyphens + boundary + twoHyphens + lineEnd);
-//            dos.writeBytes(lineEnd);
-//            dos.writeBytes(dataToGet+lineEnd);
-//            dos.writeBytes("Content-Disposition: form-data; name=\"phoneno=\"" +lineEnd);
-//
-//            dos.writeBytes(lineEnd);
-//            dos.writeBytes(dataToGet);
-//            dos.writeBytes(lineEnd);
-//            dos.writeBytes(twoHyphens + boundary + twoHyphens + lineEnd);
             serverResponseCode = conn.getResponseCode();
 
             fileInputStream.close();
@@ -112,10 +104,5 @@ public class AudioUpload {
             return "Could not upload";
         }
     }
-//
-//    @Override
-//    public void onBackPressed() {
-//        mediaPlayer.stop();
-//        super.onBackPressed();
-//    }
+
 }

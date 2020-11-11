@@ -32,8 +32,7 @@ public class InternetCheckActivity extends AppCompatActivity {
         finish.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-//                ThankYouActivity.this.finish();
-//                System.exit(0);
+
                 mediaPlayer.stop();
                 finishAffinity();
                 System.exit(0);
@@ -43,8 +42,7 @@ public class InternetCheckActivity extends AppCompatActivity {
         done.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-//                ThankYouActivity.this.finish();
-//                System.exit(0);
+
                 mediaPlayer.stop();
                 Intent i=new Intent(InternetCheckActivity.this,SplashScreen.class);
                 startActivity(i);

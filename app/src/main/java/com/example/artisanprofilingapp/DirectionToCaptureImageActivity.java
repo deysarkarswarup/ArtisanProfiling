@@ -23,7 +23,6 @@ public class DirectionToCaptureImageActivity extends AppCompatActivity {
         mediaPlayer = MediaPlayer.create(this, R.raw.directiontocaptureimage);
 
         mediaPlayer.start();
-        //At the end
         nextBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

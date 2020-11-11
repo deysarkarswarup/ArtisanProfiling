@@ -116,10 +116,8 @@ public class ProfilePicActivity extends AppCompatActivity {
     }
 
     private void getFileUri() {
-        //img_type = "yes";
-        image_name = "_"+ dataToGet + ".jpg";
-        //img_type = ".jpg";
 
+        image_name = "_"+ dataToGet + ".jpg";
         file = new File(Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_PICTURES)
                 + File.separator + count + image_name);
         Log.d("msg" , String.valueOf(file));
@@ -175,8 +173,6 @@ public class ProfilePicActivity extends AppCompatActivity {
                     rotatedBitmap = bitmap;
             }
             bitmap = rotatedBitmap;
-//            bitmap = BitmapFactory.decodeFile(file_uri.getPath());
-//            Log.d("hi", "doInBackground: "+bitmap.toString());
             ByteArrayOutputStream stream = new ByteArrayOutputStream();
             bitmap.compress(Bitmap.CompressFormat.JPEG, 50, stream);//compress image as per ur need
             bitmap.recycle();
@@ -198,8 +194,7 @@ public class ProfilePicActivity extends AppCompatActivity {
 
     private void makeRequest() {
         RequestQueue requestQueue = Volley.newRequestQueue(this);
-//        StringRequest request = new StringRequest(Request.Method.POST, "http://192.168.43.12/Artisans-Profiling/profilepic.php",
-        StringRequest request = new StringRequest(Request.Method.POST, "https://artisanapp.xyz/profilepic.php",
+      StringRequest request = new StringRequest(Request.Method.POST, "https://artisanapp.xyz/profilepic.php",
 
                 new Response.Listener<String>() {
                     @Override
@@ -225,7 +220,6 @@ public class ProfilePicActivity extends AppCompatActivity {
 
     private boolean checkPermission() {
         int result = ContextCompat.checkSelfPermission(ProfilePicActivity.this, Manifest.permission.WRITE_EXTERNAL_STORAGE);
-        //int result2 = ContextCompat.checkSelfPermission(Insert_image_instructionActivity.this, Manifest.permission.CAMERA);
         if (result == PackageManager.PERMISSION_GRANTED ) {
             return true;
         } else {
@@ -262,33 +256,10 @@ private void requestPermission() {
 
     @Override
     public void onRequestPermissionsResult(int requestCode, String permissions[], int[] grantResults) {
-//        switch (requestCode) {
-//            case PERMISSION_REQUEST_CODE:
-//                if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
-//                    myPref.edit().putString("track", "6").apply();
-//                    Log.e("value", "Permission Granted, Now you can use local drive .");
-//                    Intent i = new Intent(Insert_image_instructionActivity.this, CaptureImageActivity.class);
-//                    startActivity(i);
-//                } else {
-//                    Log.e("value", "Permission Denied, You cannot use local drive .");
-//                }
-//                break;
-////            case 9:
-////                if (grantResults.length > 1 && grantResults[1] == PackageManager.PERMISSION_GRANTED) {
-////                    Log.e("value", "Permission Granted, Now you can use camera .");
-////                } else {
-////                    Log.e("value", "Permission Denied, You cannot use camera.");
-////                }
-////                break;
-//        }
 
         switch (requestCode) {
             case 666: // Allowed was selected so Permission granted
                 if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
-
-//                    Log.d("Jhingalala", "granted");
-//                    mediaPlayer.start();
-//                    do your work here
 
                 } else if (Build.VERSION.SDK_INT >= 23 && !shouldShowRequestPermissionRationale(permissions[0])) {
                     // User selected the Never Ask Again Option Change settings in app settings manually
@@ -322,7 +293,6 @@ private void requestPermission() {
                                 .setPositiveButton("RETRY", new DialogInterface.OnClickListener() {
                                     public void onClick(DialogInterface dialog, int id) {
 //                                        mediaPlayer.stop();
-                                        //ActivityCompat.requestPermissions((Activity) context, new String[]{Manifest.permission.READ_EXTERNAL_STORAGE}, Integer.parseInt(WRITE_EXTERNAL_STORAGE));
                                         Intent i = new Intent(ProfilePicActivity.this, ProfilePicActivity.class);
                                         i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK);
                                         startActivity(i);

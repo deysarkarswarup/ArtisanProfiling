@@ -21,10 +21,7 @@ public class NCoReIntoActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_n_co_re_into);
-
         submitBtn= findViewById(R.id.submitBtn);
-
-//        submitBtn.setOnClickListener(View.OnClickListener());
 
         submitBtn.setOnClickListener(new View.OnClickListener() {
             @Override

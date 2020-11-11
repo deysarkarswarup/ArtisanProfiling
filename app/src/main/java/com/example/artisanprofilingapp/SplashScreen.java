@@ -17,36 +17,20 @@ import androidx.appcompat.app.AppCompatActivity;
 public class SplashScreen extends AppCompatActivity {
     Intent i;
     SharedPreferences myPref;
-//    private BroadcastReceiver MyReceiver = null;
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        //MyReceiver = new MyReceiver();
-        //String getconnectionresponse = myReceiver.status;
-        //Log.d("oirki", getconnectionresponse);
-//        getActivity().registerReceiver(receiver, filter);
         myPref = getApplicationContext().getSharedPreferences("MyPref",MODE_PRIVATE);
         final String s = myPref.getString("track","0");
-
 
         ConnectivityManager con = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
         NetworkInfo networkInfo = con.getActiveNetworkInfo();
         if (networkInfo != null && networkInfo.isConnected() == true) {
-//            Intent intent = new Intent(SplashScreen.this, MapActivity.class);
-//            startActivity(intent);
-//            finish();
+
             new Handler().postDelayed(new Runnable() {
                 @Override
                 public void run() {
-//                    startActivity(new Intent(SplashScreen.this, NCoReIntoActivity.class));
-//        if (flag.equals("-1"))
-//        {
-//            i=new Intent(SplashScreen.this,InternetCheckActivity.class);
-//            startActivity(i);
-//        }
-//        else {
-
-                    if (s != null)
+                        if (s != null)
                         switch (s) {
                             case "0":
                                 startActivity(new Intent(SplashScreen.this, NCoReIntoActivity.class));
@@ -159,29 +143,7 @@ public class SplashScreen extends AppCompatActivity {
             startActivity(intent);
             finish();
         }
-
-
-
-//        Log.d("initially eirki->", s);
-//         String res = broadcastIntent();
-//MyReceiver myReceive = new MyReceiver();
-//final String flag = myReceive.status;
-//        Log.d("after eirki->", flag);
-//        Log.d("after eirki->", res);
-
-//        startActivity(new Intent(this,MainActivity.class));
     }
-
-//    public String broadcastIntent() {
-//        registerReceiver(MyReceiver, new IntentFilter(ConnectivityManager.CONNECTIVITY_ACTION));
-//        String TrackToGet = myPref.getString("track","No data found");
-//        return TrackToGet;
-//    }
-//    @Override
-//    protected void onPause() {
-//        super.onPause();
-//        unregisterReceiver(MyReceiver);
-//    }
 }
 
 

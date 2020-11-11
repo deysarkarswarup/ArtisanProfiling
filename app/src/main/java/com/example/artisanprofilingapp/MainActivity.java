@@ -96,17 +96,6 @@ public class MainActivity extends AppCompatActivity {
         requestQueue = Volley.newRequestQueue(MainActivity.this);
         progressDialog = new ProgressDialog(MainActivity.this);
         final boolean[] flag = {false};
-        //DELETE THIS
-       // startActivity(new Intent(MainActivity.this, ArtformActivity3.class));
-//        mobileno.setOnFocusChangeListener(new View.OnFocusChangeListener() {
-//            @Override
-//            public void onFocusChange(View v, boolean hasFocus) {
-//                if(mobileno.getText().toString().length()!=10) {
-//                    mobileno.setError("১০ ডিজিটের ফোন নম্বর টাইপ করুন");
-//                    flag[0] = false;
-//                }
-//            }
-//        });
         mobileno.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {
@@ -137,18 +126,9 @@ public class MainActivity extends AppCompatActivity {
                 if (networkInfo != null && networkInfo.isConnected()) {
                     if (!mobileno.getText().toString().equals("")) {
 
-//                            if (!checkPermission()) {
-//Log.d("hiii","hello");
-//                                requestPermission();
-//                            }
-
-                        //Toast.makeText(MainActivity.this,"হয়েগেছে",Toast.LENGTH_LONG).show();
                         if(flag[0]) {
                             regUser();
 
-
-                            //UNCOMMENT THIS
-//                            mediaPlayer.stop();
                             startActivity(new Intent(MainActivity.this, AddressActivity.class));
                         }
                         else{
@@ -170,8 +150,6 @@ public class MainActivity extends AppCompatActivity {
 
 
         });
-//        Intent i = new Intent(getApplicationContext(), NameActivity.class);
-//        startActivity(i);
     }
 
     private void regUser() {
@@ -180,10 +158,6 @@ public class MainActivity extends AppCompatActivity {
             progressDialog.show();
 
             PhoneNoHolder = phno.getEditText().getText().toString().trim();
-
-            //private boolean isValidMobile(String phone) {
-//                    boolean flag = android.util.Patterns.PHONE.matcher(PhoneNoHolder).matches();
-            //}
 
             Log.d("eirki phone->",PhoneNoHolder);
             myPref.edit().putString("phone", PhoneNoHolder).apply();
@@ -196,9 +170,6 @@ public class MainActivity extends AppCompatActivity {
         PhoneNoHolder = PhoneNoHolder.replaceAll(characterFilter,"");
 
             String myurl = "https://artisanapp.xyz/phoneno.php?phoneno=" + PhoneNoHolder;
-//                String myurl = "http://192.168.43.12/Artisans-Profiling/phoneno.php?phoneno=" + PhoneNoHolder;
-
-//String myurl = "https://artisanapp.xyz/phoneno.php?phoneno=" + PhoneNoHolder;
             RequestQueue queue = Volley.newRequestQueue(getApplicationContext());
 
             StringRequest stringRequest = new StringRequest(Request.Method.POST, myurl,
@@ -209,11 +180,7 @@ public class MainActivity extends AppCompatActivity {
                             showJSON(response);
                             progressDialog.dismiss();
                             // Showing response message coming from server.
-                            //Toast.makeText(MainActivity.this, response, Toast.LENGTH_LONG).show();
                             myPref.edit().putString("track", "1").apply();
-//                                Intent i = new Intent(getApplicationContext(), NameActivity.class);
-//                                startActivity(i);
-
                         }
                     },
                     new Response.ErrorListener() {
@@ -237,38 +204,13 @@ public class MainActivity extends AppCompatActivity {
                 JSONObject jsonObject = new JSONObject(response);
                 JSONArray result = jsonObject.getJSONArray(Config.JSON_ARRAY);
 
-                // for (int i = 0; i < result.length(); i++) {
                 JSONObject jo = result.getJSONObject(0);
-//                String title = jo.getString(Config5.KEY_TITLE);
-//                String date = jo.getString(Config5.KEY_DATE);
-//                String data = jo.getString(Config5.KEY_DATA);
                 String id = jo.getString(Config.KEY_ID);
-                Log.d("eirki",id);
                 myPref.edit().putString("id",id).apply();
-
-
-//                    final HashMap<String, String> employees = new HashMap<>();
-////                employees.put(Config5.KEY_TITLE,  "Date = "+title);
-////                employees.put(Config5.KEY_DATE, date);
-////                employees.put(Config5.KEY_DATA, data);
-//                    employees.put(Config.KEY_ID, id);
-//
-//                    list.add(employees);
-//
-//                    //}
-
 
             } catch (JSONException e) {
                 e.printStackTrace();
             }
-//                ListAdapter adapter = new SimpleAdapter(
-//                        MainActivity.this, list, R.layout.activity_mylist,
-//                        new String[]{Config5.KEY_ID},
-//                        new int[]{R.id.tvid});
-//
-//                listview.setAdapter(adapter);
-
-
     }
 
     private boolean checkPermission() {
@@ -277,17 +219,12 @@ public class MainActivity extends AppCompatActivity {
         if (result == PackageManager.PERMISSION_GRANTED) {
             return true;
         } else {
-//            requestPermission();
             return false;
         }
     }
 
     private void requestPermission() {
         int i=0;
-//        if (ActivityCompat.shouldShowRequestPermissionRationale(MainActivity.this, Manifest.permission.CAMERA)) {
-//            i=1;
-//            Toast.makeText(MainActivity.this, "Camera permission allows us to click images. Please allow this permission in App Settings.", Toast.LENGTH_LONG).show();
-//        }
 
         if(ActivityCompat.shouldShowRequestPermissionRationale(this, Manifest.permission.CAMERA))
         {
@@ -311,36 +248,17 @@ public class MainActivity extends AppCompatActivity {
         {
             ActivityCompat.requestPermissions(this,new String[]{Manifest.permission.CAMERA},666);
         }
-//
-//        else {
-//            i=3;
-//            ActivityCompat.requestPermissions(MainActivity.this, new String[]{Manifest.permission.CAMERA}, PERMISSION_REQUEST_CODE);
-//
-//        }
+
         Log.d("check",Integer.toString(i));
     }
 
     @Override
     public void onRequestPermissionsResult(int requestCode, String permissions[], int[] grantResults) {
-//        switch (requestCode) {
-//            case PERMISSION_REQUEST_CODE:
-//                if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
-//                    Log.e("value", "Permission Granted, Now you can use local drive .");
-//                } else {
-//                    Log.e("value", "Permission Denied, You cannot use local drive .");
-//                }
-//                break;
-//        }
 
         switch (requestCode) {
 
             case 666: // Allowed was selected so Permission granted
                 if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
-
-                    Log.d("Jhingalala", "granted");
-//                    mediaPlayer.start();
-
-                    // do your work here
 
                 } else if (Build.VERSION.SDK_INT >= 23 && !shouldShowRequestPermissionRationale(permissions[0])) {
                     // User selected the Never Ask Again Option Change settings in app settings manually

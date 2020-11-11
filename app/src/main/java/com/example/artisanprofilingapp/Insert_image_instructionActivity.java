@@ -475,7 +475,6 @@ public class Insert_image_instructionActivity extends AppCompatActivity {
 
     private boolean checkPermission() {
         int result = ContextCompat.checkSelfPermission(Insert_image_instructionActivity.this, Manifest.permission.WRITE_EXTERNAL_STORAGE);
-        //int result2 = ContextCompat.checkSelfPermission(Insert_image_instructionActivity.this, Manifest.permission.CAMERA);
         if (result == PackageManager.PERMISSION_GRANTED ) {
             return true;
         } else {

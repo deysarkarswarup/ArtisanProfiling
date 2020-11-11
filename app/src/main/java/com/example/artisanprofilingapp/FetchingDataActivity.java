@@ -39,32 +39,18 @@ public class FetchingDataActivity extends AppCompatActivity {
         wbs.setMediaPlaybackRequiresUserGesture(false);
         webView.loadUrl("http://artisanapp.xyz/fetchingData.php?id="+idToGet);
 
-
         ConnectivityManager con = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
         NetworkInfo networkInfo = con.getActiveNetworkInfo();
         if (networkInfo != null && networkInfo.isConnected()) {
             finish.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-//                ThankYouActivity.this.finish();
-//                System.exit(0);
-                    //myPref.edit().putString("track","0").apply();
-
-                        Intent intent = new Intent(FetchingDataActivity.this, ThankYouActivity.class);
+Intent intent = new Intent(FetchingDataActivity.this, ThankYouActivity.class);
                         startActivity(intent);
 
                 }
             });
 
-//            newentry.setOnClickListener(new View.OnClickListener() {
-//                @Override
-//                public void onClick(View view) {
-//                    myPref.edit().putString("track","0").apply();
-//                    mediaPlayer.stop();
-//                    Intent i = new Intent(ThankYouActivity.this, UserTypeActivity.class);
-//                    startActivity(i);
-//                }
-//            });
         }
         else{
             Intent intent = new Intent(FetchingDataActivity.this, InternetCheckActivity.class);

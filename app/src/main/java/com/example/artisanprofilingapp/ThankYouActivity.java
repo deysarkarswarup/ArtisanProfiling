@@ -32,8 +32,6 @@ public class ThankYouActivity extends AppCompatActivity {
             finish.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-//                ThankYouActivity.this.finish();
-//                System.exit(0);
                     myPref.edit().putString("track","0").apply();
                     //mediaPlayer.stop();
                     finishAffinity();
@@ -41,15 +39,6 @@ public class ThankYouActivity extends AppCompatActivity {
                 }
             });
 
-//            newentry.setOnClickListener(new View.OnClickListener() {
-//                @Override
-//                public void onClick(View view) {
-//                    myPref.edit().putString("track","0").apply();
-//                    mediaPlayer.stop();
-//                    Intent i = new Intent(ThankYouActivity.this, UserTypeActivity.class);
-//                    startActivity(i);
-//                }
-//            });
         }
         else{
             Intent intent = new Intent(ThankYouActivity.this, InternetCheckActivity.class);

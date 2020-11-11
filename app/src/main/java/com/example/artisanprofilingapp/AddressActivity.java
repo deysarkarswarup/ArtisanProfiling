@@ -70,7 +70,6 @@ public class AddressActivity extends AppCompatActivity {
         requestQueue = Volley.newRequestQueue(AddressActivity.this);
         progressDialog = new ProgressDialog(AddressActivity.this);
 //        mediaPlayer = MediaPlayer.create(this, R.raw.addressinst);
-//
 //        mediaPlayer.start();
 
         radioGroup1 = (RadioGroup) findViewById(R.id.radioGroup1);
@@ -80,19 +79,15 @@ public class AddressActivity extends AppCompatActivity {
                 switch (checkedId){
                     case R.id.gen:
                         caste = "gen";
-//                        myPref.edit().putString("caste", "gen").apply();
                         break;
                     case R.id.sc:
                         caste = "sc";
-//                        myPref.edit().putString("caste", "sc").apply();
                         break;
                     case R.id.st:
                         caste = "st";
-//                        myPref.edit().putString("caste", "st").apply();
                         break;
                     case R.id.obc:
                         caste = "obc";
-//                        myPref.edit().putString("caste", "obc").apply();
                 }
             }
         });
@@ -104,15 +99,12 @@ public class AddressActivity extends AppCompatActivity {
                 switch (checkedId){
                     case R.id.male:
                         gender = "male";
-//                        myPref.edit().putString("gender", "male").apply();
                         break;
                     case R.id.female:
                         gender = "female";
-//                        myPref.edit().putString("gender", "female").apply();
                         break;
                     case R.id.others:
                         gender = "others";
-//                        myPref.edit().putString("gender", "others").apply();
                         break;
                 }
             }
@@ -193,13 +185,7 @@ public class AddressActivity extends AppCompatActivity {
                 AddressHolder4 = landMark.getEditText().getText().toString().trim();
                 AddressHolder5 = addressExp.getEditText().getText().toString().trim();
 
-//                Log.d("eirki",AddressHolder1);
                 String idToGet = myPref.getString("id","No data found");
-//                String nameToGet = myPref.getString("name","No data found");
-//                String ageToGet = myPref.getString("age","No data found");
-//                Log.d("eirki id->",idToGet);
-//                Log.d("eirki name->",nameToGet);
-//                Log.d("eirki age->",ageToGet);
 
                 AddressHolder = AddressHolder.replaceAll(" ","%20");
                 AddressHolder1 = AddressHolder1.replaceAll(" ","%20");
@@ -208,11 +194,8 @@ public class AddressActivity extends AppCompatActivity {
                 AddressHolder4 = AddressHolder4.replaceAll(" ","%20");
                 AddressHolder5 = AddressHolder5.replaceAll(" ","%20");
                 idToGet = idToGet.replaceAll(" ","%20");
-//                AddressExpHolder = AddressExpHolder.replaceAll(" ","%20");
-//                ageToGet = ageToGet.replaceAll(" ","%20");
 
                 String characterFilter = "[^\\p{L}\\p{M}\\p{N}\\p{P}\\p{Z}\\p{Cf}\\p{Cs}\\s]";
-//                nameToGet = nameToGet.replaceAll(characterFilter,"");
                 AddressHolder = AddressHolder.replaceAll(characterFilter,"");
                 AddressHolder1 = AddressHolder1.replaceAll(characterFilter,"");
                 AddressHolder2 = AddressHolder2.replaceAll(characterFilter,"");
@@ -220,10 +203,6 @@ public class AddressActivity extends AppCompatActivity {
                 AddressHolder4 = AddressHolder4.replaceAll(characterFilter,"");
                 AddressHolder5 = AddressHolder5.replaceAll(characterFilter,"");
                 idToGet = idToGet.replaceAll(characterFilter,"");
-//                AddressExpHolder = AddressExpHolder.replaceAll(characterFilter,"");
-//                ageToGet = ageToGet.replaceAll(characterFilter,"");
-//                String caste = myPref.getString("caste","No data found");
-//                String gender = myPref.getString("gender","No data found");
 
                 String myurl = "https://artisanapp.xyz/name_address.php?name=" + AddressHolder + "&age="+ AddressHolder1
                         +"&addressLine2="+ AddressHolder2 +"&pinCode="+ AddressHolder3 +"&landMark="+ AddressHolder4
@@ -255,7 +234,6 @@ public class AddressActivity extends AppCompatActivity {
             }
 
         });
-
 
     }
 

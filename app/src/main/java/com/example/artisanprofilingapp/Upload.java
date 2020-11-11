@@ -79,14 +79,7 @@ public class Upload {
 
             dos.writeBytes(lineEnd);
             dos.writeBytes(twoHyphens + boundary + twoHyphens + lineEnd);
-//            dos.writeBytes(lineEnd);
-//            dos.writeBytes(dataToGet+lineEnd);
-//            dos.writeBytes("Content-Disposition: form-data; name=\"phoneno=\"" +lineEnd);
-//
-//            dos.writeBytes(lineEnd);
-//            dos.writeBytes(dataToGet);
-//            dos.writeBytes(lineEnd);
-//            dos.writeBytes(twoHyphens + boundary + twoHyphens + lineEnd);
+
             serverResponseCode = conn.getResponseCode();
 
             fileInputStream.close();

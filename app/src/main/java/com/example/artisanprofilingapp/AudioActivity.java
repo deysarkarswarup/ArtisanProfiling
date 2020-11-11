@@ -47,8 +47,6 @@ public class AudioActivity extends AppCompatActivity {
     MediaPlayer mediaPlayer ;
     ProgressDialog progressDialog;
     SharedPreferences myPref;
-//    private File file;
-  //  private Uri file_uri, uri;
     private String dataToGet;
     String fileName="", PriceHolder="";
     @Override
@@ -141,7 +139,6 @@ public class AudioActivity extends AppCompatActivity {
                     SecurityException, IllegalStateException {
                 buttonStop.setEnabled(false);
                 buttonStart.setEnabled(false);
-    //            buttonStopPlayingRecording.setEnabled(true);
                 mediaPlayer = new MediaPlayer();
                 try {
                     fileName = AudioSavePathInDevice;
@@ -160,9 +157,6 @@ public class AudioActivity extends AppCompatActivity {
                 } catch (IOException e) {
                     e.printStackTrace();
                 }
-                //mediaPlayer.start();
-//                Toast.makeText(AudioActivity.this, "Recording Playing",
-//                        Toast.LENGTH_LONG).show();
             }
         });
 
@@ -172,7 +166,6 @@ public class AudioActivity extends AppCompatActivity {
                     SecurityException, IllegalStateException {
                 buttonStop.setEnabled(false);
                 buttonStart.setEnabled(false);
-                //            buttonStopPlayingRecording.setEnabled(true);
                 mediaPlayer = new MediaPlayer();
                 try {
                     fileName = AudioSavePathInDevice;
@@ -184,16 +177,12 @@ public class AudioActivity extends AppCompatActivity {
                     }
                     uploadAudio();
                     mediaPlayer.setDataSource(AudioSavePathInDevice);
-//                    mediaPlayer.prepare();
                     Log.d("hmm",AudioSavePathInDevice);
                     Intent i=new Intent(AudioActivity.this,ImageCaptureSelection.class);
                     startActivity(i);
                 } catch (IOException e) {
                     e.printStackTrace();
                 }
-                //mediaPlayer.start();
-//                Toast.makeText(AudioActivity.this, "Recording Playing",
-//                        Toast.LENGTH_LONG).show();
             }
         });
 
@@ -216,8 +205,6 @@ public class AudioActivity extends AppCompatActivity {
                 Toast.makeText(AudioActivity.this, s, Toast.LENGTH_LONG).show();
                 mediaPlayer.stop();
                 myPref.edit().putString("track", "17").apply();
-//                Intent i=new Intent(AudioActivity.this,UserChoiceActivity.class);
-//                startActivity(i);
             }
 
 
