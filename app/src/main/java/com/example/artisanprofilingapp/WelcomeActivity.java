@@ -37,7 +37,7 @@ public class WelcomeActivity extends AppCompatActivity {
         WebSettings wbs = webView.getSettings();
         wbs.setJavaScriptEnabled(true);
         wbs.setMediaPlaybackRequiresUserGesture(false);
-        webView.loadUrl("http://artisanapp.xyz/fetchingData.php?id=" + idToGet);
+        webView.loadUrl("http://artisanapp.xyz/welcomeMsg.php?id=" + idToGet);
 
         ConnectivityManager con = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
         NetworkInfo networkInfo = con.getActiveNetworkInfo();
