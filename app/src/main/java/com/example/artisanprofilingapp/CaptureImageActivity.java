@@ -56,7 +56,7 @@ public class CaptureImageActivity extends AppCompatActivity {
     private File file;
     private Uri file_uri;
     SharedPreferences myPref;
-    private String dataToGet, idToGet;
+    private String dataToGet, idToGet,productNameToGet;
     private String ImageCountToGet;
     private MediaPlayer mediaPlayer;
 
@@ -70,6 +70,7 @@ public class CaptureImageActivity extends AppCompatActivity {
         myPref = getApplicationContext().getSharedPreferences("MyPref",MODE_PRIVATE);
         dataToGet = myPref.getString("phone","No data found");
         idToGet = myPref.getString("id","No Data found");
+        productNameToGet = myPref.getString("ProductName","No Data found");
         ImageCountToGet = myPref.getString("count","No data found");
         mediaPlayer = MediaPlayer.create(this, R.raw.captureimage1);
 
@@ -198,7 +199,7 @@ public class CaptureImageActivity extends AppCompatActivity {
 
 //        StringRequest request = new StringRequest(Request.Method.POST, "http://192.168.43.12/Artisans-Profiling/imageupload.php",
 
-StringRequest request = new StringRequest(Request.Method.POST, "https://artisanapp.xyz/imageupload.php",
+StringRequest request = new StringRequest(Request.Method.POST, "https://artisanapp.xyz/imageupload.php?productName="+productNameToGet,
 
                 new Response.Listener<String>() {
                     @Override
