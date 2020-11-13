@@ -66,43 +66,7 @@ public class EditAddressActivity extends AppCompatActivity {
 //        mediaPlayer = MediaPlayer.create(this, R.raw.addressinst);
 //        mediaPlayer.start();
 
-//        radioGroup1 = (RadioGroup) findViewById(R.id.radioGroup1);
-//        radioGroup1.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
-//            @Override
-//            public void onCheckedChanged(RadioGroup group, int checkedId) {
-//                switch (checkedId){
-//                    case R.id.gen:
-//                        caste = "gen";
-//                        break;
-//                    case R.id.sc:
-//                        caste = "sc";
-//                        break;
-//                    case R.id.st:
-//                        caste = "st";
-//                        break;
-//                    case R.id.obc:
-//                        caste = "obc";
-//                }
-//            }
-//        });
-//
-//        radioGroup2 = (RadioGroup) findViewById(R.id.radioGroup2);
-//        radioGroup2.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
-//            @Override
-//            public void onCheckedChanged(RadioGroup group, int checkedId) {
-//                switch (checkedId){
-//                    case R.id.male:
-//                        gender = "male";
-//                        break;
-//                    case R.id.female:
-//                        gender = "female";
-//                        break;
-//                    case R.id.others:
-//                        gender = "others";
-//                        break;
-//                }
-//            }
-//        });
+
 
         submitbtn.setOnClickListener(new View.OnClickListener(){
             @Override
