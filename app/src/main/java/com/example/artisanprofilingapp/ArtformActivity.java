@@ -45,7 +45,7 @@ public class ArtformActivity extends AppCompatActivity {
     ProgressDialog progressDialog;
     String DataHolder;
     SharedPreferences myPref;
-    //    private MediaPlayer mediaPlayer;
+        private MediaPlayer mediaPlayer;
     RadioGroup radioGroup, radioGroup1, radioGroup2;
     String yesOrNo, yesOrNo1,typeOfSilpo;
 
@@ -65,9 +65,8 @@ public class ArtformActivity extends AppCompatActivity {
         // Creating Volley newRequestQueue .
         requestQueue = Volley.newRequestQueue(ArtformActivity.this);
         progressDialog = new ProgressDialog(ArtformActivity.this);
-//        mediaPlayer = MediaPlayer.create(this, R.raw.addressinst);
-//
-//        mediaPlayer.start();
+        mediaPlayer = MediaPlayer.create(this, R.raw.slide4);
+        mediaPlayer.start();
 
         radioGroup = (RadioGroup) findViewById(R.id.radioGroup);
         radioGroup.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
@@ -127,14 +126,12 @@ public class ArtformActivity extends AppCompatActivity {
         submitbtn.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
-
-
                 ConnectivityManager con = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
                 NetworkInfo networkInfo = con.getActiveNetworkInfo();
                 if (networkInfo != null && networkInfo.isConnected()) {
                     if (!nam.getText().toString().equals("")) {
                         regUser();
-////                        mediaPlayer.stop();
+                        mediaPlayer.stop();
                         Intent i = new Intent(ArtformActivity.this, DirectionToCaptureImageActivity.class);
                         startActivity(i);
 
@@ -145,6 +142,7 @@ public class ArtformActivity extends AppCompatActivity {
                 }
 
                 else{
+                    mediaPlayer.stop();
                     Intent intent = new Intent(ArtformActivity.this, InternetCheckActivity.class);
                     startActivity(intent);
                     finish();
@@ -205,12 +203,12 @@ Log.d("msg",myurl);
 
     @Override
     public void onBackPressed() {
-//        mediaPlayer.stop();
+        mediaPlayer.stop();
         super.onBackPressed();
     }
     @Override
     public void onUserLeaveHint(){
-//        mediaPlayer.stop();
+        mediaPlayer.stop();
         super.onUserLeaveHint();
     }
 }

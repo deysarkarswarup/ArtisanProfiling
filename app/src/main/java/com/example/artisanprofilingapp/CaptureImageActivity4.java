@@ -69,7 +69,7 @@ public class CaptureImageActivity4 extends AppCompatActivity {
         idToGet = myPref.getString("id","No Data found");
         productNameToGet = myPref.getString("ProductName","No Data found");
         ImageCountToGet = myPref.getString("count","No data found");
-        mediaPlayer = MediaPlayer.create(this, R.raw.captureimage4);
+        mediaPlayer = MediaPlayer.create(this, R.raw.slide12);
 
         mediaPlayer.start();
 
@@ -96,6 +96,7 @@ public class CaptureImageActivity4 extends AppCompatActivity {
                     }
                 }
                 else{
+                    mediaPlayer.stop();
                     Intent intent = new Intent(CaptureImageActivity4.this, InternetCheckActivity.class);
                     startActivity(intent);
                     finish();
@@ -205,14 +206,12 @@ public class CaptureImageActivity4 extends AppCompatActivity {
             }
         }) {
             @Override
-            protected Map<String, String> getParams() throws AuthFailureError {
+            protected Map<String, String> getParams() {
                 HashMap<String,String> map = new HashMap<>();
                 map.put("encoded_string",encoded_string);
                 map.put("image_name",count+image_name);
                 map.put("id",idToGet);
                 map.put("productName",productNameToGet);
-
-
                 return map;
             }
         };
@@ -221,7 +220,6 @@ public class CaptureImageActivity4 extends AppCompatActivity {
     }
 
     private boolean checkPermission() {
-        // int result = ContextCompat.checkSelfPermission(CaptureImageActivity.this, android.Manifest.permission.WRITE_EXTERNAL_STORAGE);
         int result2 = ContextCompat.checkSelfPermission(CaptureImageActivity4.this, Manifest.permission.CAMERA);
         if (/*result == PackageManager.PERMISSION_GRANTED && */result2 == PackageManager.PERMISSION_GRANTED) {
             return true;
@@ -232,19 +230,12 @@ public class CaptureImageActivity4 extends AppCompatActivity {
 
     private void requestPermission() {
         int i=0;
-//        if (ActivityCompat.shouldShowRequestPermissionRationale(CaptureImageActivity.this, android.Manifest.permission.WRITE_EXTERNAL_STORAGE)) {
-//           i=1;
-//            Toast.makeText(CaptureImageActivity.this, "Write External Storage permission allows us to save files. Please allow this permission in App Settings.", Toast.LENGTH_LONG).show();
-//        }
         if(ActivityCompat.shouldShowRequestPermissionRationale(CaptureImageActivity4.this, android.Manifest.permission.CAMERA)) {
             i=2;
             Toast.makeText(CaptureImageActivity4.this, "Camera permission allows us to Click Pictures. Please allow this permission in App Settings.", Toast.LENGTH_LONG).show();
         }
-
-
         else {
             i=3;
-            //ActivityCompat.requestPermissions(CaptureImageActivity.this, new String[]{android.Manifest.permission.WRITE_EXTERNAL_STORAGE}, PERMISSION_REQUEST_CODE);
             ActivityCompat.requestPermissions(CaptureImageActivity4.this, new String[]{Manifest.permission.CAMERA}, PERMISSION_REQUEST_CODE);
         }
         Log.d("check",Integer.toString(i));

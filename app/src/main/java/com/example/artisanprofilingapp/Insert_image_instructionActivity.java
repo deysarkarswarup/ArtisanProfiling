@@ -52,12 +52,12 @@ public class Insert_image_instructionActivity extends AppCompatActivity {
         img8 = findViewById(R.id.img8);
         inst = findViewById(R.id.picInstruction);
 
-        sareemediaPlayer = MediaPlayer.create(this, R.raw.sareeinst);
-        bagmediaPlayer = MediaPlayer.create(this, R.raw.baginst);
-        tshirtmediaPlayer = MediaPlayer.create(this, R.raw.tshirtinst);
-        goinamediaPlayer = MediaPlayer.create(this, R.raw.goinainst);
-        kurtamediaPlayer = MediaPlayer.create(this, R.raw.kurtainst);
-        showpiecemediaPlayer = MediaPlayer.create(this, R.raw.showpieceinst);
+//        sareemediaPlayer = MediaPlayer.create(this, R.raw.sareeinst);
+//        bagmediaPlayer = MediaPlayer.create(this, R.raw.baginst);
+//        tshirtmediaPlayer = MediaPlayer.create(this, R.raw.tshirtinst);
+//        goinamediaPlayer = MediaPlayer.create(this, R.raw.goinainst);
+//        kurtamediaPlayer = MediaPlayer.create(this, R.raw.kurtainst);
+//        showpiecemediaPlayer = MediaPlayer.create(this, R.raw.showpieceinst);
 
 
         selected = myPref.getString("selected","none");
@@ -83,6 +83,7 @@ public class Insert_image_instructionActivity extends AppCompatActivity {
                     img6.setImageResource(R.drawable.saree6);
                     img7.setImageResource(R.drawable.saree7);
                     img8.setImageResource(R.drawable.saree8);
+                    sareemediaPlayer = MediaPlayer.create(this, R.raw.slide81);
                     sareemediaPlayer.start();
                     break;
                 case "goina":
@@ -104,7 +105,8 @@ public class Insert_image_instructionActivity extends AppCompatActivity {
                     img6.setImageResource(R.drawable.jewellery6);
                     img7.setVisibility(View.GONE);
                     img8.setVisibility(View.GONE);
-                    goinamediaPlayer.start();
+                    sareemediaPlayer = MediaPlayer.create(this, R.raw.slide81);
+                    sareemediaPlayer.start();
                     break;
                 case "bag":
                     inst.setText("ব্যাগ এর ছবি তোলার কিছু প্রাথমিক ধারণা\n" +

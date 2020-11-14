@@ -75,7 +75,7 @@ public class ProfilePicActivity2 extends AppCompatActivity {
     public static final int RequestPermissionCode = 1;
     RequestQueue requestQueue;
     ProgressDialog progressDialog;
-    String fileName="", PriceHolder="";
+    String fileName="";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

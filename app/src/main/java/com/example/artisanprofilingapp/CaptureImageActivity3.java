@@ -69,7 +69,7 @@ public class CaptureImageActivity3 extends AppCompatActivity {
         idToGet = myPref.getString("id","No Data found");
         productNameToGet = myPref.getString("ProductName","No Data found");
         ImageCountToGet = myPref.getString("count","No data found");
-        mediaPlayer = MediaPlayer.create(this, R.raw.captureimage3);
+        mediaPlayer = MediaPlayer.create(this, R.raw.slide11);
 
         mediaPlayer.start();
 
@@ -96,6 +96,7 @@ public class CaptureImageActivity3 extends AppCompatActivity {
                     }
                 }
                 else{
+                    mediaPlayer.stop();
                     Intent intent = new Intent(CaptureImageActivity3.this, InternetCheckActivity.class);
                     startActivity(intent);
                     finish();

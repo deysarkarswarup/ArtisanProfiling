@@ -36,7 +36,7 @@ public class AddressActivity extends AppCompatActivity {
     ProgressDialog progressDialog;
     String AddressHolder, AddressHolder1, AddressHolder2, AddressHolder3, AddressHolder4, AddressHolder5;
     SharedPreferences myPref;
-//    private MediaPlayer mediaPlayer;
+    private MediaPlayer mediaPlayer;
     RadioGroup radioGroup1, radioGroup2;
     String gender, caste;
     int potaka=0;
@@ -69,8 +69,8 @@ public class AddressActivity extends AppCompatActivity {
         // Creating Volley newRequestQueue .
         requestQueue = Volley.newRequestQueue(AddressActivity.this);
         progressDialog = new ProgressDialog(AddressActivity.this);
-//        mediaPlayer = MediaPlayer.create(this, R.raw.addressinst);
-//        mediaPlayer.start();
+        mediaPlayer = MediaPlayer.create(this, R.raw.slide2);
+        mediaPlayer.start();
 
         radioGroup1 = (RadioGroup) findViewById(R.id.radioGroup1);
         radioGroup1.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
@@ -158,7 +158,7 @@ public class AddressActivity extends AppCompatActivity {
 
                     if (potaka==6){
                         regUser();
-//                        mediaPlayer.stop();
+                        mediaPlayer.stop();
                         Intent i = new Intent(AddressActivity.this, ProfilePicActivity.class);
                         startActivity(i);
                     }
@@ -168,6 +168,7 @@ public class AddressActivity extends AppCompatActivity {
                 }
 
                 else{
+                    mediaPlayer.stop();
                     Intent intent = new Intent(AddressActivity.this, InternetCheckActivity.class);
                     startActivity(intent);
                     finish();
@@ -239,12 +240,12 @@ public class AddressActivity extends AppCompatActivity {
 
     @Override
     public void onBackPressed() {
-//        mediaPlayer.stop();
+        mediaPlayer.stop();
         super.onBackPressed();
     }
     @Override
     public void onUserLeaveHint(){
-//        mediaPlayer.stop();
+        mediaPlayer.stop();
         super.onUserLeaveHint();
     }
 }

@@ -14,18 +14,19 @@ import android.view.View;
 import android.widget.Button;
 
 public class ThankYouActivity extends AppCompatActivity {
-    Button finish,newentry;
+    Button finish;
     SharedPreferences myPref;
-    //private MediaPlayer mediaPlayer;
+    private MediaPlayer mediaPlayer;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_thank_you);
         finish = (Button) findViewById(R.id.finish);
-//        newentry = (Button) findViewById(R.id.newEntry);
+
         myPref = getApplicationContext().getSharedPreferences("MyPref",MODE_PRIVATE);
-        //mediaPlayer = MediaPlayer.create(this, R.raw.thankyouinst);
-        //mediaPlayer.start();
+        mediaPlayer = MediaPlayer.create(this, R.raw.slide15);
+        mediaPlayer.start();
+
         myPref.edit().putString("track","100").apply();
         ConnectivityManager con = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
         NetworkInfo networkInfo = con.getActiveNetworkInfo();
@@ -36,7 +37,7 @@ public class ThankYouActivity extends AppCompatActivity {
                     myPref.edit().putString("track","100").apply();
                     String s= myPref.getString("track","No data found");
                     Log.d("track thankyou",s);
-                    //mediaPlayer.stop();
+                    mediaPlayer.stop();
                     finishAffinity();
                     System.exit(0);
                 }
@@ -44,6 +45,7 @@ public class ThankYouActivity extends AppCompatActivity {
 
         }
         else{
+            mediaPlayer.stop();
             Intent intent = new Intent(ThankYouActivity.this, InternetCheckActivity.class);
             startActivity(intent);
             finish();
@@ -51,13 +53,13 @@ public class ThankYouActivity extends AppCompatActivity {
     }
     @Override
     public void onBackPressed() {
-        //mediaPlayer.stop();
+        mediaPlayer.stop();
         super.onBackPressed();
         myPref.edit().putString("track","100").apply();
     }
     @Override
     public void onUserLeaveHint(){
-        //mediaPlayer.stop();
+        mediaPlayer.stop();
         super.onUserLeaveHint();
         myPref.edit().putString("track","100").apply();
     }

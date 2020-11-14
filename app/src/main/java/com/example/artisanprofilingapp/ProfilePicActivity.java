@@ -60,7 +60,7 @@ public class ProfilePicActivity extends AppCompatActivity {
     SharedPreferences myPref;
     private String dataToGet, idToGet, updateProfile="";
     private String ImageCountToGet;
-//    private MediaPlayer mediaPlayer;
+    private MediaPlayer mediaPlayer;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -73,8 +73,8 @@ public class ProfilePicActivity extends AppCompatActivity {
         updateProfile = myPref.getString("updateProfile","No data found");
         idToGet = myPref.getString("id","No data found");
         ImageCountToGet = myPref.getString("count","No data found");
-//        mediaPlayer = MediaPlayer.create(this, R.raw.profilepicinst);
-//        mediaPlayer.start();
+        mediaPlayer = MediaPlayer.create(this, R.raw.slide3);
+        mediaPlayer.start();
 
         String state = Environment.getExternalStorageState();
         if (Environment.MEDIA_MOUNTED.equals(state)) {
@@ -108,6 +108,7 @@ public class ProfilePicActivity extends AppCompatActivity {
                     startActivityForResult(i, 10);
                 }
                 else{
+                    mediaPlayer.stop();
                     Intent intent = new Intent(ProfilePicActivity.this, InternetCheckActivity.class);
                     startActivity(intent);
                     finish();
@@ -190,10 +191,12 @@ public class ProfilePicActivity extends AppCompatActivity {
             updateProfile = myPref.getString("updateProfile","No data found");
 //            mediaPlayer.stop();
             if (updateProfile.equals("1")){
+                mediaPlayer.stop();
                 Intent i = new Intent(ProfilePicActivity.this, FetchingDataActivity.class);
                 startActivity(i);
             }
             else {
+                mediaPlayer.stop();
                 Intent i = new Intent(ProfilePicActivity.this, ProfilePicActivity2.class);
                 startActivity(i);
             }
@@ -322,12 +325,12 @@ private void requestPermission() {
     }
     @Override
     public void onBackPressed() {
-//        mediaPlayer.stop();
+        mediaPlayer.stop();
         super.onBackPressed();
     }
     @Override
     public void onUserLeaveHint(){
-//        mediaPlayer.stop();
+        mediaPlayer.stop();
         super.onUserLeaveHint();
     }
 }

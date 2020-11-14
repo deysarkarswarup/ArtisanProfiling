@@ -11,7 +11,7 @@ import android.widget.Button;
 
 public class NewDirectionToCaptureImageActivity extends AppCompatActivity {
     private Button nextBtn;
-//    private MediaPlayer mediaPlayer;
+    private MediaPlayer mediaPlayer;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -19,14 +19,13 @@ public class NewDirectionToCaptureImageActivity extends AppCompatActivity {
 
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         nextBtn = findViewById(R.id.nextBtn);
-//        mediaPlayer = MediaPlayer.create(this, R.raw.directiontocaptureimage);
-
-//        mediaPlayer.start();
+        mediaPlayer = MediaPlayer.create(this, R.raw.slide5);
+        mediaPlayer.start();
         //At the end
         nextBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-//                mediaPlayer.stop();
+                mediaPlayer.stop();
                 startActivity(new Intent(NewDirectionToCaptureImageActivity.this,DirectionToCaptureImageActivity.class));
             }
         });
@@ -34,12 +33,12 @@ public class NewDirectionToCaptureImageActivity extends AppCompatActivity {
     }
     @Override
     public void onBackPressed() {
-//        mediaPlayer.stop();
+        mediaPlayer.stop();
         super.onBackPressed();
     }
     @Override
     public void onUserLeaveHint(){
-//        mediaPlayer.stop();
+        mediaPlayer.stop();
         super.onUserLeaveHint();
     }
 }

@@ -60,16 +60,16 @@ public class MainActivity extends AppCompatActivity {
     SharedPreferences myPref;
     public static int REQUEST_PERMISSION=1;
     private static final int PERMISSION_REQUEST_CODE = 100;
-    private MediaPlayer mediaPlayer;
+//    private MediaPlayer mediaPlayer;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        mediaPlayer = MediaPlayer.create(this,R.raw.phoneno);
+//        mediaPlayer = MediaPlayer.create(this,R.raw.phoneno);
 
-        mediaPlayer.start();
+//        mediaPlayer.start();
         String state = Environment.getExternalStorageState();
         if (Environment.MEDIA_MOUNTED.equals(state)) {
             if (Build.VERSION.SDK_INT >= 23) {
@@ -159,7 +159,6 @@ public class MainActivity extends AppCompatActivity {
 
             PhoneNoHolder = phno.getEditText().getText().toString().trim();
 
-            Log.d("eirki phone->",PhoneNoHolder);
             myPref.edit().putString("phone", PhoneNoHolder).apply();
             myPref.edit().putString("count", "0").apply();
 
@@ -313,12 +312,12 @@ public class MainActivity extends AppCompatActivity {
     }
     @Override
     public void onBackPressed() {
-        mediaPlayer.stop();
+//        mediaPlayer.stop();
         super.onBackPressed();
     }
     @Override
     public void onUserLeaveHint(){
-        mediaPlayer.stop();
+//        mediaPlayer.stop();
         super.onUserLeaveHint();
     }
 }

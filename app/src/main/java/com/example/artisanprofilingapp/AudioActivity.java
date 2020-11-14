@@ -44,7 +44,7 @@ public class AudioActivity extends AppCompatActivity {
     String RandomAudioFileName = "ABCDEFGHIJKLMNOP";
     public static final int RequestPermissionCode = 1;
     RequestQueue requestQueue;
-    MediaPlayer mediaPlayer ;
+    MediaPlayer mediaPlayer,mediaPlayer1 ;
     ProgressDialog progressDialog;
     SharedPreferences myPref;
     private String dataToGet;
@@ -64,10 +64,8 @@ public class AudioActivity extends AppCompatActivity {
 
         myPref = getApplicationContext().getSharedPreferences("MyPref",MODE_PRIVATE);
         dataToGet = myPref.getString("id","No data found");
-        Log.d("hiii", "onCreate: "+dataToGet);
-        mediaPlayer = MediaPlayer.create(this, R.raw.audioinst);
-
-        mediaPlayer.start();
+        mediaPlayer1 = MediaPlayer.create(this, R.raw.slide13);
+        mediaPlayer1.start();
 
         requestQueue = Volley.newRequestQueue(AudioActivity.this);
         progressDialog = new ProgressDialog(AudioActivity.this);
@@ -80,9 +78,8 @@ public class AudioActivity extends AppCompatActivity {
         buttonStart.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                mediaPlayer1.stop();
                 if(checkPermission()) {
-
                         ConnectivityManager con = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
                         NetworkInfo networkInfo = con.getActiveNetworkInfo();
                         if (networkInfo != null && networkInfo.isConnected()) {
@@ -123,6 +120,7 @@ public class AudioActivity extends AppCompatActivity {
         buttonStop.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                mediaPlayer1.stop();
                 mediaRecorder.stop();
                 buttonStop.setEnabled(false);
                 buttonPlayLastRecordAudio.setEnabled(true);
@@ -137,6 +135,7 @@ public class AudioActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) throws IllegalArgumentException,
                     SecurityException, IllegalStateException {
+                mediaPlayer1.stop();
                 buttonStop.setEnabled(false);
                 buttonStart.setEnabled(false);
                 mediaPlayer = new MediaPlayer();
@@ -144,14 +143,11 @@ public class AudioActivity extends AppCompatActivity {
                     fileName = AudioSavePathInDevice;
                     if (!nam.getText().toString().equals("")) {
                         PriceHolder = name.getEditText().getText().toString().trim();
-                        Log.d("hmm Priczz", PriceHolder);
                     } else {
                         nam.setError("আপনার প্রোডাক্টের দাম বলুন");
                     }
                     uploadAudio();
                     mediaPlayer.setDataSource(AudioSavePathInDevice);
-//                    mediaPlayer.prepare();
-                    Log.d("hmm",AudioSavePathInDevice);
                     Intent i=new Intent(AudioActivity.this,FetchingDataActivity.class);
                     startActivity(i);
                 } catch (IOException e) {
@@ -164,6 +160,7 @@ public class AudioActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) throws IllegalArgumentException,
                     SecurityException, IllegalStateException {
+                mediaPlayer1.stop();
                 buttonStop.setEnabled(false);
                 buttonStart.setEnabled(false);
                 mediaPlayer = new MediaPlayer();
@@ -171,13 +168,11 @@ public class AudioActivity extends AppCompatActivity {
                     fileName = AudioSavePathInDevice;
                     if (!nam.getText().toString().equals("")) {
                         PriceHolder = name.getEditText().getText().toString().trim();
-                        Log.d("hmm Priczz", PriceHolder);
                     } else {
                         nam.setError("আপনার প্রোডাক্টের দাম বলুন");
                     }
                     uploadAudio();
                     mediaPlayer.setDataSource(AudioSavePathInDevice);
-                    Log.d("hmm",AudioSavePathInDevice);
                     Intent i=new Intent(AudioActivity.this,ImageCaptureSelection.class);
                     startActivity(i);
                 } catch (IOException e) {
@@ -213,7 +208,6 @@ public class AudioActivity extends AppCompatActivity {
             protected String doInBackground(Void... params) {
                 AudioUpload u = new AudioUpload();
                 String msg = u.upLoad2Server(fileName,dataToGet+"*"+PriceHolder);
-                Log.d("hmm msg-->" ,msg);
                 return msg;
 
             }
@@ -279,12 +273,12 @@ public class AudioActivity extends AppCompatActivity {
 
     @Override
     public void onBackPressed() {
-        mediaPlayer.stop();
+        mediaPlayer1.stop();
         super.onBackPressed();
     }
     @Override
     public void onUserLeaveHint(){
-        mediaPlayer.stop();
+        mediaPlayer1.stop();
         super.onUserLeaveHint();
     }
 }

@@ -16,16 +16,15 @@ import java.io.IOException;
 
 public class InternetCheckActivity extends AppCompatActivity {
     Button finish,newentry,done;
-    private MediaPlayer mediaPlayer;
+//    private MediaPlayer mediaPlayer;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_internet_check);
 
-        mediaPlayer = MediaPlayer.create(this, R.raw.nointernetinst);
-
-        mediaPlayer.start();
+//        mediaPlayer = MediaPlayer.create(this, R.raw.nointernetinst);
+//        mediaPlayer.start();
 
         finish = (Button) findViewById(R.id.finish);
         done = (Button) findViewById(R.id.done);
@@ -33,7 +32,7 @@ public class InternetCheckActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                mediaPlayer.stop();
+//                mediaPlayer.stop();
                 finishAffinity();
                 System.exit(0);
             }
@@ -43,7 +42,7 @@ public class InternetCheckActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                mediaPlayer.stop();
+//                mediaPlayer.stop();
                 Intent i=new Intent(InternetCheckActivity.this,SplashScreen.class);
                 startActivity(i);
             }
@@ -52,12 +51,12 @@ public class InternetCheckActivity extends AppCompatActivity {
     }
     @Override
     public void onBackPressed() {
-        mediaPlayer.stop();
+//        mediaPlayer.stop();
         super.onBackPressed();
     }
     @Override
     public void onUserLeaveHint(){
-        mediaPlayer.stop();
+//        mediaPlayer.stop();
         super.onUserLeaveHint();
     }
 }
