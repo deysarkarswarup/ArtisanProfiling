@@ -78,22 +78,21 @@ public class ProfilePicActivity extends AppCompatActivity {
 
         String state = Environment.getExternalStorageState();
         if (Environment.MEDIA_MOUNTED.equals(state)) {
+            mediaPlayer.start();
             if (Build.VERSION.SDK_INT >= 23) {
                 if (!checkPermission()) {
-
                     requestPermission();
+                    mediaPlayer.start();
                 }
             }
         }
-//        mediaPlayer.start();
+        mediaPlayer.start();
 
         StrictMode.VmPolicy.Builder builder = new StrictMode.VmPolicy.Builder();
         StrictMode.setVmPolicy(builder.build());
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
-                            //mediaPlayer.start();
                 ConnectivityManager con = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
                 NetworkInfo networkInfo = con.getActiveNetworkInfo();
                 if (networkInfo != null && networkInfo.isConnected()) {
@@ -240,6 +239,7 @@ public class ProfilePicActivity extends AppCompatActivity {
 
 private void requestPermission() {
     int i=0;
+
     if(ActivityCompat.shouldShowRequestPermissionRationale(this, Manifest.permission.WRITE_EXTERNAL_STORAGE))
     {
         new AlertDialog.Builder(this)
@@ -260,6 +260,7 @@ private void requestPermission() {
     }
     else
     {
+//        mediaPlayer.start();
         ActivityCompat.requestPermissions(this,new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE},666);
     }
     Log.d("check",Integer.toString(i));
@@ -271,6 +272,7 @@ private void requestPermission() {
         switch (requestCode) {
             case 666: // Allowed was selected so Permission granted
                 if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+//                    mediaPlayer.start();
 
                 } else if (Build.VERSION.SDK_INT >= 23 && !shouldShowRequestPermissionRationale(permissions[0])) {
                     // User selected the Never Ask Again Option Change settings in app settings manually

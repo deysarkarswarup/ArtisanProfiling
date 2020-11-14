@@ -45,6 +45,22 @@ public class Insert_image_instructionActivity extends AppCompatActivity {
         submitbtn = (Button)findViewById(R.id.submitBtn);
         myPref = getApplicationContext().getSharedPreferences("MyPref",MODE_PRIVATE);
 
+        sareemediaPlayer = MediaPlayer.create(this, R.raw.slide81);
+        goinamediaPlayer = MediaPlayer.create(this, R.raw.slide82);
+        bagmediaPlayer = MediaPlayer.create(this, R.raw.slide83);
+        tshirtmediaPlayer = MediaPlayer.create(this, R.raw.slide84);
+        wrapperskirtmediaPlayer = MediaPlayer.create(this, R.raw.slide85);
+        palazzomediaPlayer = MediaPlayer.create(this, R.raw.slide86);
+        cushioncovermediaPlayer = MediaPlayer.create(this, R.raw.slide87);
+        leatherbagmediaPlayer = MediaPlayer.create(this, R.raw.slide810);
+        handkerchiefmediaPlayer = MediaPlayer.create(this, R.raw.slide815);
+        stolesmediaPlayer = MediaPlayer.create(this, R.raw.slide814);
+        paintingmediaPlayer = MediaPlayer.create(this, R.raw.slide813);
+        utilitymediaPlayer = MediaPlayer.create(this, R.raw.slide812);
+        homedecormediaPlayer = MediaPlayer.create(this, R.raw.slide811);
+        kurtamediaPlayer = MediaPlayer.create(this, R.raw.slide89);
+        blousepiecemediaPlayer = MediaPlayer.create(this, R.raw.slide88);
+
         img1 = findViewById(R.id.img1);
         img2 = findViewById(R.id.img2);
         img3 = findViewById(R.id.img3);
@@ -78,7 +94,6 @@ public class Insert_image_instructionActivity extends AppCompatActivity {
                     img6.setImageResource(R.drawable.saree6);
                     img7.setImageResource(R.drawable.saree7);
                     img8.setImageResource(R.drawable.saree8);
-                    sareemediaPlayer = MediaPlayer.create(this, R.raw.slide81);
                     sareemediaPlayer.start();
                     break;
                 case "goina":
@@ -100,7 +115,6 @@ public class Insert_image_instructionActivity extends AppCompatActivity {
                     img6.setImageResource(R.drawable.jewellery6);
                     img7.setVisibility(View.GONE);
                     img8.setVisibility(View.GONE);
-                    goinamediaPlayer = MediaPlayer.create(this, R.raw.slide82);
                     goinamediaPlayer.start();
                     break;
                 case "bag":
@@ -123,7 +137,6 @@ public class Insert_image_instructionActivity extends AppCompatActivity {
                     img6.setImageResource(R.drawable.bag6);
                     img7.setImageResource(R.drawable.bag7);
                     img8.setImageResource(R.drawable.bag8);
-                    bagmediaPlayer = MediaPlayer.create(this, R.raw.slide83);
                     bagmediaPlayer.start();
                     break;
 
@@ -145,7 +158,6 @@ public class Insert_image_instructionActivity extends AppCompatActivity {
                     img6.setImageResource(R.drawable.tshirt6);
                     img7.setImageResource(R.drawable.tshirt7);
                     img8.setImageResource(R.drawable.tshirt8);
-                    tshirtmediaPlayer = MediaPlayer.create(this, R.raw.slide84);
                     tshirtmediaPlayer.start();
                     break;
                 case "wrapperskirt":
@@ -166,7 +178,6 @@ public class Insert_image_instructionActivity extends AppCompatActivity {
                     img6.setImageResource(R.drawable.kurta6);
                     img7.setVisibility(View.GONE);
                     img8.setVisibility(View.GONE);
-                    wrapperskirtmediaPlayer = MediaPlayer.create(this, R.raw.slide85);
                     wrapperskirtmediaPlayer.start();
                     break;
                 case "palazzo":
@@ -187,7 +198,6 @@ public class Insert_image_instructionActivity extends AppCompatActivity {
                     img6.setImageResource(R.drawable.palazzo6);
                     img7.setVisibility(View.GONE);
                     img8.setVisibility(View.GONE);
-                    palazzomediaPlayer = MediaPlayer.create(this, R.raw.slide86);
                     palazzomediaPlayer.start();
                     break;
 
@@ -209,7 +219,6 @@ public class Insert_image_instructionActivity extends AppCompatActivity {
                     img6.setImageResource(R.drawable.cushion7);
                     img7.setVisibility(View.GONE);
                     img8.setVisibility(View.GONE);
-                    cushioncovermediaPlayer = MediaPlayer.create(this, R.raw.slide87);
                     cushioncovermediaPlayer.start();
                     break;
 
@@ -233,7 +242,6 @@ public class Insert_image_instructionActivity extends AppCompatActivity {
                     img6.setImageResource(R.drawable.leatherbag6);
                     img7.setImageResource(R.drawable.leatherbag7);
                     img8.setImageResource(R.drawable.leatherbag8);
-                    leatherbagmediaPlayer = MediaPlayer.create(this, R.raw.slide810);
                     leatherbagmediaPlayer.start();
                     break;
 
@@ -255,7 +263,6 @@ public class Insert_image_instructionActivity extends AppCompatActivity {
                     img6.setImageResource(R.drawable.blouse6);
                     img7.setVisibility(View.GONE);
                     img8.setVisibility(View.GONE);
-                    blousepiecemediaPlayer = MediaPlayer.create(this, R.raw.slide88);
                     blousepiecemediaPlayer.start();
                     break;
 
@@ -277,7 +284,6 @@ public class Insert_image_instructionActivity extends AppCompatActivity {
                     img6.setImageResource(R.drawable.kurta6);
                     img7.setVisibility(View.GONE);
                     img8.setVisibility(View.GONE);
-                    kurtamediaPlayer = MediaPlayer.create(this, R.raw.slide89);
                     kurtamediaPlayer.start();
                     break;
 
@@ -299,7 +305,6 @@ public class Insert_image_instructionActivity extends AppCompatActivity {
                     img6.setVisibility(View.GONE);
                     img7.setVisibility(View.GONE);
                     img8.setVisibility(View.GONE);
-                    homedecormediaPlayer = MediaPlayer.create(this, R.raw.slide811);
                     homedecormediaPlayer.start();
                     break;
 
@@ -321,7 +326,6 @@ public class Insert_image_instructionActivity extends AppCompatActivity {
                     img6.setImageResource(R.drawable.utility6);
                     img7.setImageResource(R.drawable.utility7);
                     img8.setImageResource(R.drawable.utility8);
-                    utilitymediaPlayer = MediaPlayer.create(this, R.raw.slide812);
                     utilitymediaPlayer.start();
                     break;
 
@@ -343,7 +347,6 @@ public class Insert_image_instructionActivity extends AppCompatActivity {
                     img6.setVisibility(View.GONE);
                     img7.setVisibility(View.GONE);
                     img8.setVisibility(View.GONE);
-                    paintingmediaPlayer = MediaPlayer.create(this, R.raw.slide813);
                     paintingmediaPlayer.start();
                     break;
 
@@ -365,7 +368,6 @@ public class Insert_image_instructionActivity extends AppCompatActivity {
                     img6.setImageResource(R.drawable.stole6);
                     img7.setVisibility(View.GONE);
                     img8.setVisibility(View.GONE);
-                    stolesmediaPlayer = MediaPlayer.create(this, R.raw.slide814);
                     stolesmediaPlayer.start();
                     break;
 
@@ -387,7 +389,6 @@ public class Insert_image_instructionActivity extends AppCompatActivity {
                     img6.setImageResource(R.drawable.hankerchiep6);
                     img7.setVisibility(View.GONE);
                     img8.setVisibility(View.GONE);
-                    handkerchiefmediaPlayer = MediaPlayer.create(this, R.raw.slide815);
                     handkerchiefmediaPlayer.start();
                     break;
 
@@ -534,49 +535,65 @@ public class Insert_image_instructionActivity extends AppCompatActivity {
 
     @Override
     public void onBackPressed(){
-        if(sareemediaPlayer.isPlaying()) {
-            sareemediaPlayer.stop();
-        }
-        else if(tshirtmediaPlayer.isPlaying()) {
-            tshirtmediaPlayer.stop();
-        }
-        else if(bagmediaPlayer.isPlaying()) {
-            bagmediaPlayer.stop();
-        }
-        else if(goinamediaPlayer.isPlaying()) {
-            goinamediaPlayer.stop();
-        }
-        else if(wrapperskirtmediaPlayer.isPlaying()) {
-            wrapperskirtmediaPlayer.stop();
-        }
-        else if(kurtamediaPlayer.isPlaying()) {
-            kurtamediaPlayer.stop();
-        }
-        else if(palazzomediaPlayer.isPlaying()) {
-            palazzomediaPlayer.stop();
-        }
-        else if(cushioncovermediaPlayer.isPlaying()) {
-            cushioncovermediaPlayer.stop();
-        }
-        else if(leatherbagmediaPlayer.isPlaying()) {
-            leatherbagmediaPlayer.stop();
-        }
-        else if(blousepiecemediaPlayer.isPlaying()) {
-            blousepiecemediaPlayer.stop();
-        }
-        else if(homedecormediaPlayer.isPlaying()) {
-            homedecormediaPlayer.stop();
-        }
-        else if(utilitymediaPlayer.isPlaying()) {
-            utilitymediaPlayer.stop();
-        }else if(paintingmediaPlayer.isPlaying()) {
-            paintingmediaPlayer.stop();
-        }
-        else if(stolesmediaPlayer.isPlaying()) {
-            stolesmediaPlayer.stop();
-        }else if(handkerchiefmediaPlayer.isPlaying()) {
-            handkerchiefmediaPlayer.stop();
-        }
+        sareemediaPlayer.stop();
+        tshirtmediaPlayer.stop();
+        bagmediaPlayer.stop();
+        goinamediaPlayer.stop();
+        wrapperskirtmediaPlayer.stop();
+        kurtamediaPlayer.stop();
+        palazzomediaPlayer.stop();
+        cushioncovermediaPlayer.stop();
+        leatherbagmediaPlayer.stop();
+        blousepiecemediaPlayer.stop();
+        homedecormediaPlayer.stop();
+        utilitymediaPlayer.stop();
+        paintingmediaPlayer.stop();
+        stolesmediaPlayer.stop();
+        handkerchiefmediaPlayer.stop();
+//
+//        if(sareemediaPlayer.isPlaying()) {
+//            sareemediaPlayer.stop();
+//        }
+//        else if(tshirtmediaPlayer.isPlaying()) {
+//            tshirtmediaPlayer.stop();
+//        }
+//        else if(bagmediaPlayer.isPlaying()) {
+//            bagmediaPlayer.stop();
+//        }
+//        else if(goinamediaPlayer.isPlaying()) {
+//            goinamediaPlayer.stop();
+//        }
+//        else if(wrapperskirtmediaPlayer.isPlaying()) {
+//            wrapperskirtmediaPlayer.stop();
+//        }
+//        else if(kurtamediaPlayer.isPlaying()) {
+//            kurtamediaPlayer.stop();
+//        }
+//        else if(palazzomediaPlayer.isPlaying()) {
+//            palazzomediaPlayer.stop();
+//        }
+//        else if(cushioncovermediaPlayer.isPlaying()) {
+//            cushioncovermediaPlayer.stop();
+//        }
+//        else if(leatherbagmediaPlayer.isPlaying()) {
+//            leatherbagmediaPlayer.stop();
+//        }
+//        else if(blousepiecemediaPlayer.isPlaying()) {
+//            blousepiecemediaPlayer.stop();
+//        }
+//        else if(homedecormediaPlayer.isPlaying()) {
+//            homedecormediaPlayer.stop();
+//        }
+//        else if(utilitymediaPlayer.isPlaying()) {
+//            utilitymediaPlayer.stop();
+//        }else if(paintingmediaPlayer.isPlaying()) {
+//            paintingmediaPlayer.stop();
+//        }
+//        else if(stolesmediaPlayer.isPlaying()) {
+//            stolesmediaPlayer.stop();
+//        }else if(handkerchiefmediaPlayer.isPlaying()) {
+//            handkerchiefmediaPlayer.stop();
+//        }
         super.onBackPressed();
     }
 
