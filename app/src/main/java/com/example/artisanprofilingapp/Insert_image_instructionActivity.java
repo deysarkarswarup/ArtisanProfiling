@@ -235,14 +235,14 @@ public class Insert_image_instructionActivity extends AppCompatActivity {
                             "•\tছবি তোলার সময় ফোন টি আড়াআড়ি ভাবে ধরুন।\n" +
                             "\n" +
                             "নিচে ব্যাগ এর কয়েকটি স্যাম্পল ছবি লক্ষ্য করুন\n");
-//                    img1.setImageResource(R.drawable.cushion2);
-//                    img2.setImageResource(R.drawable.cushion3);
-//                    img3.setImageResource(R.drawable.cushion4);
-//                    img4.setImageResource(R.drawable.cushion5);
-//                    img5.setImageResource(R.drawable.cushion6);
-//                    img6.setImageResource(R.drawable.cushion7);
-////                    img7.setImageResource(R.drawable.bag7);
-////                    img8.setImageResource(R.drawable.bag8);
+                    img1.setImageResource(R.drawable.leatherbag1);
+                    img2.setImageResource(R.drawable.leatherbag2);
+                    img3.setImageResource(R.drawable.leatherbag3);
+                    img4.setImageResource(R.drawable.leatherbag4);
+                    img5.setImageResource(R.drawable.leatherbag5);
+                    img6.setImageResource(R.drawable.leatherbag6);
+                    img7.setImageResource(R.drawable.leatherbag7);
+                    img8.setImageResource(R.drawable.leatherbag8);
 //                    img7.setVisibility(View.GONE);
 //                    img8.setVisibility(View.GONE);
                     showpiecemediaPlayer.start();

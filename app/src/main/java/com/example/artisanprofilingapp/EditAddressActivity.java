@@ -76,19 +76,7 @@ public class EditAddressActivity extends AppCompatActivity {
                 ConnectivityManager con = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
                 NetworkInfo networkInfo = con.getActiveNetworkInfo();
                 if (networkInfo != null && networkInfo.isConnected()) {
-//                    if (!nam.getText().toString().equals("")) {
-//                        potaka = 1;
-//
-//                    } else {
-//                        nam.setError("টাইপ করুন");
-//                    }
-//
-//                    if (!nam1.getText().toString().equals("")) {
-//                        potaka++;
-//
-//                    } else {
-//                        nam1.setError("টাইপ করুন");
-//                    }
+
                     if (!nam2.getText().toString().equals("")) {
                         potaka=1;
 
