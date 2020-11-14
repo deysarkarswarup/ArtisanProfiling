@@ -55,14 +55,6 @@ public class Insert_image_instructionActivity extends AppCompatActivity {
         img8 = findViewById(R.id.img8);
         inst = findViewById(R.id.picInstruction);
 
-//        sareemediaPlayer = MediaPlayer.create(this, R.raw.sareeinst);
-//        bagmediaPlayer = MediaPlayer.create(this, R.raw.baginst);
-//        tshirtmediaPlayer = MediaPlayer.create(this, R.raw.tshirtinst);
-//        goinamediaPlayer = MediaPlayer.create(this, R.raw.goinainst);
-//        kurtamediaPlayer = MediaPlayer.create(this, R.raw.kurtainst);
-//        showpiecemediaPlayer = MediaPlayer.create(this, R.raw.showpieceinst);
-
-
         selected = myPref.getString("selected","none");
         try {
             switch (selected) {
