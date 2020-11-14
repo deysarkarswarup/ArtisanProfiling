@@ -31,7 +31,10 @@ public class Insert_image_instructionActivity extends AppCompatActivity {
     Button submitbtn;
     private static final int PERMISSION_REQUEST_CODE = 100;
     SharedPreferences myPref;
-    private MediaPlayer sareemediaPlayer, kurtamediaPlayer, tshirtmediaPlayer, bagmediaPlayer, showpiecemediaPlayer, goinamediaPlayer;
+    private MediaPlayer sareemediaPlayer, kurtamediaPlayer, tshirtmediaPlayer, bagmediaPlayer,
+            wrapperskirtmediaPlayer, goinamediaPlayer, palazzomediaPlayer, cushioncovermediaPlayer,
+            leatherbagmediaPlayer, blousepiecemediaPlayer, homedecormediaPlayer, utilitymediaPlayer,
+            paintingmediaPlayer, stolesmediaPlayer, handkerchiefmediaPlayer;
     private ImageView img1,img2,img3,img4,img5,img6,img7,img8;
     private TextView inst;
     private String selected;
@@ -105,8 +108,8 @@ public class Insert_image_instructionActivity extends AppCompatActivity {
                     img6.setImageResource(R.drawable.jewellery6);
                     img7.setVisibility(View.GONE);
                     img8.setVisibility(View.GONE);
-                    sareemediaPlayer = MediaPlayer.create(this, R.raw.slide81);
-                    sareemediaPlayer.start();
+                    goinamediaPlayer = MediaPlayer.create(this, R.raw.slide81);
+                    goinamediaPlayer.start();
                     break;
                 case "bag":
                     inst.setText("ব্যাগ এর ছবি তোলার কিছু প্রাথমিক ধারণা\n" +
@@ -128,9 +131,7 @@ public class Insert_image_instructionActivity extends AppCompatActivity {
                     img6.setImageResource(R.drawable.bag6);
                     img7.setImageResource(R.drawable.bag7);
                     img8.setImageResource(R.drawable.bag8);
-//                    img7.setVisibility(View.GONE);
-//                    img8.setVisibility(View.GONE);
-//                    bagmediaPlayer.prepare();
+                    bagmediaPlayer = MediaPlayer.create(this, R.raw.slide81);
                     bagmediaPlayer.start();
                     break;
 
@@ -152,8 +153,7 @@ public class Insert_image_instructionActivity extends AppCompatActivity {
                     img6.setImageResource(R.drawable.tshirt6);
                     img7.setImageResource(R.drawable.tshirt7);
                     img8.setImageResource(R.drawable.tshirt8);
-//                    img7.setVisibility(View.GONE);
-//                    img8.setVisibility(View.GONE);
+                    tshirtmediaPlayer = MediaPlayer.create(this, R.raw.slide81);
                     tshirtmediaPlayer.start();
                     break;
                 case "wrapperskirt":
@@ -172,12 +172,10 @@ public class Insert_image_instructionActivity extends AppCompatActivity {
                     img4.setImageResource(R.drawable.kurta4);
                     img5.setImageResource(R.drawable.kurta5);
                     img6.setImageResource(R.drawable.kurta6);
-//                    img7.setImageResource(R.drawable.bag7);
-//                    img8.setImageResource(R.drawable.bag8);
                     img7.setVisibility(View.GONE);
                     img8.setVisibility(View.GONE);
-//                    kurtamediaPlayer.prepare();
-                    kurtamediaPlayer.start();
+                    wrapperskirtmediaPlayer = MediaPlayer.create(this, R.raw.slide81);
+                    wrapperskirtmediaPlayer.start();
                     break;
                 case "palazzo":
                     inst.setText("পালাজো এর ছবি তোলার কিছু প্রাথমিক ধারণা\n" +
@@ -195,11 +193,10 @@ public class Insert_image_instructionActivity extends AppCompatActivity {
                     img4.setImageResource(R.drawable.palazzo4);
                     img5.setImageResource(R.drawable.palazzo5);
                     img6.setImageResource(R.drawable.palazzo6);
-//                    img7.setImageResource(R.drawable.bag7);
-//                    img8.setImageResource(R.drawable.bag8);
                     img7.setVisibility(View.GONE);
                     img8.setVisibility(View.GONE);
-                    showpiecemediaPlayer.start();
+                    palazzomediaPlayer = MediaPlayer.create(this, R.raw.slide81);
+                    palazzomediaPlayer.start();
                     break;
 
                 case "cushioncover":
@@ -218,11 +215,10 @@ public class Insert_image_instructionActivity extends AppCompatActivity {
                     img4.setImageResource(R.drawable.cushion5);
                     img5.setImageResource(R.drawable.cushion6);
                     img6.setImageResource(R.drawable.cushion7);
-//                    img7.setImageResource(R.drawable.bag7);
-//                    img8.setImageResource(R.drawable.bag8);
                     img7.setVisibility(View.GONE);
                     img8.setVisibility(View.GONE);
-                    showpiecemediaPlayer.start();
+                    cushioncovermediaPlayer = MediaPlayer.create(this, R.raw.slide81);
+                    cushioncovermediaPlayer.start();
                     break;
 
                 case "leatherbag":
@@ -245,9 +241,8 @@ public class Insert_image_instructionActivity extends AppCompatActivity {
                     img6.setImageResource(R.drawable.leatherbag6);
                     img7.setImageResource(R.drawable.leatherbag7);
                     img8.setImageResource(R.drawable.leatherbag8);
-//                    img7.setVisibility(View.GONE);
-//                    img8.setVisibility(View.GONE);
-                    showpiecemediaPlayer.start();
+                    leatherbagmediaPlayer = MediaPlayer.create(this, R.raw.slide81);
+                    leatherbagmediaPlayer.start();
                     break;
 
                 case "blousepiece":
@@ -266,11 +261,10 @@ public class Insert_image_instructionActivity extends AppCompatActivity {
                     img4.setImageResource(R.drawable.blouse4);
                     img5.setImageResource(R.drawable.blouse5);
                     img6.setImageResource(R.drawable.blouse6);
-//                    img7.setImageResource(R.drawable.bag7);
-//                    img8.setImageResource(R.drawable.bag8);
                     img7.setVisibility(View.GONE);
                     img8.setVisibility(View.GONE);
-                    showpiecemediaPlayer.start();
+                    blousepiecemediaPlayer = MediaPlayer.create(this, R.raw.slide81);
+                    blousepiecemediaPlayer.start();
                     break;
 
                 case "kurta":
@@ -289,11 +283,10 @@ public class Insert_image_instructionActivity extends AppCompatActivity {
                     img4.setImageResource(R.drawable.kurta4);
                     img5.setImageResource(R.drawable.kurta5);
                     img6.setImageResource(R.drawable.kurta6);
-//                    img7.setImageResource(R.drawable.bag7);
-//                    img8.setImageResource(R.drawable.bag8);
                     img7.setVisibility(View.GONE);
                     img8.setVisibility(View.GONE);
-                    showpiecemediaPlayer.start();
+                    kurtamediaPlayer = MediaPlayer.create(this, R.raw.slide81);
+                    kurtamediaPlayer.start();
                     break;
 
                 case "homedecor":
@@ -312,11 +305,10 @@ public class Insert_image_instructionActivity extends AppCompatActivity {
                     img4.setVisibility(View.GONE);
                     img5.setVisibility(View.GONE);
                     img6.setVisibility(View.GONE);
-//                    img7.setImageResource(R.drawable.bag7);
-//                    img8.setImageResource(R.drawable.bag8);
                     img7.setVisibility(View.GONE);
                     img8.setVisibility(View.GONE);
-                    showpiecemediaPlayer.start();
+                    homedecormediaPlayer = MediaPlayer.create(this, R.raw.slide81);
+                    homedecormediaPlayer.start();
                     break;
 
                 case "utility":
@@ -337,9 +329,8 @@ public class Insert_image_instructionActivity extends AppCompatActivity {
                     img6.setImageResource(R.drawable.utility6);
                     img7.setImageResource(R.drawable.utility7);
                     img8.setImageResource(R.drawable.utility8);
-//                    img7.setVisibility(View.GONE);
-//                    img8.setVisibility(View.GONE);
-                    showpiecemediaPlayer.start();
+                    utilitymediaPlayer = MediaPlayer.create(this, R.raw.slide81);
+                    utilitymediaPlayer.start();
                     break;
 
                 case "painting":
@@ -358,11 +349,10 @@ public class Insert_image_instructionActivity extends AppCompatActivity {
                     img4.setVisibility(View.GONE);
                     img5.setVisibility(View.GONE);
                     img6.setVisibility(View.GONE);
-//                    img7.setImageResource(R.drawable.bag7);
-//                    img8.setImageResource(R.drawable.bag8);
                     img7.setVisibility(View.GONE);
                     img8.setVisibility(View.GONE);
-                    showpiecemediaPlayer.start();
+                    paintingmediaPlayer = MediaPlayer.create(this, R.raw.slide81);
+                    paintingmediaPlayer.start();
                     break;
 
                 case "stoles":
@@ -381,11 +371,10 @@ public class Insert_image_instructionActivity extends AppCompatActivity {
                     img4.setImageResource(R.drawable.stole4);
                     img5.setImageResource(R.drawable.stole5);
                     img6.setImageResource(R.drawable.stole6);
-//                    img7.setImageResource(R.drawable.utility7);
-//                    img8.setImageResource(R.drawable.utility8);
                     img7.setVisibility(View.GONE);
                     img8.setVisibility(View.GONE);
-                    showpiecemediaPlayer.start();
+                    stolesmediaPlayer = MediaPlayer.create(this, R.raw.slide81);
+                    stolesmediaPlayer.start();
                     break;
 
                 case "handkerchief":
@@ -404,11 +393,10 @@ public class Insert_image_instructionActivity extends AppCompatActivity {
                     img4.setImageResource(R.drawable.hankerchiep4);
                     img5.setImageResource(R.drawable.hankerchiep5);
                     img6.setImageResource(R.drawable.hankerchiep6);
-//                    img7.setImageResource(R.drawable.utility7);
-//                    img8.setImageResource(R.drawable.utility8);
                     img7.setVisibility(View.GONE);
                     img8.setVisibility(View.GONE);
-                    showpiecemediaPlayer.start();
+                    handkerchiefmediaPlayer = MediaPlayer.create(this, R.raw.slide81);
+                    handkerchiefmediaPlayer.start();
                     break;
 
 
@@ -451,19 +439,87 @@ public class Insert_image_instructionActivity extends AppCompatActivity {
                     else if(goinamediaPlayer.isPlaying()) {
                         goinamediaPlayer.stop();
                     }
-                    else if(showpiecemediaPlayer.isPlaying()) {
-                        showpiecemediaPlayer.stop();
+                    else if(wrapperskirtmediaPlayer.isPlaying()) {
+                        wrapperskirtmediaPlayer.stop();
                     }
                     else if(kurtamediaPlayer.isPlaying()) {
                         kurtamediaPlayer.stop();
                     }
+                    else if(palazzomediaPlayer.isPlaying()) {
+                        palazzomediaPlayer.stop();
+                    }
+                    else if(cushioncovermediaPlayer.isPlaying()) {
+                        cushioncovermediaPlayer.stop();
+                    }
+                    else if(leatherbagmediaPlayer.isPlaying()) {
+                        leatherbagmediaPlayer.stop();
+                    }
+                    else if(blousepiecemediaPlayer.isPlaying()) {
+                        blousepiecemediaPlayer.stop();
+                    }
+                    else if(homedecormediaPlayer.isPlaying()) {
+                        homedecormediaPlayer.stop();
+                    }
+                    else if(utilitymediaPlayer.isPlaying()) {
+                        utilitymediaPlayer.stop();
+                    }else if(paintingmediaPlayer.isPlaying()) {
+                        paintingmediaPlayer.stop();
+                    }
+                    else if(stolesmediaPlayer.isPlaying()) {
+                        stolesmediaPlayer.stop();
+                    }else if(handkerchiefmediaPlayer.isPlaying()) {
+                        handkerchiefmediaPlayer.stop();
+                    }
+
 
                     Intent i = new Intent(Insert_image_instructionActivity.this, CaptureImageActivity.class);
                     startActivity(i);
 
-
                 }
                 else{
+                    if(sareemediaPlayer.isPlaying()) {
+                        sareemediaPlayer.stop();
+                    }
+                    else if(tshirtmediaPlayer.isPlaying()) {
+                        tshirtmediaPlayer.stop();
+                    }
+                    else if(bagmediaPlayer.isPlaying()) {
+                        bagmediaPlayer.stop();
+                    }
+                    else if(goinamediaPlayer.isPlaying()) {
+                        goinamediaPlayer.stop();
+                    }
+                    else if(wrapperskirtmediaPlayer.isPlaying()) {
+                        wrapperskirtmediaPlayer.stop();
+                    }
+                    else if(kurtamediaPlayer.isPlaying()) {
+                        kurtamediaPlayer.stop();
+                    }
+                    else if(palazzomediaPlayer.isPlaying()) {
+                        palazzomediaPlayer.stop();
+                    }
+                    else if(cushioncovermediaPlayer.isPlaying()) {
+                        cushioncovermediaPlayer.stop();
+                    }
+                    else if(leatherbagmediaPlayer.isPlaying()) {
+                        leatherbagmediaPlayer.stop();
+                    }
+                    else if(blousepiecemediaPlayer.isPlaying()) {
+                        blousepiecemediaPlayer.stop();
+                    }
+                    else if(homedecormediaPlayer.isPlaying()) {
+                        homedecormediaPlayer.stop();
+                    }
+                    else if(utilitymediaPlayer.isPlaying()) {
+                        utilitymediaPlayer.stop();
+                    }else if(paintingmediaPlayer.isPlaying()) {
+                        paintingmediaPlayer.stop();
+                    }
+                    else if(stolesmediaPlayer.isPlaying()) {
+                        stolesmediaPlayer.stop();
+                    }else if(handkerchiefmediaPlayer.isPlaying()) {
+                        handkerchiefmediaPlayer.stop();
+                    }
                     Intent intent = new Intent(Insert_image_instructionActivity.this, InternetCheckActivity.class);
                     startActivity(intent);
                     finish();
@@ -486,12 +542,49 @@ public class Insert_image_instructionActivity extends AppCompatActivity {
 
     @Override
     public void onBackPressed(){
-        sareemediaPlayer.stop();
-        tshirtmediaPlayer.stop();
-        bagmediaPlayer.stop();
-        goinamediaPlayer.stop();
-        showpiecemediaPlayer.stop();
-        kurtamediaPlayer.stop();
+        if(sareemediaPlayer.isPlaying()) {
+            sareemediaPlayer.stop();
+        }
+        else if(tshirtmediaPlayer.isPlaying()) {
+            tshirtmediaPlayer.stop();
+        }
+        else if(bagmediaPlayer.isPlaying()) {
+            bagmediaPlayer.stop();
+        }
+        else if(goinamediaPlayer.isPlaying()) {
+            goinamediaPlayer.stop();
+        }
+        else if(wrapperskirtmediaPlayer.isPlaying()) {
+            wrapperskirtmediaPlayer.stop();
+        }
+        else if(kurtamediaPlayer.isPlaying()) {
+            kurtamediaPlayer.stop();
+        }
+        else if(palazzomediaPlayer.isPlaying()) {
+            palazzomediaPlayer.stop();
+        }
+        else if(cushioncovermediaPlayer.isPlaying()) {
+            cushioncovermediaPlayer.stop();
+        }
+        else if(leatherbagmediaPlayer.isPlaying()) {
+            leatherbagmediaPlayer.stop();
+        }
+        else if(blousepiecemediaPlayer.isPlaying()) {
+            blousepiecemediaPlayer.stop();
+        }
+        else if(homedecormediaPlayer.isPlaying()) {
+            homedecormediaPlayer.stop();
+        }
+        else if(utilitymediaPlayer.isPlaying()) {
+            utilitymediaPlayer.stop();
+        }else if(paintingmediaPlayer.isPlaying()) {
+            paintingmediaPlayer.stop();
+        }
+        else if(stolesmediaPlayer.isPlaying()) {
+            stolesmediaPlayer.stop();
+        }else if(handkerchiefmediaPlayer.isPlaying()) {
+            handkerchiefmediaPlayer.stop();
+        }
         super.onBackPressed();
     }
 
