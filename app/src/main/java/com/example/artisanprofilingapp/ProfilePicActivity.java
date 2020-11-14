@@ -69,6 +69,7 @@ public class ProfilePicActivity extends AppCompatActivity {
 
         button = (Button) findViewById(R.id.start);
         myPref = getApplicationContext().getSharedPreferences("MyPref",MODE_PRIVATE);
+        myPref.edit().putString("track", "2").apply();
         dataToGet = myPref.getString("phone","No data found");
         updateProfile = myPref.getString("updateProfile","No data found");
         idToGet = myPref.getString("id","No data found");
@@ -186,7 +187,7 @@ public class ProfilePicActivity extends AppCompatActivity {
         protected void onPostExecute(Void aVoid) {
             makeRequest();
             Toast.makeText(ProfilePicActivity.this, "picture submitted successfully!", Toast.LENGTH_LONG).show();
-            myPref.edit().putString("track", "7").apply();
+//            myPref.edit().putString("track", "7").apply();
             updateProfile = myPref.getString("updateProfile","No data found");
 //            mediaPlayer.stop();
             if (updateProfile.equals("1")){
@@ -328,11 +329,13 @@ private void requestPermission() {
     @Override
     public void onBackPressed() {
         mediaPlayer.stop();
+        myPref.edit().putString("track", "2").apply();
         super.onBackPressed();
     }
     @Override
     public void onUserLeaveHint(){
         mediaPlayer.stop();
+        myPref.edit().putString("track", "2").apply();
         super.onUserLeaveHint();
     }
 }

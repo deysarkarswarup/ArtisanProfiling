@@ -68,6 +68,7 @@ public class CaptureImageActivity extends AppCompatActivity {
 
         button = (Button) findViewById(R.id.start);
         myPref = getApplicationContext().getSharedPreferences("MyPref",MODE_PRIVATE);
+        myPref.edit().putString("track", "7").apply();
         dataToGet = myPref.getString("phone","No data found");
         idToGet = myPref.getString("id","No Data found");
         productNameToGet = myPref.getString("ProductName","No Data found");
@@ -185,7 +186,7 @@ public class CaptureImageActivity extends AppCompatActivity {
             makeRequest();
             Toast.makeText(CaptureImageActivity.this, "picture submitted successfully!", Toast.LENGTH_LONG).show();
 
-            myPref.edit().putString("track", "11").apply();
+//            myPref.edit().putString("track", "11").apply();
             mediaPlayer.stop();
             Intent i=new Intent(CaptureImageActivity.this,CaptureImageActivity2.class);
             startActivity(i);
@@ -264,11 +265,13 @@ public class CaptureImageActivity extends AppCompatActivity {
     @Override
     public void onBackPressed() {
         mediaPlayer.stop();
+        myPref.edit().putString("track", "7").apply();
         super.onBackPressed();
     }
     @Override
     public void onUserLeaveHint(){
         mediaPlayer.stop();
+        myPref.edit().putString("track", "7").apply();
         super.onUserLeaveHint();
     }
 }

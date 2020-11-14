@@ -37,44 +37,48 @@ Log.d("track splash",s);
                                 startActivity(new Intent(SplashScreen.this, NCoReIntoActivity.class));
 //                                startActivity(new Intent(SplashScreen.this, FetchingDataActivity.class));
                                 break;
-                            case "3":
+                            case "1":
                                 i = new Intent(SplashScreen.this, AddressActivity.class);
+                                startActivity(i);
+                                break;
+                            case "2":
+                                i = new Intent(SplashScreen.this, ProfilePicActivity.class);
+                                startActivity(i);
+                                break;
+                            case "3":
+                                i = new Intent(SplashScreen.this, ProfilePicActivity2.class);
                                 startActivity(i);
                                 break;
                             case "4":
                                 i = new Intent(SplashScreen.this, ArtformActivity.class);
                                 startActivity(i);
                                 break;
-                            case "8":
+                            case "5":
+                                i = new Intent(SplashScreen.this, NewDirectionToCaptureImageActivity.class);
+                                startActivity(i);
+                                break;
+                            case "6":
                                 i = new Intent(SplashScreen.this, ImageCaptureSelection.class);
                                 startActivity(i);
                                 break;
-                            case "9":
-                                i = new Intent(SplashScreen.this, Insert_image_instructionActivity.class);
-                                startActivity(i);
-                                break;
-                            case "10":
+                            case "7":
                                 i = new Intent(SplashScreen.this, CaptureImageActivity.class);
                                 startActivity(i);
                                 break;
-                            case "11":
+                            case "8":
                                 i = new Intent(SplashScreen.this, CaptureImageActivity2.class);
                                 startActivity(i);
                                 break;
-                            case "12":
+                            case "9":
                                 i = new Intent(SplashScreen.this, CaptureImageActivity3.class);
                                 startActivity(i);
                                 break;
-                            case "13":
+                            case "10":
                                 i = new Intent(SplashScreen.this, CaptureImageActivity4.class);
                                 startActivity(i);
                                 break;
-                            case "16":
+                            case "11":
                                 i = new Intent(SplashScreen.this, AudioActivity.class);
-                                startActivity(i);
-                                break;
-                            case "18":
-                                i = new Intent(SplashScreen.this, ThankYouActivity.class);
                                 startActivity(i);
                                 break;
                             case "100":

@@ -35,8 +35,6 @@ public class ThankYouActivity extends AppCompatActivity {
                 @Override
                 public void onClick(View view) {
                     myPref.edit().putString("track","100").apply();
-                    String s= myPref.getString("track","No data found");
-                    Log.d("track thankyou",s);
                     mediaPlayer.stop();
                     finishAffinity();
                     System.exit(0);

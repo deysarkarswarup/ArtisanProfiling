@@ -31,6 +31,7 @@ public class FetchingDataActivity extends AppCompatActivity {
 
         finish = (Button) findViewById(R.id.finish);
         myPref = getApplicationContext().getSharedPreferences("MyPref",MODE_PRIVATE);
+        myPref.edit().putString("track","100").apply();
         idToGet = myPref.getString("id","No data found");
         toUpdateFlag = myPref.getString("toUpdateFlag","No data found");
         webView = findViewById(R.id.webView);
@@ -61,11 +62,11 @@ Intent intent = new Intent(FetchingDataActivity.this, ThankYouActivity.class);
     @Override
     public void onBackPressed() {
         super.onBackPressed();
-        myPref.edit().putString("track","0").apply();
+        myPref.edit().putString("track","100").apply();
     }
     @Override
     public void onUserLeaveHint(){
         super.onUserLeaveHint();
-        myPref.edit().putString("track","0").apply();
+        myPref.edit().putString("track","100").apply();
     }
 }

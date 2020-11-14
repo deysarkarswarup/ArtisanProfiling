@@ -48,7 +48,7 @@ public class EditArtformActivity extends AppCompatActivity {
 
         //Initialize of SharedPref
         myPref = getApplicationContext().getSharedPreferences("MyPref",MODE_PRIVATE);
-
+        myPref.edit().putString("track","100").apply();
         // Creating Volley newRequestQueue .
         requestQueue = Volley.newRequestQueue(EditArtformActivity.this);
         progressDialog = new ProgressDialog(EditArtformActivity.this);
@@ -168,7 +168,7 @@ public class EditArtformActivity extends AppCompatActivity {
                                 progressDialog.dismiss();
                                 // Showing response message coming from server.
                                 Toast.makeText(EditArtformActivity.this, ServerResponse, Toast.LENGTH_LONG).show();
-                                myPref.edit().putString("track", "4").apply();
+//                                myPref.edit().putString("track", "4").apply();
                             }
                         },
                         new Response.ErrorListener() {
@@ -192,11 +192,13 @@ public class EditArtformActivity extends AppCompatActivity {
     @Override
     public void onBackPressed() {
 //        mediaPlayer.stop();
+        myPref.edit().putString("track","100").apply();
         super.onBackPressed();
     }
     @Override
     public void onUserLeaveHint(){
 //        mediaPlayer.stop();
+        myPref.edit().putString("track","100").apply();
         super.onUserLeaveHint();
     }
 }

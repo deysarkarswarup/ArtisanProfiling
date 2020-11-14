@@ -63,6 +63,7 @@ public class AudioActivity extends AppCompatActivity {
         yes = findViewById(R.id.yes);
 
         myPref = getApplicationContext().getSharedPreferences("MyPref",MODE_PRIVATE);
+        myPref.edit().putString("track", "11").apply();
         dataToGet = myPref.getString("id","No data found");
         mediaPlayer1 = MediaPlayer.create(this, R.raw.slide13);
         mediaPlayer1.start();
@@ -199,7 +200,7 @@ public class AudioActivity extends AppCompatActivity {
                 uploading.dismiss();
                 Toast.makeText(AudioActivity.this, s, Toast.LENGTH_LONG).show();
                 mediaPlayer.stop();
-                myPref.edit().putString("track", "17").apply();
+//                myPref.edit().putString("track", "17").apply();
             }
 
 
@@ -274,11 +275,13 @@ public class AudioActivity extends AppCompatActivity {
     @Override
     public void onBackPressed() {
         mediaPlayer1.stop();
+        myPref.edit().putString("track", "11").apply();
         super.onBackPressed();
     }
     @Override
     public void onUserLeaveHint(){
         mediaPlayer1.stop();
+        myPref.edit().putString("track", "11").apply();
         super.onUserLeaveHint();
     }
 }

@@ -65,7 +65,7 @@ public class AddressActivity extends AppCompatActivity {
 
         //Initialize of SharedPref
         myPref = getApplicationContext().getSharedPreferences("MyPref",MODE_PRIVATE);
-
+        myPref.edit().putString("track", "1").apply();
         // Creating Volley newRequestQueue .
         requestQueue = Volley.newRequestQueue(AddressActivity.this);
         progressDialog = new ProgressDialog(AddressActivity.this);
@@ -218,7 +218,7 @@ public class AddressActivity extends AppCompatActivity {
                                 progressDialog.dismiss();
                                 // Showing response message coming from server.
                                 Toast.makeText(AddressActivity.this, ServerResponse, Toast.LENGTH_LONG).show();
-                                myPref.edit().putString("track", "4").apply();
+//                                myPref.edit().putString("track", "4").apply();
                             }
                         },
                         new Response.ErrorListener() {
@@ -241,11 +241,13 @@ public class AddressActivity extends AppCompatActivity {
     @Override
     public void onBackPressed() {
         mediaPlayer.stop();
+        myPref.edit().putString("track", "1").apply();
         super.onBackPressed();
     }
     @Override
     public void onUserLeaveHint(){
         mediaPlayer.stop();
+        myPref.edit().putString("track", "1").apply();
         super.onUserLeaveHint();
     }
 }

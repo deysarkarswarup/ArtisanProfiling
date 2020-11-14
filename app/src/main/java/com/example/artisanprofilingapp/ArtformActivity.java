@@ -45,7 +45,7 @@ public class ArtformActivity extends AppCompatActivity {
     ProgressDialog progressDialog;
     String DataHolder;
     SharedPreferences myPref;
-        private MediaPlayer mediaPlayer;
+    private MediaPlayer mediaPlayer;
     RadioGroup radioGroup, radioGroup1, radioGroup2;
     String yesOrNo, yesOrNo1,typeOfSilpo;
 
@@ -61,7 +61,7 @@ public class ArtformActivity extends AppCompatActivity {
 
         //Initialize of SharedPref
         myPref = getApplicationContext().getSharedPreferences("MyPref",MODE_PRIVATE);
-
+        myPref.edit().putString("track", "4").apply();
         // Creating Volley newRequestQueue .
         requestQueue = Volley.newRequestQueue(ArtformActivity.this);
         progressDialog = new ProgressDialog(ArtformActivity.this);
@@ -204,11 +204,13 @@ Log.d("msg",myurl);
     @Override
     public void onBackPressed() {
         mediaPlayer.stop();
+        myPref.edit().putString("track", "4").apply();
         super.onBackPressed();
     }
     @Override
     public void onUserLeaveHint(){
         mediaPlayer.stop();
+        myPref.edit().putString("track", "4").apply();
         super.onUserLeaveHint();
     }
 }

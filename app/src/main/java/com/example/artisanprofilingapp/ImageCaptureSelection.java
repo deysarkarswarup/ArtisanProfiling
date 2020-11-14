@@ -42,6 +42,7 @@ public class ImageCaptureSelection extends AppCompatActivity {
         other = findViewById(R.id.others);
 
         myPref = getApplicationContext().getSharedPreferences("MyPref", MODE_PRIVATE);
+        myPref.edit().putString("track", "6").apply();
         mediaPlayer = MediaPlayer.create(this, R.raw.slide7);
 
         mediaPlayer.start();
@@ -53,7 +54,7 @@ public class ImageCaptureSelection extends AppCompatActivity {
                 public void onClick(View v) {
                     myPref.edit().putString("selected", "saree").apply();
                     myPref.edit().putString("ProductName", "শাড়ি").apply();
-                    myPref.edit().putString("track", "15").apply();
+//                    myPref.edit().putString("track", "15").apply();
                     mediaPlayer.stop();
                     startActivity(new Intent(getApplicationContext(), Insert_image_instructionActivity.class));
                 }
@@ -63,7 +64,7 @@ public class ImageCaptureSelection extends AppCompatActivity {
                 public void onClick(View v) {
                     myPref.edit().putString("selected", "goina").apply();
                     myPref.edit().putString("ProductName", "গয়না").apply();
-                    myPref.edit().putString("track", "15").apply();
+//                    myPref.edit().putString("track", "15").apply();
                     mediaPlayer.stop();
                     startActivity(new Intent(getApplicationContext(), Insert_image_instructionActivity.class));
                 }
@@ -73,7 +74,7 @@ public class ImageCaptureSelection extends AppCompatActivity {
                 public void onClick(View v) {
                     myPref.edit().putString("selected", "bag").apply();
                     myPref.edit().putString("ProductName", "ব্যাগ").apply();
-                    myPref.edit().putString("track", "15").apply();
+//                    myPref.edit().putString("track", "15").apply();
                     mediaPlayer.stop();
                     startActivity(new Intent(getApplicationContext(), Insert_image_instructionActivity.class));
                 }
@@ -83,7 +84,7 @@ public class ImageCaptureSelection extends AppCompatActivity {
                 public void onClick(View v) {
                     myPref.edit().putString("selected", "tshirt").apply();
                     myPref.edit().putString("ProductName", "টি-শার্ট").apply();
-                    myPref.edit().putString("track", "15").apply();
+//                    myPref.edit().putString("track", "15").apply();
                     mediaPlayer.stop();
                     startActivity(new Intent(getApplicationContext(), Insert_image_instructionActivity.class));
                 }
@@ -95,7 +96,7 @@ public class ImageCaptureSelection extends AppCompatActivity {
                 public void onClick(View v) {
                     myPref.edit().putString("selected", "wrapperskirt").apply();
                     myPref.edit().putString("ProductName", "স্কার্ট").apply();
-                    myPref.edit().putString("track", "15").apply();
+//                    myPref.edit().putString("track", "15").apply();
                     mediaPlayer.stop();
                     startActivity(new Intent(getApplicationContext(), Insert_image_instructionActivity.class));
                 }
@@ -107,7 +108,7 @@ public class ImageCaptureSelection extends AppCompatActivity {
                 public void onClick(View v) {
                     myPref.edit().putString("selected", "palazzo").apply();
                     myPref.edit().putString("ProductName", "পালাজো").apply();
-                    myPref.edit().putString("track", "15").apply();
+//                    myPref.edit().putString("track", "15").apply();
                     mediaPlayer.stop();
                     startActivity(new Intent(getApplicationContext(), Insert_image_instructionActivity.class));
                 }
@@ -119,31 +120,29 @@ public class ImageCaptureSelection extends AppCompatActivity {
                 public void onClick(View v) {
                     myPref.edit().putString("selected", "cushioncover").apply();
                     myPref.edit().putString("ProductName", "কুশন কভার").apply();
-                    myPref.edit().putString("track", "15").apply();
+//                    myPref.edit().putString("track", "15").apply();
                     mediaPlayer.stop();
                     startActivity(new Intent(getApplicationContext(), Insert_image_instructionActivity.class));
                 }
             });
-
 
             leatherbag.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     myPref.edit().putString("selected", "leatherbag").apply();
                     myPref.edit().putString("ProductName", "চামড়ার ব্যাগ").apply();
-                    myPref.edit().putString("track", "15").apply();
+//                    myPref.edit().putString("track", "15").apply();
                     mediaPlayer.stop();
                     startActivity(new Intent(getApplicationContext(), Insert_image_instructionActivity.class));
                 }
             });
-
 
             blousepiece.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     myPref.edit().putString("selected", "blousepiece").apply();
                     myPref.edit().putString("ProductName", "ব্লাউজ পিস").apply();
-                    myPref.edit().putString("track", "15").apply();
+//                    myPref.edit().putString("track", "15").apply();
                     mediaPlayer.stop();
                     startActivity(new Intent(getApplicationContext(), Insert_image_instructionActivity.class));
                 }
@@ -154,7 +153,7 @@ public class ImageCaptureSelection extends AppCompatActivity {
                 public void onClick(View v) {
                     myPref.edit().putString("selected", "kurta").apply();
                     myPref.edit().putString("ProductName", "কুর্তা কুর্তি").apply();
-                    myPref.edit().putString("track", "15").apply();
+//                    myPref.edit().putString("track", "15").apply();
                     mediaPlayer.stop();
                     startActivity(new Intent(getApplicationContext(), Insert_image_instructionActivity.class));
                 }
@@ -165,7 +164,7 @@ public class ImageCaptureSelection extends AppCompatActivity {
                 public void onClick(View v) {
                     myPref.edit().putString("selected", "homedecor").apply();
                     myPref.edit().putString("ProductName", "শো-পিস").apply();
-                    myPref.edit().putString("track", "15").apply();
+//                    myPref.edit().putString("track", "15").apply();
                     mediaPlayer.stop();
                     startActivity(new Intent(getApplicationContext(), Insert_image_instructionActivity.class));
                 }
@@ -176,7 +175,7 @@ public class ImageCaptureSelection extends AppCompatActivity {
                 public void onClick(View v) {
                     myPref.edit().putString("selected", "utility").apply();
                     myPref.edit().putString("ProductName", "অফিস আইটেম").apply();
-                    myPref.edit().putString("track", "15").apply();
+//                    myPref.edit().putString("track", "15").apply();
                     mediaPlayer.stop();
                     startActivity(new Intent(getApplicationContext(), Insert_image_instructionActivity.class));
                 }
@@ -188,7 +187,7 @@ public class ImageCaptureSelection extends AppCompatActivity {
                 public void onClick(View v) {
                     myPref.edit().putString("selected", "painting").apply();
                     myPref.edit().putString("ProductName", "পেইন্টিং").apply();
-                    myPref.edit().putString("track", "15").apply();
+//                    myPref.edit().putString("track", "15").apply();
                     mediaPlayer.stop();
                     startActivity(new Intent(getApplicationContext(), Insert_image_instructionActivity.class));
                 }
@@ -200,7 +199,7 @@ public class ImageCaptureSelection extends AppCompatActivity {
                 public void onClick(View v) {
                     myPref.edit().putString("selected", "stoles").apply();
                     myPref.edit().putString("ProductName", "স্টোল").apply();
-                    myPref.edit().putString("track", "15").apply();
+//                    myPref.edit().putString("track", "15").apply();
                     mediaPlayer.stop();
                     startActivity(new Intent(getApplicationContext(), Insert_image_instructionActivity.class));
                 }
@@ -212,7 +211,7 @@ public class ImageCaptureSelection extends AppCompatActivity {
                 public void onClick(View v) {
                     myPref.edit().putString("selected", "handkerchief").apply();
                     myPref.edit().putString("ProductName", "রুমাল").apply();
-                    myPref.edit().putString("track", "15").apply();
+//                    myPref.edit().putString("track", "15").apply();
                     mediaPlayer.stop();
                     startActivity(new Intent(getApplicationContext(), Insert_image_instructionActivity.class));
                 }
@@ -223,7 +222,7 @@ public class ImageCaptureSelection extends AppCompatActivity {
                 public void onClick(View v) {
                     myPref.edit().putString("selected", "other").apply();
                     myPref.edit().putString("ProductName", "অন্যান্য").apply();
-                    myPref.edit().putString("track", "15").apply();
+//                    myPref.edit().putString("track", "15").apply();
                     mediaPlayer.stop();
                     startActivity(new Intent(getApplicationContext(), CaptureImageActivity.class));
                 }
@@ -240,11 +239,13 @@ public class ImageCaptureSelection extends AppCompatActivity {
     @Override
     public void onBackPressed() {
         mediaPlayer.stop();
+        myPref.edit().putString("track", "6").apply();
         super.onBackPressed();
     }
     @Override
     public void onUserLeaveHint(){
         mediaPlayer.stop();
+        myPref.edit().putString("track", "6").apply();
         super.onUserLeaveHint();
     }
 

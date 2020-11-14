@@ -90,6 +90,7 @@ public class ProfilePicActivity2 extends AppCompatActivity {
         inst = findViewById(R.id.inst);
 
         myPref = getApplicationContext().getSharedPreferences("MyPref",MODE_PRIVATE);
+        myPref.edit().putString("track", "3").apply();
         dataToGet = myPref.getString("phone","No data found");
         idToGet = myPref.getString("id","No data found");
         ImageCountToGet = myPref.getString("count","No data found");
@@ -339,7 +340,7 @@ public class ProfilePicActivity2 extends AppCompatActivity {
         protected void onPostExecute(Void aVoid) {
             makeRequest();
             Toast.makeText(ProfilePicActivity2.this, "picture submitted successfully!", Toast.LENGTH_LONG).show();
-            myPref.edit().putString("track", "7").apply();
+//            myPref.edit().putString("track", "7").apply();
 //            mediaPlayer.stop();
             Intent i=new Intent(ProfilePicActivity2.this, ProfilePicActivity2.class);
             startActivity(i);
@@ -426,7 +427,7 @@ public class ProfilePicActivity2 extends AppCompatActivity {
                 uploading.dismiss();
                 Toast.makeText(ProfilePicActivity2.this, s, Toast.LENGTH_LONG).show();
                 mediaPlayer.stop();
-                myPref.edit().putString("track", "17").apply();
+//                myPref.edit().putString("track", "17").apply();
                 Intent i=new Intent(ProfilePicActivity2.this,ArtformActivity.class);
                 startActivity(i);
             }
@@ -469,11 +470,13 @@ public class ProfilePicActivity2 extends AppCompatActivity {
     @Override
     public void onBackPressed() {
 //        mediaPlayer.stop();
+        myPref.edit().putString("track", "3").apply();
         super.onBackPressed();
     }
     @Override
     public void onUserLeaveHint(){
 //        mediaPlayer.stop();
+        myPref.edit().putString("track", "3").apply();
         super.onUserLeaveHint();
     }
 }

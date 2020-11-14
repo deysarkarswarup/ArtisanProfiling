@@ -74,9 +74,7 @@ public class MainActivity extends AppCompatActivity {
         if (Environment.MEDIA_MOUNTED.equals(state)) {
             if (Build.VERSION.SDK_INT >= 23) {
                if (!checkPermission()) {
-
                     requestPermission();
-
                 }
                else{
 //                   mediaPlayer.start();
@@ -179,7 +177,7 @@ public class MainActivity extends AppCompatActivity {
                             showJSON(response);
                             progressDialog.dismiss();
                             // Showing response message coming from server.
-                            myPref.edit().putString("track", "1").apply();
+//                            myPref.edit().putString("track", "1").apply();
                         }
                     },
                     new Response.ErrorListener() {

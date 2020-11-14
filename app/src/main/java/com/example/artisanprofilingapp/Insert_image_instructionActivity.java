@@ -419,7 +419,7 @@ public class Insert_image_instructionActivity extends AppCompatActivity {
                 ConnectivityManager con = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
                 NetworkInfo networkInfo = con.getActiveNetworkInfo();
                 if (networkInfo != null && networkInfo.isConnected()) {
-                    myPref.edit().putString("track", "10").apply();
+//                    myPref.edit().putString("track", "10").apply();
                     if(sareemediaPlayer.isPlaying()) {
                         sareemediaPlayer.stop();
                     }
