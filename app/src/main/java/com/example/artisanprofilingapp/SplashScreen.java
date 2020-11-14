@@ -23,7 +23,7 @@ public class SplashScreen extends AppCompatActivity {
         myPref = getApplicationContext().getSharedPreferences("MyPref",MODE_PRIVATE);
         final String s = myPref.getString("track","0");
 //        final String s ="";
-Log.d("track splash",s);
+//Log.d("track splash",s);
         ConnectivityManager con = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
         NetworkInfo networkInfo = con.getActiveNetworkInfo();
         if (networkInfo != null && networkInfo.isConnected() == true) {
