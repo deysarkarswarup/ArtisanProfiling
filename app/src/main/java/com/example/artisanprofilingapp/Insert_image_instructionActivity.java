@@ -100,7 +100,7 @@ public class Insert_image_instructionActivity extends AppCompatActivity {
                     img6.setImageResource(R.drawable.jewellery6);
                     img7.setVisibility(View.GONE);
                     img8.setVisibility(View.GONE);
-                    goinamediaPlayer = MediaPlayer.create(this, R.raw.slide81);
+                    goinamediaPlayer = MediaPlayer.create(this, R.raw.slide82);
                     goinamediaPlayer.start();
                     break;
                 case "bag":
@@ -123,7 +123,7 @@ public class Insert_image_instructionActivity extends AppCompatActivity {
                     img6.setImageResource(R.drawable.bag6);
                     img7.setImageResource(R.drawable.bag7);
                     img8.setImageResource(R.drawable.bag8);
-                    bagmediaPlayer = MediaPlayer.create(this, R.raw.slide81);
+                    bagmediaPlayer = MediaPlayer.create(this, R.raw.slide83);
                     bagmediaPlayer.start();
                     break;
 
@@ -145,7 +145,7 @@ public class Insert_image_instructionActivity extends AppCompatActivity {
                     img6.setImageResource(R.drawable.tshirt6);
                     img7.setImageResource(R.drawable.tshirt7);
                     img8.setImageResource(R.drawable.tshirt8);
-                    tshirtmediaPlayer = MediaPlayer.create(this, R.raw.slide81);
+                    tshirtmediaPlayer = MediaPlayer.create(this, R.raw.slide84);
                     tshirtmediaPlayer.start();
                     break;
                 case "wrapperskirt":
@@ -166,7 +166,7 @@ public class Insert_image_instructionActivity extends AppCompatActivity {
                     img6.setImageResource(R.drawable.kurta6);
                     img7.setVisibility(View.GONE);
                     img8.setVisibility(View.GONE);
-                    wrapperskirtmediaPlayer = MediaPlayer.create(this, R.raw.slide81);
+                    wrapperskirtmediaPlayer = MediaPlayer.create(this, R.raw.slide85);
                     wrapperskirtmediaPlayer.start();
                     break;
                 case "palazzo":
@@ -187,7 +187,7 @@ public class Insert_image_instructionActivity extends AppCompatActivity {
                     img6.setImageResource(R.drawable.palazzo6);
                     img7.setVisibility(View.GONE);
                     img8.setVisibility(View.GONE);
-                    palazzomediaPlayer = MediaPlayer.create(this, R.raw.slide81);
+                    palazzomediaPlayer = MediaPlayer.create(this, R.raw.slide86);
                     palazzomediaPlayer.start();
                     break;
 
@@ -209,7 +209,7 @@ public class Insert_image_instructionActivity extends AppCompatActivity {
                     img6.setImageResource(R.drawable.cushion7);
                     img7.setVisibility(View.GONE);
                     img8.setVisibility(View.GONE);
-                    cushioncovermediaPlayer = MediaPlayer.create(this, R.raw.slide81);
+                    cushioncovermediaPlayer = MediaPlayer.create(this, R.raw.slide87);
                     cushioncovermediaPlayer.start();
                     break;
 
@@ -233,7 +233,7 @@ public class Insert_image_instructionActivity extends AppCompatActivity {
                     img6.setImageResource(R.drawable.leatherbag6);
                     img7.setImageResource(R.drawable.leatherbag7);
                     img8.setImageResource(R.drawable.leatherbag8);
-                    leatherbagmediaPlayer = MediaPlayer.create(this, R.raw.slide81);
+                    leatherbagmediaPlayer = MediaPlayer.create(this, R.raw.slide810);
                     leatherbagmediaPlayer.start();
                     break;
 
@@ -255,7 +255,7 @@ public class Insert_image_instructionActivity extends AppCompatActivity {
                     img6.setImageResource(R.drawable.blouse6);
                     img7.setVisibility(View.GONE);
                     img8.setVisibility(View.GONE);
-                    blousepiecemediaPlayer = MediaPlayer.create(this, R.raw.slide81);
+                    blousepiecemediaPlayer = MediaPlayer.create(this, R.raw.slide88);
                     blousepiecemediaPlayer.start();
                     break;
 
@@ -277,7 +277,7 @@ public class Insert_image_instructionActivity extends AppCompatActivity {
                     img6.setImageResource(R.drawable.kurta6);
                     img7.setVisibility(View.GONE);
                     img8.setVisibility(View.GONE);
-                    kurtamediaPlayer = MediaPlayer.create(this, R.raw.slide81);
+                    kurtamediaPlayer = MediaPlayer.create(this, R.raw.slide89);
                     kurtamediaPlayer.start();
                     break;
 
@@ -299,7 +299,7 @@ public class Insert_image_instructionActivity extends AppCompatActivity {
                     img6.setVisibility(View.GONE);
                     img7.setVisibility(View.GONE);
                     img8.setVisibility(View.GONE);
-                    homedecormediaPlayer = MediaPlayer.create(this, R.raw.slide81);
+                    homedecormediaPlayer = MediaPlayer.create(this, R.raw.slide811);
                     homedecormediaPlayer.start();
                     break;
 
@@ -321,7 +321,7 @@ public class Insert_image_instructionActivity extends AppCompatActivity {
                     img6.setImageResource(R.drawable.utility6);
                     img7.setImageResource(R.drawable.utility7);
                     img8.setImageResource(R.drawable.utility8);
-                    utilitymediaPlayer = MediaPlayer.create(this, R.raw.slide81);
+                    utilitymediaPlayer = MediaPlayer.create(this, R.raw.slide812);
                     utilitymediaPlayer.start();
                     break;
 
@@ -343,7 +343,7 @@ public class Insert_image_instructionActivity extends AppCompatActivity {
                     img6.setVisibility(View.GONE);
                     img7.setVisibility(View.GONE);
                     img8.setVisibility(View.GONE);
-                    paintingmediaPlayer = MediaPlayer.create(this, R.raw.slide81);
+                    paintingmediaPlayer = MediaPlayer.create(this, R.raw.slide813);
                     paintingmediaPlayer.start();
                     break;
 
@@ -365,7 +365,7 @@ public class Insert_image_instructionActivity extends AppCompatActivity {
                     img6.setImageResource(R.drawable.stole6);
                     img7.setVisibility(View.GONE);
                     img8.setVisibility(View.GONE);
-                    stolesmediaPlayer = MediaPlayer.create(this, R.raw.slide81);
+                    stolesmediaPlayer = MediaPlayer.create(this, R.raw.slide814);
                     stolesmediaPlayer.start();
                     break;
 
@@ -387,7 +387,7 @@ public class Insert_image_instructionActivity extends AppCompatActivity {
                     img6.setImageResource(R.drawable.hankerchiep6);
                     img7.setVisibility(View.GONE);
                     img8.setVisibility(View.GONE);
-                    handkerchiefmediaPlayer = MediaPlayer.create(this, R.raw.slide81);
+                    handkerchiefmediaPlayer = MediaPlayer.create(this, R.raw.slide815);
                     handkerchiefmediaPlayer.start();
                     break;
 
