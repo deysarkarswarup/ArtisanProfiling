@@ -550,50 +550,6 @@ public class Insert_image_instructionActivity extends AppCompatActivity {
         paintingmediaPlayer.stop();
         stolesmediaPlayer.stop();
         handkerchiefmediaPlayer.stop();
-//
-//        if(sareemediaPlayer.isPlaying()) {
-//            sareemediaPlayer.stop();
-//        }
-//        else if(tshirtmediaPlayer.isPlaying()) {
-//            tshirtmediaPlayer.stop();
-//        }
-//        else if(bagmediaPlayer.isPlaying()) {
-//            bagmediaPlayer.stop();
-//        }
-//        else if(goinamediaPlayer.isPlaying()) {
-//            goinamediaPlayer.stop();
-//        }
-//        else if(wrapperskirtmediaPlayer.isPlaying()) {
-//            wrapperskirtmediaPlayer.stop();
-//        }
-//        else if(kurtamediaPlayer.isPlaying()) {
-//            kurtamediaPlayer.stop();
-//        }
-//        else if(palazzomediaPlayer.isPlaying()) {
-//            palazzomediaPlayer.stop();
-//        }
-//        else if(cushioncovermediaPlayer.isPlaying()) {
-//            cushioncovermediaPlayer.stop();
-//        }
-//        else if(leatherbagmediaPlayer.isPlaying()) {
-//            leatherbagmediaPlayer.stop();
-//        }
-//        else if(blousepiecemediaPlayer.isPlaying()) {
-//            blousepiecemediaPlayer.stop();
-//        }
-//        else if(homedecormediaPlayer.isPlaying()) {
-//            homedecormediaPlayer.stop();
-//        }
-//        else if(utilitymediaPlayer.isPlaying()) {
-//            utilitymediaPlayer.stop();
-//        }else if(paintingmediaPlayer.isPlaying()) {
-//            paintingmediaPlayer.stop();
-//        }
-//        else if(stolesmediaPlayer.isPlaying()) {
-//            stolesmediaPlayer.stop();
-//        }else if(handkerchiefmediaPlayer.isPlaying()) {
-//            handkerchiefmediaPlayer.stop();
-//        }
         super.onBackPressed();
     }
 

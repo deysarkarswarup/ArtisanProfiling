@@ -15,7 +15,6 @@ import android.widget.Button;
 public class UpdateChooseActivity extends AppCompatActivity {
     Button age, address, profilePic, expe, silpo, newProduct;
     private SharedPreferences myPref;
-    //private MediaPlayer mediaPlayer;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -29,8 +28,6 @@ public class UpdateChooseActivity extends AppCompatActivity {
         newProduct = findViewById(R.id.newProduct);
 
         myPref = getApplicationContext().getSharedPreferences("MyPref", MODE_PRIVATE);
-//        mediaPlayer = MediaPlayer.create(this, R.raw.captureselectioninst);
-//        mediaPlayer.start();
         myPref.edit().putString("updateProfile","1").apply();
         ConnectivityManager con = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
         NetworkInfo networkInfo = con.getActiveNetworkInfo();
@@ -38,10 +35,6 @@ public class UpdateChooseActivity extends AppCompatActivity {
             age.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-//                    myPref.edit().putString("selected", "saree").apply();
-//                    myPref.edit().putString("ProductName", "শাড়ি").apply();
-//                    myPref.edit().putString("track", "15").apply();
-//                    mediaPlayer.stop();
                     startActivity(new Intent(getApplicationContext(), EditAgeActivity.class));
                 }
             });
@@ -49,10 +42,6 @@ public class UpdateChooseActivity extends AppCompatActivity {
             address.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-//                    myPref.edit().putString("selected", "saree").apply();
-//                    myPref.edit().putString("ProductName", "শাড়ি").apply();
-//                    myPref.edit().putString("track", "15").apply();
-//                    mediaPlayer.stop();
                     startActivity(new Intent(getApplicationContext(), EditAddressActivity.class));
                 }
             });
@@ -60,10 +49,6 @@ public class UpdateChooseActivity extends AppCompatActivity {
             profilePic.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-//                    myPref.edit().putString("selected", "saree").apply();
-//                    myPref.edit().putString("ProductName", "শাড়ি").apply();
-//                    myPref.edit().putString("track", "15").apply();
-//                    mediaPlayer.stop();
                     startActivity(new Intent(getApplicationContext(), ProfilePicActivity.class));
                 }
             });
@@ -71,10 +56,6 @@ public class UpdateChooseActivity extends AppCompatActivity {
             expe.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-//                    myPref.edit().putString("selected", "saree").apply();
-//                    myPref.edit().putString("ProductName", "শাড়ি").apply();
-//                    myPref.edit().putString("track", "15").apply();
-//                    mediaPlayer.stop();
                     startActivity(new Intent(getApplicationContext(), EditExperienceActivity.class));
                 }
             });
@@ -82,10 +63,6 @@ public class UpdateChooseActivity extends AppCompatActivity {
             silpo.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-//                    myPref.edit().putString("selected", "saree").apply();
-//                    myPref.edit().putString("ProductName", "শাড়ি").apply();
-//                    myPref.edit().putString("track", "15").apply();
-//                    mediaPlayer.stop();
                     startActivity(new Intent(getApplicationContext(), EditArtformActivity.class));
                 }
             });
@@ -93,10 +70,6 @@ public class UpdateChooseActivity extends AppCompatActivity {
             newProduct.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-//                    myPref.edit().putString("selected", "saree").apply();
-//                    myPref.edit().putString("ProductName", "শাড়ি").apply();
-//                    myPref.edit().putString("track", "15").apply();
-//                    mediaPlayer.stop();
                     startActivity(new Intent(getApplicationContext(), ImageCaptureSelection.class));
                 }
             });
@@ -111,12 +84,10 @@ public class UpdateChooseActivity extends AppCompatActivity {
 
     @Override
     public void onBackPressed() {
-//        mediaPlayer.stop();
         super.onBackPressed();
     }
     @Override
     public void onUserLeaveHint(){
-//        mediaPlayer.stop();
         super.onUserLeaveHint();
     }
 

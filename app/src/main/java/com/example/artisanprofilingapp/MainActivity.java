@@ -62,13 +62,11 @@ public class MainActivity extends AppCompatActivity {
     private static final int PERMISSION_REQUEST_CODE = 100;
 //    private MediaPlayer mediaPlayer;
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 //        mediaPlayer = MediaPlayer.create(this,R.raw.phoneno);
-
 //        mediaPlayer.start();
         String state = Environment.getExternalStorageState();
         if (Environment.MEDIA_MOUNTED.equals(state)) {
@@ -151,16 +149,11 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void regUser() {
-
             progressDialog.setMessage("Please Wait, We are Inserting Your Data on Server");
             progressDialog.show();
-
             PhoneNoHolder = phno.getEditText().getText().toString().trim();
-
             myPref.edit().putString("phone", PhoneNoHolder).apply();
             myPref.edit().putString("count", "0").apply();
-
-
             PhoneNoHolder = PhoneNoHolder.replaceAll(" ","%20");
 
         String characterFilter = "[^\\p{L}\\p{M}\\p{N}\\p{P}\\p{Z}\\p{Cf}\\p{Cs}\\s]";
@@ -177,7 +170,6 @@ public class MainActivity extends AppCompatActivity {
                             showJSON(response);
                             progressDialog.dismiss();
                             // Showing response message coming from server.
-//                            myPref.edit().putString("track", "1").apply();
                         }
                     },
                     new Response.ErrorListener() {
