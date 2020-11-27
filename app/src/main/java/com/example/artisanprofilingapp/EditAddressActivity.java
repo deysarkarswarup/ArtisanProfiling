@@ -29,9 +29,8 @@ public class EditAddressActivity extends AppCompatActivity {
     Button submitbtn;
     RequestQueue requestQueue;
     ProgressDialog progressDialog;
-    String AddressHolder, AddressHolder1, AddressHolder2, AddressHolder3, AddressHolder4, AddressHolder5;
+    String AddressHolder2, AddressHolder3, AddressHolder4;
     SharedPreferences myPref;
-    //    private MediaPlayer mediaPlayer;
     RadioGroup radioGroup1, radioGroup2;
     String gender, caste;
     int potaka=0;
@@ -63,10 +62,6 @@ public class EditAddressActivity extends AppCompatActivity {
         // Creating Volley newRequestQueue .
         requestQueue = Volley.newRequestQueue(EditAddressActivity.this);
         progressDialog = new ProgressDialog(EditAddressActivity.this);
-//        mediaPlayer = MediaPlayer.create(this, R.raw.addressinst);
-//        mediaPlayer.start();
-
-
 
         submitbtn.setOnClickListener(new View.OnClickListener(){
             @Override
@@ -95,16 +90,8 @@ public class EditAddressActivity extends AppCompatActivity {
                     } else {
                         nam4.setError("টাইপ করুন");
                     }
-//                    if (!nam5.getText().toString().equals("")) {
-//                        potaka++;
-//
-//                    } else {
-//                        nam5.setError("টাইপ করুন");
-//                    }
-
                     if (potaka>=3){
                         regUser();
-//                        mediaPlayer.stop();
                         Intent i = new Intent(EditAddressActivity.this, FetchingDataActivity.class);
                         startActivity(i);
                     }
@@ -123,31 +110,19 @@ public class EditAddressActivity extends AppCompatActivity {
             private void regUser() {
                 progressDialog.setMessage("Please Wait, We are Inserting Your Data on Server");
                 progressDialog.show();
-
-//                AddressHolder = name.getEditText().getText().toString().trim();
-//                AddressHolder1 = age.getEditText().getText().toString().trim();
                 AddressHolder2 = addressLine2.getEditText().getText().toString().trim();
                 AddressHolder3 = pinCode.getEditText().getText().toString().trim();
                 AddressHolder4 = landMark.getEditText().getText().toString().trim();
-//                AddressHolder5 = addressExp.getEditText().getText().toString().trim();
-
                 String idToGet = myPref.getString("id","No data found");
-
-//                AddressHolder = AddressHolder.replaceAll(" ","%20");
-//                AddressHolder1 = AddressHolder1.replaceAll(" ","%20");
                 AddressHolder2 = AddressHolder2.replaceAll(" ","%20");
                 AddressHolder3 = AddressHolder3.replaceAll(" ","%20");
                 AddressHolder4 = AddressHolder4.replaceAll(" ","%20");
-//                AddressHolder5 = AddressHolder5.replaceAll(" ","%20");
                 idToGet = idToGet.replaceAll(" ","%20");
 
                 String characterFilter = "[^\\p{L}\\p{M}\\p{N}\\p{P}\\p{Z}\\p{Cf}\\p{Cs}\\s]";
-//                AddressHolder = AddressHolder.replaceAll(characterFilter,"");
-//                AddressHolder1 = AddressHolder1.replaceAll(characterFilter,"");
                 AddressHolder2 = AddressHolder2.replaceAll(characterFilter,"");
                 AddressHolder3 = AddressHolder3.replaceAll(characterFilter,"");
                 AddressHolder4 = AddressHolder4.replaceAll(characterFilter,"");
-//                AddressHolder5 = AddressHolder5.replaceAll(characterFilter,"");
                 idToGet = idToGet.replaceAll(characterFilter,"");
 
                 String myurl = "https://artisanapp.xyz/edit_address.php?addressLine2="+ AddressHolder2 +"&pinCode="+ AddressHolder3
@@ -162,7 +137,6 @@ public class EditAddressActivity extends AppCompatActivity {
                                 progressDialog.dismiss();
                                 // Showing response message coming from server.
                                 Toast.makeText(EditAddressActivity.this, ServerResponse, Toast.LENGTH_LONG).show();
-//                                myPref.edit().putString("track", "4").apply();
                             }
                         },
                         new Response.ErrorListener() {
@@ -184,13 +158,11 @@ public class EditAddressActivity extends AppCompatActivity {
 
     @Override
     public void onBackPressed() {
-//        mediaPlayer.stop();
         myPref.edit().putString("track","100").apply();
         super.onBackPressed();
     }
     @Override
     public void onUserLeaveHint(){
-//        mediaPlayer.stop();
         myPref.edit().putString("track","100").apply();
         super.onUserLeaveHint();
     }

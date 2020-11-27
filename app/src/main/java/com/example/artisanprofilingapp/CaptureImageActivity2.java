@@ -211,7 +211,6 @@ public class CaptureImageActivity2 extends AppCompatActivity {
                 HashMap<String,String> map = new HashMap<>();
                 map.put("encoded_string",encoded_string);
                 map.put("image_name",count+image_name);
-                Log.d("eirki id-->", idToGet);
                 map.put("id",idToGet);
                 map.put("productName",productNameToGet);
 

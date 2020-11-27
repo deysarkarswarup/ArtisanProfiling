@@ -32,7 +32,6 @@ public class EditArtformActivity extends AppCompatActivity {
     ProgressDialog progressDialog;
     String DataHolder;
     SharedPreferences myPref;
-    //    private MediaPlayer mediaPlayer;
     RadioGroup radioGroup, radioGroup1, radioGroup2;
     String yesOrNo, yesOrNo1,typeOfSilpo;
 

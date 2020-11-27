@@ -24,16 +24,13 @@ import com.android.volley.toolbox.Volley;
 import com.google.android.material.textfield.TextInputLayout;
 
 public class EditAgeActivity extends AppCompatActivity {
-    TextInputLayout name, age, addressLine2, landMark, pinCode, addressExp;
+    TextInputLayout age;
     EditText nam, nam1, nam2, nam3,nam4, nam5;//to show error msg
     Button submitbtn;
     RequestQueue requestQueue;
     ProgressDialog progressDialog;
-    String AddressHolder, AddressHolder1, AddressHolder2, AddressHolder3, AddressHolder4, AddressHolder5;
+    String AddressHolder1;
     SharedPreferences myPref;
-    //    private MediaPlayer mediaPlayer;
-    RadioGroup radioGroup1, radioGroup2;
-    String gender, caste;
     int potaka=0;
 
 
@@ -41,70 +38,15 @@ public class EditAgeActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_edit_age);
-
-//        name = findViewById(R.id.name);
         age = findViewById(R.id.age);
-//        addressLine2 = findViewById(R.id.addressLine2);
-//        pinCode = findViewById(R.id.pinCode);
-//        landMark = findViewById(R.id.landMark);
-//        addressExp = findViewById(R.id.addressexp);
-
-
-//        nam = findViewById(R.id.nam);//to show error msg
         nam1 = findViewById(R.id.nam1);//to show error msg
-//        nam2 = findViewById(R.id.nam2);//to show error msg
-//        nam3 = findViewById(R.id.nam3);//to show error msg
-//        nam4 = findViewById(R.id.nam4);//to show error msg
-//        nam5 = findViewById(R.id.nam5);
         submitbtn = findViewById(R.id.submitBtn);
 
         //Initialize of SharedPref
         myPref = getApplicationContext().getSharedPreferences("MyPref",MODE_PRIVATE);
-
         // Creating Volley newRequestQueue .
         requestQueue = Volley.newRequestQueue(EditAgeActivity.this);
         progressDialog = new ProgressDialog(EditAgeActivity.this);
-//        mediaPlayer = MediaPlayer.create(this, R.raw.addressinst);
-//        mediaPlayer.start();
-
-//        radioGroup1 = (RadioGroup) findViewById(R.id.radioGroup1);
-//        radioGroup1.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
-//            @Override
-//            public void onCheckedChanged(RadioGroup group, int checkedId) {
-//                switch (checkedId){
-//                    case R.id.gen:
-//                        caste = "gen";
-//                        break;
-//                    case R.id.sc:
-//                        caste = "sc";
-//                        break;
-//                    case R.id.st:
-//                        caste = "st";
-//                        break;
-//                    case R.id.obc:
-//                        caste = "obc";
-//                }
-//            }
-//        });
-//
-//        radioGroup2 = (RadioGroup) findViewById(R.id.radioGroup2);
-//        radioGroup2.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
-//            @Override
-//            public void onCheckedChanged(RadioGroup group, int checkedId) {
-//                switch (checkedId){
-//                    case R.id.male:
-//                        gender = "male";
-//                        break;
-//                    case R.id.female:
-//                        gender = "female";
-//                        break;
-//                    case R.id.others:
-//                        gender = "others";
-//                        break;
-//                }
-//            }
-//        });
-
         submitbtn.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
@@ -113,47 +55,14 @@ public class EditAgeActivity extends AppCompatActivity {
                 ConnectivityManager con = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
                 NetworkInfo networkInfo = con.getActiveNetworkInfo();
                 if (networkInfo != null && networkInfo.isConnected()) {
-//                    if (!nam.getText().toString().equals("")) {
-//                        potaka = 1;
-//
-//                    } else {
-//                        nam.setError("টাইপ করুন");
-//                    }
-
                     if (!nam1.getText().toString().equals("")) {
                         potaka =1;
 
                     } else {
                         nam1.setError("টাইপ করুন");
                     }
-//                    if (!nam2.getText().toString().equals("")) {
-//                        potaka++;
-//
-//                    } else {
-//                        nam2.setError("টাইপ করুন");
-//                    }
-//                    if (!nam3.getText().toString().equals("")) {
-//                        potaka++;
-//
-//                    } else {
-//                        nam3.setError("টাইপ করুন");
-//                    }
-//                    if (!nam4.getText().toString().equals("")) {
-//                        potaka++;
-//
-//                    } else {
-//                        nam4.setError("টাইপ করুন");
-//                    }
-//                    if (!nam5.getText().toString().equals("")) {
-//                        potaka++;
-//
-//                    } else {
-//                        nam5.setError("টাইপ করুন");
-//                    }
-
                     if (potaka==1){
                         regUser();
-//                        mediaPlayer.stop();
                         Intent i = new Intent(EditAgeActivity.this, FetchingDataActivity.class);
                         startActivity(i);
                     }
@@ -172,31 +81,13 @@ public class EditAgeActivity extends AppCompatActivity {
             private void regUser() {
                 progressDialog.setMessage("Please Wait, We are Inserting Your Data on Server");
                 progressDialog.show();
-
-//                AddressHolder = name.getEditText().getText().toString().trim();
                 AddressHolder1 = age.getEditText().getText().toString().trim();
-//                AddressHolder2 = addressLine2.getEditText().getText().toString().trim();
-//                AddressHolder3 = pinCode.getEditText().getText().toString().trim();
-//                AddressHolder4 = landMark.getEditText().getText().toString().trim();
-//                AddressHolder5 = addressExp.getEditText().getText().toString().trim();
-
                 String idToGet = myPref.getString("id","No data found");
-
-//                AddressHolder = AddressHolder.replaceAll(" ","%20");
                 AddressHolder1 = AddressHolder1.replaceAll(" ","%20");
-//                AddressHolder2 = AddressHolder2.replaceAll(" ","%20");
-//                AddressHolder3 = AddressHolder3.replaceAll(" ","%20");
-//                AddressHolder4 = AddressHolder4.replaceAll(" ","%20");
-//                AddressHolder5 = AddressHolder5.replaceAll(" ","%20");
                 idToGet = idToGet.replaceAll(" ","%20");
 
                 String characterFilter = "[^\\p{L}\\p{M}\\p{N}\\p{P}\\p{Z}\\p{Cf}\\p{Cs}\\s]";
-//                AddressHolder = AddressHolder.replaceAll(characterFilter,"");
                 AddressHolder1 = AddressHolder1.replaceAll(characterFilter,"");
-//                AddressHolder2 = AddressHolder2.replaceAll(characterFilter,"");
-//                AddressHolder3 = AddressHolder3.replaceAll(characterFilter,"");
-//                AddressHolder4 = AddressHolder4.replaceAll(characterFilter,"");
-//                AddressHolder5 = AddressHolder5.replaceAll(characterFilter,"");
                 idToGet = idToGet.replaceAll(characterFilter,"");
 
                 String myurl = "https://artisanapp.xyz/edit_age.php?age="+ AddressHolder1+"&id="+ idToGet;
@@ -210,7 +101,6 @@ public class EditAgeActivity extends AppCompatActivity {
                                 progressDialog.dismiss();
                                 // Showing response message coming from server.
                                 Toast.makeText(EditAgeActivity.this, ServerResponse, Toast.LENGTH_LONG).show();
-//                                myPref.edit().putString("track", "4").apply();
                             }
                         },
                         new Response.ErrorListener() {
@@ -232,13 +122,11 @@ public class EditAgeActivity extends AppCompatActivity {
 
     @Override
     public void onBackPressed() {
-//        mediaPlayer.stop();
         myPref.edit().putString("track","100").apply();
         super.onBackPressed();
     }
     @Override
     public void onUserLeaveHint(){
-//        mediaPlayer.stop();
         myPref.edit().putString("track","100").apply();
         super.onUserLeaveHint();
     }
